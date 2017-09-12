@@ -1,6 +1,0 @@
-
-function printAppVersion() {
-   
-    print(getAppVersion())
-}
-
