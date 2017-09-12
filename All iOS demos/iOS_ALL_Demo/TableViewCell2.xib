@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="TableViewCell2" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell2" rowHeight="154" id="4DS-mN-DEA" customClass="TableViewCell2">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="154"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4DS-mN-DEA" id="SvM-6O-Koc">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="153.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kq7-LT-sel">
+                        <rect key="frame" x="50" y="2" width="220" height="149.5"/>
+                        <color key="backgroundColor" red="1" green="0.37460746700000003" blue="0.29443519610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="kq7-LT-sel" secondAttribute="trailing" constant="50" id="1Kp-l5-K3x"/>
+                    <constraint firstItem="kq7-LT-sel" firstAttribute="top" secondItem="SvM-6O-Koc" secondAttribute="top" constant="2" id="KkS-et-emJ"/>
+                    <constraint firstItem="kq7-LT-sel" firstAttribute="leading" secondItem="SvM-6O-Koc" secondAttribute="leading" constant="50" id="QBB-oI-I6U"/>
+                    <constraint firstAttribute="bottom" secondItem="kq7-LT-sel" secondAttribute="bottom" constant="2" id="yki-36-oXF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="text2Label" destination="kq7-LT-sel" id="Ib2-vK-hUD"/>
+            </connections>
+            <point key="canvasLocation" x="68" y="144"/>
+        </tableViewCell>
+    </objects>
+</document>
