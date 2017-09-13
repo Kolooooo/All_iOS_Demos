@@ -8,11 +8,14 @@
 
 #import "UILabelViewController.h"
 #import "UILabel+Extension.h"
+#import "UIView+Extension.h"
 #import "Config.h"
 
 @interface UILabelViewController ()
 
-@property (nonatomic, strong) UILabel  *label1;
+@property (nonatomic, strong) UILabel  *contantLabel;
+@property (nonatomic, strong) UIView  *contantHeightView;
+@property (nonatomic, strong) UIView  *lineHeightHeight;
 
 @end
 
@@ -26,46 +29,36 @@
 }
 
 - (void)showTheMethod{
-    [self.label1 wordSpacingWithFloat:10];
-    [self.label1 lineSpacingWithFloat:10];
-    [self.label1 alignLeftTop];
-    
-    
-    // 总文字的高度：
-    CGFloat  textH = [self.label1 sizeThatFits:CGSizeMake(self.label1.frame.size.width, MAXFLOAT)].height;
-    // 每行文字的高度：
-    CGFloat lineHeight = self.label1.font.lineHeight;
-    
-    
-    NSLog(@"%f %f", textH, lineHeight);
-    
-    
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 64, 10, textH)];
-    view.backgroundColor = [UIColor purpleColor];
-    view.alpha = 0.3;
-    
-    
-    UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(10, 64, 10, lineHeight)];
-    view1.backgroundColor = [UIColor redColor];
-    view1.alpha = 0.3;
-    
-    
-    [self.view addSubview:view];
-    [self.view addSubview:view1];
+    [self.contantLabel wordSpacingWithFloat:10];
+    [self.contantLabel lineSpacingWithFloat:10];
+    [self.contantLabel alignLeftTop];
+    self.contantHeightView.height = [self.contantLabel contantHeight];
+    self.lineHeightHeight.height = [self.contantLabel lineHeight];
 }
 
 - (void)initUI{
     self.view.backgroundColor = [UIColor whiteColor];
     
     
-    self.label1 = [[UILabel alloc] init];
-    self.label1.frame = CGRectMake(0, 64, ScreenWidth, 1000);
-    self.label1.backgroundColor = [UIColor grayColor];
-    self.label1.numberOfLines = 0;
-    self.label1.text = @"我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角。";
+    self.contantLabel = [[UILabel alloc] init];
+    self.contantLabel.frame = CGRectMake(0, 64, ScreenWidth, 1000);
+    self.contantLabel.backgroundColor = [UIColor grayColor];
+    self.contantLabel.numberOfLines = 0;
+    self.contantLabel.text = @"我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角。";
 
+    
+    self.contantHeightView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, 10, 0)];
+    self.contantHeightView.backgroundColor = [UIColor redColor];
+    self.contantHeightView.alpha = 0.5;
+    
+    self.lineHeightHeight = [[UIView alloc] initWithFrame:CGRectMake(10, 64, 10, 0)];
+    self.lineHeightHeight.backgroundColor = [UIColor redColor];
+    self.lineHeightHeight.alpha = 0.5;
+    
 
-    [self.view addSubview:self.label1];
+    [self.view addSubview:self.contantLabel];
+    [self.view addSubview:self.contantHeightView];
+    [self.view addSubview:self.lineHeightHeight];
 }
 
 @end

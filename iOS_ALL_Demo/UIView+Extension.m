@@ -6,12 +6,12 @@
 //  Copyright © 2016年 sengo. All rights reserved.
 //
 
-#import "UIView+KKUIView.h"
+#import "UIView+Extension.h"
 #import <sys/utsname.h>
 #import <AdSupport/AdSupport.h>
 
 
-@implementation UIView (KKUIView)
+@implementation UIView (Extension)
 
 - (UIViewController *)KK_viewController{
     UIViewController *viewController = nil;
@@ -162,67 +162,67 @@
 }
 
 
-+ (instancetype)KK_viewFromXib {
++ (instancetype)viewFromXib {
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
 }
 
-- (void)setKK_x:(CGFloat)x {
+- (void)setX:(CGFloat)x {
     CGRect frame = self.frame;
     frame.origin.x = x;
     self.frame = frame;
 }
 
-- (CGFloat)KK_x {
+- (CGFloat)x {
     return self.frame.origin.x;
 }
 
-- (void)setKK_y:(CGFloat)y {
+- (void)setY:(CGFloat)y {
     CGRect frame = self.frame;
     frame.origin.y = y;
     self.frame = frame;
 }
 
-- (CGFloat)KK_y {
+- (CGFloat)y {
     return self.frame.origin.y;
 }
 
-- (void)setKK_width:(CGFloat)width {
+- (void)setWidth:(CGFloat)width {
     CGRect frame = self.frame;
     frame.size.width = width;
     self.frame = frame;
 }
 
-- (CGFloat)KK_width {
+- (CGFloat)width {
     return self.frame.size.width;
 }
 
-- (void)setKK_height:(CGFloat)height {
+- (void)setHeight:(CGFloat)height {
     CGRect frame = self.frame;
     frame.size.height = height;
     self.frame = frame;
 }
 
-- (CGFloat)KK_height {
+- (CGFloat)height {
     return self.frame.size.height;
 }
 
-- (void)setKK_centerX:(CGFloat)centerX {
+- (void)setCenterX:(CGFloat)centerX {
     CGPoint center = self.center;
     center.x = centerX;
     self.center = center;
 }
 
-- (CGFloat)KK_centerX {
+- (CGFloat)centerX {
     return self.center.x;
 }
 
-- (void)setKK_centerY:(CGFloat)centerY {
+- (void)setCenterY:(CGFloat)centerY {
     CGPoint center = self.center;
     center.y = centerY;
     self.center = center;
 }
 
-- (CGFloat)KK_centerY {
+- (CGFloat)centerY {
     return self.center.y;
 }
 

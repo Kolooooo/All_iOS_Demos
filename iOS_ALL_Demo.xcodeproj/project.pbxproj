@@ -18,7 +18,7 @@
 		A92C88721F5AB0E300CD02C4 /* NSObject+KKCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C88671F5AB0E300CD02C4 /* NSObject+KKCommon.m */; };
 		A92C88731F5AB0E300CD02C4 /* UIButton+KKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C88691F5AB0E300CD02C4 /* UIButton+KKButton.m */; };
 		A92C88741F5AB0E300CD02C4 /* UIImage+KKImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C886B1F5AB0E300CD02C4 /* UIImage+KKImage.m */; };
-		A92C88751F5AB0E300CD02C4 /* UIView+KKUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C886D1F5AB0E300CD02C4 /* UIView+KKUIView.m */; };
+		A92C88751F5AB0E300CD02C4 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C886D1F5AB0E300CD02C4 /* UIView+Extension.m */; };
 		A92C88761F5AB0E300CD02C4 /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C886F1F5AB0E300CD02C4 /* UIViewController+Extension.m */; };
 		A92C887C1F5AB34F00CD02C4 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C887A1F5AB34F00CD02C4 /* TableViewCell.m */; };
 		A92C887D1F5AB34F00CD02C4 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A92C887B1F5AB34F00CD02C4 /* TableViewCell.xib */; };
@@ -67,8 +67,8 @@
 		A92C88691F5AB0E300CD02C4 /* UIButton+KKButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+KKButton.m"; sourceTree = "<group>"; };
 		A92C886A1F5AB0E300CD02C4 /* UIImage+KKImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KKImage.h"; sourceTree = "<group>"; };
 		A92C886B1F5AB0E300CD02C4 /* UIImage+KKImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KKImage.m"; sourceTree = "<group>"; };
-		A92C886C1F5AB0E300CD02C4 /* UIView+KKUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+KKUIView.h"; sourceTree = "<group>"; };
-		A92C886D1F5AB0E300CD02C4 /* UIView+KKUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KKUIView.m"; sourceTree = "<group>"; };
+		A92C886C1F5AB0E300CD02C4 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		A92C886D1F5AB0E300CD02C4 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		A92C886E1F5AB0E300CD02C4 /* UIViewController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extension.h"; sourceTree = "<group>"; };
 		A92C886F1F5AB0E300CD02C4 /* UIViewController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
 		A92C88791F5AB34F00CD02C4 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
@@ -199,8 +199,8 @@
 				A92C88691F5AB0E300CD02C4 /* UIButton+KKButton.m */,
 				A92C886A1F5AB0E300CD02C4 /* UIImage+KKImage.h */,
 				A92C886B1F5AB0E300CD02C4 /* UIImage+KKImage.m */,
-				A92C886C1F5AB0E300CD02C4 /* UIView+KKUIView.h */,
-				A92C886D1F5AB0E300CD02C4 /* UIView+KKUIView.m */,
+				A92C886C1F5AB0E300CD02C4 /* UIView+Extension.h */,
+				A92C886D1F5AB0E300CD02C4 /* UIView+Extension.m */,
 				A92C886E1F5AB0E300CD02C4 /* UIViewController+Extension.h */,
 				A92C886F1F5AB0E300CD02C4 /* UIViewController+Extension.m */,
 				A9A7F2191F61F1D400D460AE /* NSObject+Extension.h */,
@@ -372,7 +372,7 @@
 				A92C88A91F5B860700CD02C4 /* MASConstraintMaker.m in Sources */,
 				A92C885A1F5AAAB100CD02C4 /* MainViewController.m in Sources */,
 				A9A7F21E1F61F50800D460AE /* NSString+Extension.m in Sources */,
-				A92C88751F5AB0E300CD02C4 /* UIView+KKUIView.m in Sources */,
+				A92C88751F5AB0E300CD02C4 /* UIView+Extension.m in Sources */,
 				A92C88B01F5B860700CD02C4 /* ViewController+MASAdditions.m in Sources */,
 				A92C88721F5AB0E300CD02C4 /* NSObject+KKCommon.m in Sources */,
 				A92C88431F5AA9EB00CD02C4 /* main.m in Sources */,

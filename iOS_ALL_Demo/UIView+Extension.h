@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (KKUIView)
+@interface UIView (Extension)
 
-@property (nonatomic, assign) CGFloat KK_x;
-@property (nonatomic, assign) CGFloat KK_y;
-@property (nonatomic, assign) CGFloat KK_width;
-@property (nonatomic, assign) CGFloat KK_height;
-@property (nonatomic, assign) CGFloat KK_centerX;
-@property (nonatomic, assign) CGFloat KK_centerY;
+@property (nonatomic, assign) CGFloat x;
+@property (nonatomic, assign) CGFloat y;
+@property (nonatomic, assign) CGFloat width;
+@property (nonatomic, assign) CGFloat height;
+@property (nonatomic, assign) CGFloat centerX;
+@property (nonatomic, assign) CGFloat centerY;
 
 /// 根据子视图 获取 子视图所在的控制器
 ///
@@ -30,7 +30,7 @@
 -(void)KK_addDebugInfoButtonToWindowWithRect:(CGRect)rect color:(UIColor *)color;
 
 /// 从xib中创建一个控件
-+ (instancetype)KK_viewFromXib;
++ (instancetype)viewFromXib;
 
 @end
 

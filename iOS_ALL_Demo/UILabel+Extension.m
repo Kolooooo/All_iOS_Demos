@@ -10,9 +10,14 @@
 
 @implementation UILabel (Extension)
 
-- (CGFloat)autoHeight{
+- (CGFloat)contantHeight{
     CGSize size = [self sizeThatFits:CGSizeMake(self.frame.size.width, MAXFLOAT)];
     return size.height;
+}
+
+- (CGFloat)lineHeight{
+    CGFloat lineHeight = self.font.lineHeight;
+    return lineHeight;
 }
 
 - (BOOL)alignLeftTop {

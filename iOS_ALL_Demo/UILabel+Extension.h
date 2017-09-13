@@ -15,7 +15,14 @@
 
  @return 自适应高度数据
  */
-- (CGFloat)autoHeight;
+- (CGFloat)contantHeight;
+
+/**
+ 每行文字的高度
+
+ @return 每行文字的高度
+ */
+- (CGFloat)lineHeight;
 
 /**
  UILabel 文字左上角对齐
