@@ -7,10 +7,7 @@
 //
 
 #import "TableViewController.h"
-#import "Config.h"
 #import "TableViewCell2.h"
-#import "UILabel+Extension.h"
-#import "Masonry.h"
 
 @interface TableViewController ()
 <UITableViewDelegate,

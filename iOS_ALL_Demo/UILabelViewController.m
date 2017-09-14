@@ -7,9 +7,6 @@
 //
 
 #import "UILabelViewController.h"
-#import "UILabel+Extension.h"
-#import "UIView+Extension.h"
-#import "Config.h"
 
 @interface UILabelViewController ()
 
@@ -29,8 +26,8 @@
 }
 
 - (void)showTheMethod{
-//    [self.contantLabel wordSpacingWithFloat:10];
-//    [self.contantLabel lineSpacingWithFloat:10];
+    [self.contantLabel wordSpacingWithFloat:10];
+    [self.contantLabel lineSpacingWithFloat:10];
     [self.contantLabel alignLeftTop];
     self.contantHeightView.height = [self.contantLabel contantHeight];
     self.lineHeightHeight.height = [self.contantLabel lineHeight];

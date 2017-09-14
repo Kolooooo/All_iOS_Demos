@@ -115,6 +115,7 @@
 		A9775E671F6B03F900A1FEDE /* NSAttributedString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+Extension.m"; path = "Masonry/NSAttributedString+Extension.m"; sourceTree = "<group>"; };
 		A9775E6E1F6B0F9A00A1FEDE /* KUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KUILabel.h; sourceTree = "<group>"; };
 		A9775E6F1F6B0F9A00A1FEDE /* KUILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KUILabel.m; sourceTree = "<group>"; };
+		A9775E721F6B14D100A1FEDE /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		A9A7F2141F61EDF700D460AE /* AutoLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayoutViewController.h; sourceTree = "<group>"; };
 		A9A7F2151F61EDF700D460AE /* AutoLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutViewController.m; sourceTree = "<group>"; };
 		A9A7F2171F61EE0100D460AE /* AutoLayoutViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AutoLayoutViewController.storyboard; sourceTree = "<group>"; };
@@ -154,6 +155,7 @@
 		A92C88401F5AA9EB00CD02C4 /* iOS_ALL_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				A9775E721F6B14D100A1FEDE /* PrefixHeader.pch */,
 				A92C88441F5AA9EB00CD02C4 /* AppDelegate.h */,
 				A92C88451F5AA9EB00CD02C4 /* AppDelegate.m */,
 				A92C887E1F5AB47A00CD02C4 /* UILabel */,
@@ -522,6 +524,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X2648TZ4GM;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS_ALL_Demo/PrefixHeader.pch";
 				INFOPLIST_FILE = iOS_ALL_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -535,6 +539,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X2648TZ4GM;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS_ALL_Demo/PrefixHeader.pch";
 				INFOPLIST_FILE = iOS_ALL_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
