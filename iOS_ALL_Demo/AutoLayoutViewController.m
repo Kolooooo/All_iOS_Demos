@@ -9,6 +9,7 @@
 #import "AutoLayoutViewController.h"
 
 @interface AutoLayoutViewController ()
+
 @property (weak, nonatomic) IBOutlet UILabel *label1;
 
 @end
@@ -17,9 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLayoutConstraint *layoutConstraint = self.label1.constraints[0];
     
-    NSLog(@"%@", layoutConstraint);
+    
 }
 
 @end

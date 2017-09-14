@@ -7,6 +7,7 @@
 //
 
 #import "UILabel+Extension.h"
+#import "KUILabel.h"
 
 @implementation UILabel (Extension)
 

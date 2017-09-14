@@ -38,6 +38,8 @@
 		A92C88B01F5B860700CD02C4 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C88A51F5B860700CD02C4 /* ViewController+MASAdditions.m */; };
 		A92C88B31F5B8AD800CD02C4 /* TableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C88B21F5B8AD800CD02C4 /* TableViewCell2.m */; };
 		A92C88B51F5B8AE700CD02C4 /* TableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = A92C88B41F5B8AE700CD02C4 /* TableViewCell2.xib */; };
+		A9775E681F6B03F900A1FEDE /* NSAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A9775E671F6B03F900A1FEDE /* NSAttributedString+Extension.m */; };
+		A9775E701F6B0F9A00A1FEDE /* KUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9775E6F1F6B0F9A00A1FEDE /* KUILabel.m */; };
 		A9A7F2161F61EDF700D460AE /* AutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A7F2151F61EDF700D460AE /* AutoLayoutViewController.m */; };
 		A9A7F2181F61EE0100D460AE /* AutoLayoutViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9A7F2171F61EE0100D460AE /* AutoLayoutViewController.storyboard */; };
 		A9A7F21B1F61F1D400D460AE /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A7F21A1F61F1D400D460AE /* NSObject+Extension.m */; };
@@ -109,6 +111,10 @@
 		A92C88B11F5B8AD800CD02C4 /* TableViewCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell2.h; sourceTree = "<group>"; };
 		A92C88B21F5B8AD800CD02C4 /* TableViewCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell2.m; sourceTree = "<group>"; };
 		A92C88B41F5B8AE700CD02C4 /* TableViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell2.xib; sourceTree = "<group>"; };
+		A9775E661F6B03F900A1FEDE /* NSAttributedString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+Extension.h"; path = "Masonry/NSAttributedString+Extension.h"; sourceTree = "<group>"; };
+		A9775E671F6B03F900A1FEDE /* NSAttributedString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+Extension.m"; path = "Masonry/NSAttributedString+Extension.m"; sourceTree = "<group>"; };
+		A9775E6E1F6B0F9A00A1FEDE /* KUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KUILabel.h; sourceTree = "<group>"; };
+		A9775E6F1F6B0F9A00A1FEDE /* KUILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KUILabel.m; sourceTree = "<group>"; };
 		A9A7F2141F61EDF700D460AE /* AutoLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayoutViewController.h; sourceTree = "<group>"; };
 		A9A7F2151F61EDF700D460AE /* AutoLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutViewController.m; sourceTree = "<group>"; };
 		A9A7F2171F61EE0100D460AE /* AutoLayoutViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AutoLayoutViewController.storyboard; sourceTree = "<group>"; };
@@ -155,6 +161,7 @@
 				A9A7F2131F61EDBE00D460AE /* AutoLayout */,
 				A92C885B1F5AABB900CD02C4 /* Main */,
 				A92C88601F5AB0C100CD02C4 /* Category */,
+				A9775E6C1F6B0E2700A1FEDE /* Tools */,
 				A92C88411F5AA9EB00CD02C4 /* Supporting Files */,
 			);
 			path = iOS_ALL_Demo;
@@ -189,6 +196,8 @@
 				A92C888B1F5B860700CD02C4 /* Masonry */,
 				A92C88851F5AB70800CD02C4 /* UILabel+Extension.h */,
 				A92C88861F5AB70800CD02C4 /* UILabel+Extension.m */,
+				A9775E661F6B03F900A1FEDE /* NSAttributedString+Extension.h */,
+				A9775E671F6B03F900A1FEDE /* NSAttributedString+Extension.m */,
 				A92C88621F5AB0E300CD02C4 /* NSArray+KKNSArray.h */,
 				A92C88631F5AB0E300CD02C4 /* NSArray+KKNSArray.m */,
 				A92C88641F5AB0E300CD02C4 /* NSDate+KKDate.h */,
@@ -274,6 +283,15 @@
 				A92C88A51F5B860700CD02C4 /* ViewController+MASAdditions.m */,
 			);
 			path = Masonry;
+			sourceTree = "<group>";
+		};
+		A9775E6C1F6B0E2700A1FEDE /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				A9775E6E1F6B0F9A00A1FEDE /* KUILabel.h */,
+				A9775E6F1F6B0F9A00A1FEDE /* KUILabel.m */,
+			);
+			name = Tools;
 			sourceTree = "<group>";
 		};
 		A9A7F2131F61EDBE00D460AE /* AutoLayout */ = {
@@ -375,6 +393,7 @@
 				A92C88751F5AB0E300CD02C4 /* UIView+Extension.m in Sources */,
 				A92C88B01F5B860700CD02C4 /* ViewController+MASAdditions.m in Sources */,
 				A92C88721F5AB0E300CD02C4 /* NSObject+KKCommon.m in Sources */,
+				A9775E701F6B0F9A00A1FEDE /* KUILabel.m in Sources */,
 				A92C88431F5AA9EB00CD02C4 /* main.m in Sources */,
 				A92C88741F5AB0E300CD02C4 /* UIImage+KKImage.m in Sources */,
 				A9A7F2161F61EDF700D460AE /* AutoLayoutViewController.m in Sources */,
@@ -384,6 +403,7 @@
 				A9A7F21B1F61F1D400D460AE /* NSObject+Extension.m in Sources */,
 				A92C88A71F5B860700CD02C4 /* MASCompositeConstraint.m in Sources */,
 				A92C88AD1F5B860700CD02C4 /* NSArray+MASAdditions.m in Sources */,
+				A9775E681F6B03F900A1FEDE /* NSAttributedString+Extension.m in Sources */,
 				A92C88761F5AB0E300CD02C4 /* UIViewController+Extension.m in Sources */,
 				A92C888A1F5AC70B00CD02C4 /* TableViewController.m in Sources */,
 				A92C88AF1F5B860700CD02C4 /* View+MASAdditions.m in Sources */,
