@@ -11,6 +11,9 @@
 
 #import "UILabel+Extension.h"
 #import "UIView+Extension.h"
+#import "NSString+Extension.h"
+#import "UITableView+Category.h"
+#import "UITableViewCell+Category.h"
 #import "Config.h"
 #import "Masonry.h"
 

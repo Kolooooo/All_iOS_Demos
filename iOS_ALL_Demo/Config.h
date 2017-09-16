@@ -10,15 +10,15 @@
 #define Config_h
 
 
-#pragma mark - 开关
-
-
 #pragma mark - 宏集合
 #ifdef DEBUG
-#define KKLog(...) NSLog(@"CLASS=%@, LINE=%d -> %@", [self class], __LINE__, [NSString stringWithFormat:__VA_ARGS__])
+#define DEBUGLOG(...) NSLog(@"CLASS=%@, LINE=%d -> %@", [self class], __LINE__, [NSString stringWithFormat:__VA_ARGS__])
 #else
-#define KKLog(...) {}
+#define DEBUGLOG(...) {}
 #endif
+
+// 错误提示标记
+//NSString *const WRONG_TIP = @"X X X X X X X X X X X X - ";
 
 #define WeakSelf __weak typeof(self) weakSelf = self;
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -43,7 +43,6 @@
 /// 机器采用了retina屏幕，坐标是375, 667，屏幕像素750 x 1334，他们之间关系式1:2关系。即一个坐标对应2个像素。
 /// iPhone 6 plus
 /// 机器采用了retina屏幕，坐标是414, 736，屏幕像素1080 x 1920，他们之间关系式1:2.6关系。即一个坐标对应2.6个像素
-
 #define KKiPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
 #define KKiPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 #define KKiPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)

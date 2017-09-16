@@ -13,7 +13,7 @@
 
 @implementation UIView (Extension)
 
-- (UIViewController *)KK_viewController{
+- (UIViewController *)viewController{
     UIViewController *viewController = nil;
     UIResponder *next = self.nextResponder;
     while (next){

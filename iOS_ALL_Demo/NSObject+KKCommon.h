@@ -43,14 +43,6 @@ void KK_enumerateFonts();
 /// 是否一个都没有，如果是一个都没有，那么就返回YES
 -(BOOL)KK_isNoOne;
 
-#pragma mark - 格式字符串验证
-/// 验证是否是正确的手机号码格式
-+(BOOL)KK_isValidateMobile:(NSString *)mobile;
-/// 验证是否是正确的邮箱号码格式
-+(BOOL)KK_isValidateEmail:(NSString *)email;
-/// 验证是否是正确的密码格式
-+ (BOOL)KK_isValiDatePassword:(NSString *)password;
-
 @end
 
 

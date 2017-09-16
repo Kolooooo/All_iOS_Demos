@@ -29,4 +29,15 @@
     return [sb instantiateViewControllerWithIdentifier:identifier];
 }
 
+- (void)takeThePhone:(NSString *_Nonnull)phoneNumber{
+    if ([phoneNumber isValidateMobile] == NO) {
+        return;
+    }
+    
+    NSMutableString * str = [[NSMutableString alloc] initWithFormat:@"tel:%@",phoneNumber];
+    UIWebView * callWebview = [[UIWebView alloc] init];
+    [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
+    [self.view addSubview:callWebview];
+}
+
 @end

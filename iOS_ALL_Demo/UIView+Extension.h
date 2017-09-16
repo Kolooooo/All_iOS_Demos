@@ -20,7 +20,7 @@
 /// 根据子视图 获取 子视图所在的控制器
 ///
 /// return 子视图所在的控制器
-- (UIViewController *)KK_viewController;
+- (UIViewController *)viewController;
 
 #pragma mark - 添加查看测试信息按钮
 /// 添加测试信息按钮到视图窗

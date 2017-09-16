@@ -31,4 +31,11 @@ typedef NS_ENUM(NSUInteger, PushType) {
  */
 + (__kindof UIViewController * _Nonnull)viewControllerWithStoryboardName:(NSString *_Nonnull)storyboardName identifier:(NSString *_Nonnull)identifier;
 
+/**
+ 打电话
+
+ @param phoneNumber 电话号码
+ */
+- (void)takeThePhone:(NSString *_Nonnull)phoneNumber;
+
 @end

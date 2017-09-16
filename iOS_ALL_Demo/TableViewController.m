@@ -43,6 +43,7 @@ UITableViewDataSource>
     TableViewCell2 *cell = [tableView dequeueReusableCellWithIdentifier:@"TableViewCell2" forIndexPath:indexPath];
     cell.text2Label.text = self.datas[indexPath.row];
     
+    [tableView bottomLineColor:[UIColor purpleColor]];
     
     return cell;
 }
