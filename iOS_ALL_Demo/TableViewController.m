@@ -92,6 +92,21 @@ UITableViewDataSource>
     
     
     [self.view addSubview:self.tableView];
+    [self someNumber];
 }
+
+
+- (NSArray<NSNumber *> *_Nonnull)someNumber {
+    NSInteger one   = 1;
+    NSInteger two   = 2;
+    NSInteger three = 3;
+    
+    NSArray *numbers = @[@(one), @(two), @(three)];
+    
+    return numbers;
+}
+
+
+
 
 @end

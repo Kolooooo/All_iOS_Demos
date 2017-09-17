@@ -38,11 +38,52 @@
     NSPredicate *phoneNumber = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",phoneRegex];
     BOOL isPhone = [phoneNumber evaluateWithObject:self];
     if (!isPhone) {
-//        DEBUGLOG(@"%@Your mobile is wrong!!!", WRONG_TIP);
+        DEBUGLOG(@"%@Your mobile is wrong!!!", WRONG_TIP);
     }
     
     return isPhone;
 }
+
+#pragma mark - 根据字符串，计算文本高度
+- (CGSize)textSizeWithFont:(UIFont *_Nonnull)font
+             numberOfLines:(NSInteger)numberOfLines
+               lineSpacing:(CGFloat)lineSpacing
+          constrainedWidth:(CGFloat)constrainedWidth
+          isLimitedToLines:(BOOL *_Nullable)isLimitedToLines{
+
+    if (self.length == 0) {
+        return CGSizeZero;
+    }
+    
+    // one line height
+    CGFloat oneLineHeight = font.lineHeight;
+    
+    // text size, but that has not lineSpacing.
+    CGSize textSize = [self boundingRectWithSize:CGSizeMake(constrainedWidth, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil].size;
+    
+    // rows
+    CGFloat rows = textSize.height / oneLineHeight;
+    
+    
+    CGFloat realHeight = oneLineHeight;
+    if (numberOfLines == 0) { // 0 不限制行数
+        if (rows >= 1) {
+            realHeight = (rows * oneLineHeight) + (rows - 1) * lineSpacing;
+        }
+    }
+    else{ // 限制行数
+        if (rows > numberOfLines) {
+            rows = numberOfLines;
+            if (isLimitedToLines) {
+                *isLimitedToLines = YES;  //被限制
+            }
+        }
+        realHeight = (rows * oneLineHeight) + (rows - 1) * lineSpacing;
+    }
+    
+    return CGSizeMake(constrainedWidth, realHeight);
+}
+
 
 // ken.todo:email and password, you need to full that
 //- (BOOL)isValidateEmail {

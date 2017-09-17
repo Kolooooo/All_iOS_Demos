@@ -9,7 +9,8 @@
 #import "TableViewCell2.h"
 
 @interface TableViewCell2()
-
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *labelMaginLeft;
+@property (nonatomic, strong) UIButton  *button;
 @end
 
 @implementation TableViewCell2
@@ -18,6 +19,17 @@
     [super awakeFromNib];
     
     self.text2Label.numberOfLines = 0;
+}
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    
+    
+    self.text2Label.preferredMaxLayoutWidth = self.width;
+    
+    
+    // [super layoutSubviews];
+    
 }
 
 @end

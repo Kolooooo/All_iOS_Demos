@@ -18,7 +18,7 @@
 #endif
 
 // 错误提示标记
-//NSString *const WRONG_TIP = @"X X X X X X X X X X X X - ";
+#define WRONG_TIP @"X X X X X X X X X X X X - "
 
 #define WeakSelf __weak typeof(self) weakSelf = self;
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height

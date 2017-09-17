@@ -34,6 +34,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="labelMaginLeft" destination="QBB-oI-I6U" id="8Nf-cn-bK5"/>
                 <outlet property="text2Label" destination="kq7-LT-sel" id="Ib2-vK-hUD"/>
             </connections>
             <point key="canvasLocation" x="68" y="144"/>

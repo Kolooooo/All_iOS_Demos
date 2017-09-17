@@ -14,6 +14,7 @@
 #import "NSString+Extension.h"
 #import "UITableView+Category.h"
 #import "UITableViewCell+Category.h"
+#import "NSAttributedString+Extension.h"
 #import "Config.h"
 #import "Masonry.h"
 

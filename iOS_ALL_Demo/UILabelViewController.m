@@ -11,6 +11,7 @@
 @interface UILabelViewController ()
 
 @property (nonatomic, strong) UILabel  *contantLabel;
+@property (nonatomic, strong) UILabel  *contantHeightLabel;
 @property (nonatomic, strong) UIView  *contantHeightView;
 @property (nonatomic, strong) UIView  *lineHeightHeight;
 
@@ -29,20 +30,35 @@
     [self.contantLabel wordSpacingWithFloat:10];
     [self.contantLabel lineSpacingWithFloat:10];
     [self.contantLabel alignLeftTop];
+    
+    
     self.contantHeightView.height = [self.contantLabel contantHeight];
-    self.lineHeightHeight.height = [self.contantLabel lineHeight];
+    self.lineHeightHeight.height  = [self.contantLabel lineHeight];
+    
+    
+//    [self.contantHeightLabel lineSpacingWithFloat:20.0f];
+//    CGSize contantHeightLabelTextSize = [self.contantHeightLabel.text textSizeWithFont:self.contantHeightLabel.font numberOfLines:0 lineSpacing:20.0f constrainedWidth:ScreenWidth isLimitedToLines:nil];
+//    self.contantHeightLabel.frame = CGRectMake(0, ScreenHeight-contantHeightLabelTextSize.height, ScreenWidth, contantHeightLabelTextSize.height);
+    
+//    self.contantHeightLabel.qsLineSpacing = 5.0f;
+//    self.contantHeightLabel.qsConstrainedWidth = ScreenWidth - 50;
+//    [self.contantHeightLabel qs_adjustTextToFitLines:0];
 }
 
 - (void)initUI{
     self.view.backgroundColor = [UIColor whiteColor];
     
-    
     self.contantLabel = [[UILabel alloc] init];
-    self.contantLabel.frame = CGRectMake(0, 64, ScreenWidth, 1000);
+    self.contantLabel.frame = CGRectMake(0, 64, ScreenWidth, 500);
     self.contantLabel.backgroundColor = [UIColor grayColor];
     self.contantLabel.numberOfLines = 0;
     self.contantLabel.text = @"我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角。\n 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角。";
     
+    self.contantHeightLabel = [[UILabel alloc] init];
+    self.contantHeightLabel.frame = CGRectMake(0, 0, ScreenWidth, 0);
+    self.contantHeightLabel.backgroundColor = [UIColor brownColor];
+    self.contantHeightLabel.numberOfLines = 0;
+    self.contantHeightLabel.text = @"通过文字属性和宽度，计算文本高度, 通过文字属性和宽度，计算文本高度, 通过文字属性和宽度，计算文本高度, 通过文字属性和宽度，计算文本高度, 通过文字属性和宽度，计算文本高度, 通过文字属性和宽度，计算文本高度, 通过文字属性和宽度，计算文本高度, 通过文字属性和宽度，计算文本高度。";
     
     self.contantHeightView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, 10, 0)];
     self.contantHeightView.backgroundColor = [UIColor redColor];
@@ -56,6 +72,7 @@
     [self.view addSubview:self.contantLabel];
     [self.view addSubview:self.contantHeightView];
     [self.view addSubview:self.lineHeightHeight];
+    [self.view addSubview:self.contantHeightLabel];
 }
 
 @end

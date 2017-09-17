@@ -9,6 +9,20 @@
 #import <UIKit/UIKit.h>
 
 @interface UILabel (Extension)
+/**
+ 最大显示宽度
+ */
+//@property (nonatomic, assign) CGFloat qsConstrainedWidth;
+//
+//
+///**
+// 行间距
+// */
+//@property (nonatomic, assign) CGFloat qsLineSpacing;
+
+//- (BOOL)qs_adjustTextToFitLines:(NSInteger)numberOfLines;
+
+// -----
 
 /**
  自适应的高度

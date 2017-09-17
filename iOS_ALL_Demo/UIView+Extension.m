@@ -13,7 +13,7 @@
 
 @implementation UIView (Extension)
 
-- (UIViewController *)viewController{
+- (UIViewController *_Nonnull)viewController{
     UIViewController *viewController = nil;
     UIResponder *next = self.nextResponder;
     while (next){
@@ -26,8 +26,14 @@
     return viewController;
 }
 
+- (CGRect)rectForWindow{
+    UIWindow * window=[[[UIApplication sharedApplication] delegate] window];
+    CGRect rect = [self convertRect:self.bounds toView:window];
+    return rect;
+}
+
 #pragma mark - 添加查看测试信息按钮
--(void)KK_addDebugInfoButtonToWindowWithRect:(CGRect)rect color:(UIColor *)color{
+-(void)addDebugInfoButtonToWindowWithRect:(CGRect)rect color:(UIColor *_Nonnull)color{
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setFrame:rect];
     btn.backgroundColor = color;
@@ -161,9 +167,18 @@
     return deviceModel;
 }
 
++ (instancetype _Nonnull)viewFromXib {
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
+}
 
-+ (instancetype)viewFromXib {
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
++ (instancetype _Nullable)viewFromXibWithViewIndex:(NSInteger)viewIndex {
+    NSArray *xibViews = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil];
+    if (xibViews.count > viewIndex) {
+        return xibViews[viewIndex];
+    }
+    
+    DEBUGLOG(@"%@view of viewIndex is null!!!", WRONG_TIP);
+    return nil;
 }
 
 - (void)setX:(CGFloat)x {

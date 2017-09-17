@@ -12,5 +12,4 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *text2Label;
 
-
 @end

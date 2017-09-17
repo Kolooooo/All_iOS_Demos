@@ -20,17 +20,32 @@
 /// 根据子视图 获取 子视图所在的控制器
 ///
 /// return 子视图所在的控制器
-- (UIViewController *)viewController;
+- (UIViewController *_Nonnull)viewController;
+
+/**
+ 获取视图在window 上的位置与大小
+
+ @return 返回视图在window 上的位置与大小
+ */
+- (CGRect)rectForWindow;
 
 #pragma mark - 添加查看测试信息按钮
 /// 添加测试信息按钮到视图窗
 ///
 /// @param rect   按钮的大小
 /// @param color   按钮的颜色
--(void)KK_addDebugInfoButtonToWindowWithRect:(CGRect)rect color:(UIColor *)color;
+-(void)addDebugInfoButtonToWindowWithRect:(CGRect)rect color:(UIColor *_Nonnull)color;
 
-/// 从xib中创建一个控件
-+ (instancetype)viewFromXib;
+/// 从xib中创建一个视图, 默认firstObject
++ (instancetype _Nonnull)viewFromXib;
+
+/**
+ 从xib中创建一个视图
+
+ @param viewIndex view 所在xib 的index
+ @return 从xib中创建出来的视图
+ */
++ (instancetype _Nullable)viewFromXibWithViewIndex:(NSInteger)viewIndex;
 
 @end
 

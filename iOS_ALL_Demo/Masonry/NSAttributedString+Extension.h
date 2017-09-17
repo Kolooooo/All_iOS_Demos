@@ -32,4 +32,29 @@
 + (instancetype _Nonnull)attributedString_FontColorWithText:(NSString *_Nonnull)text
                                                       color:(UIColor *_Nonnull)color
                                                       range:(NSRange)range;
+
+/**
+ 修改文本字间距
+
+ @param text 文本
+ @param wordSpacing 字间距
+ @param range 修改文本文字的范围
+ @return 修改过文本文字样式
+ */
++ (instancetype _Nullable)attributedString_WordSpacingWithText:(NSString *_Nonnull)text
+                                                   wordSpacing:(CGFloat)wordSpacing
+                                                         range:(NSRange)range;
+
+/**
+ 修改文本行间距
+
+ @param text 文本
+ @param lineSpacing 行间距
+ @param range 修改文本文字的范围
+ @return 修改过文本文字样式
+ */
++ (instancetype _Nullable)attributedString_LineSpacingWithText:(NSString *_Nonnull)text
+                                                   lineSpacing:(CGFloat)lineSpacing
+                                                         range:(NSRange)range;
+
 @end
