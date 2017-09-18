@@ -38,7 +38,7 @@
     NSPredicate *phoneNumber = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",phoneRegex];
     BOOL isPhone = [phoneNumber evaluateWithObject:self];
     if (!isPhone) {
-        DEBUGLOG(@"%@Your mobile is wrong!!!", WRONG_TIP);
+        NSAssert(NO, @"Your mobile is wrong!!!");
     }
     
     return isPhone;

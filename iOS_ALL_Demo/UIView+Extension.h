@@ -29,6 +29,11 @@
  */
 - (CGRect)rectForWindow;
 
+/**
+ 打印视图结构
+ */
+- (void)logViewHierarchy;
+
 #pragma mark - 添加查看测试信息按钮
 /// 添加测试信息按钮到视图窗
 ///

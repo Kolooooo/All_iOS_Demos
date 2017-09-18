@@ -10,5 +10,6 @@
 
 @interface NSObject (Extension)
 
+- (void)logPrivateProperty;
 
 @end

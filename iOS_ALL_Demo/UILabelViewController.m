@@ -36,13 +36,8 @@
     self.lineHeightHeight.height  = [self.contantLabel lineHeight];
     
     
-//    [self.contantHeightLabel lineSpacingWithFloat:20.0f];
-//    CGSize contantHeightLabelTextSize = [self.contantHeightLabel.text textSizeWithFont:self.contantHeightLabel.font numberOfLines:0 lineSpacing:20.0f constrainedWidth:ScreenWidth isLimitedToLines:nil];
-//    self.contantHeightLabel.frame = CGRectMake(0, ScreenHeight-contantHeightLabelTextSize.height, ScreenWidth, contantHeightLabelTextSize.height);
-    
-//    self.contantHeightLabel.qsLineSpacing = 5.0f;
-//    self.contantHeightLabel.qsConstrainedWidth = ScreenWidth - 50;
-//    [self.contantHeightLabel qs_adjustTextToFitLines:0];
+    [[[UISearchController alloc] init] logPrivateProperty];
+    [self.view logViewHierarchy];
 }
 
 - (void)initUI{

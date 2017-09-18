@@ -16,6 +16,8 @@
 #import "UITableViewCell+Category.h"
 #import "NSAttributedString+Extension.h"
 #import "UIViewController+Extension.h"
+#import "NSArray+Category.h"
+#import "NSObject+Extension.h"
 
 
 #import "Config.h"

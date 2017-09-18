@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIButton (KKButton)
+@interface UIButton (Category)
 
 /// 按钮文字在左边，iocn 在右边的布局
--(void)KK_titleInLeftAndIconInRight;
+- (void)titleOnLeftAndIconOnRight;
 
 @end

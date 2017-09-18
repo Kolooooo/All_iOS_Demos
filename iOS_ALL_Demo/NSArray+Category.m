@@ -6,15 +6,22 @@
 //  Copyright © 2017年 模特. All rights reserved.
 //
 
-#import "NSArray+KKNSArray.h"
+#import "NSArray+Category.h"
 
-@implementation NSArray (KKNSArray)
+@implementation NSArray (Category)
 
-- (float)KK_getArraySomeNumWithType:(GetArraySomeNumType)getArraySomeNumType{
+- (void)logs{
+    id obj;
+    for (obj in self) {
+        NSLog(@"obj: \n%@", obj);
+    }
+}
+
+- (float)getArraySomeNumWithType:(GetArraySomeNumType)getArraySomeNumType{
     if (getArraySomeNumType == GetArraySomeNumTypeSum) {
         return [[self valueForKeyPath:@"@sum.floatValue"] floatValue];
     }
-
+    
     if (getArraySomeNumType == GetArraySomeNumTypeAvg) {
         return[[self valueForKeyPath:@"@avg.floatValue"] floatValue];
     }

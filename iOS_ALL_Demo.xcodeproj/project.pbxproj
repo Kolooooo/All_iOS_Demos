@@ -13,10 +13,10 @@
 		A92C88511F5AA9EB00CD02C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92C884F1F5AA9EB00CD02C4 /* LaunchScreen.storyboard */; };
 		A92C885A1F5AAAB100CD02C4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C88591F5AAAB100CD02C4 /* MainViewController.m */; };
 		A92C885F1F5AADDD00CD02C4 /* MainNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C885E1F5AADDD00CD02C4 /* MainNavViewController.m */; };
-		A92C88701F5AB0E300CD02C4 /* NSArray+KKNSArray.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C88631F5AB0E300CD02C4 /* NSArray+KKNSArray.m */; };
+		A92C88701F5AB0E300CD02C4 /* NSArray+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C88631F5AB0E300CD02C4 /* NSArray+Category.m */; };
 		A92C88711F5AB0E300CD02C4 /* NSDate+KKDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C88651F5AB0E300CD02C4 /* NSDate+KKDate.m */; };
 		A92C88721F5AB0E300CD02C4 /* NSObject+KKCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C88671F5AB0E300CD02C4 /* NSObject+KKCommon.m */; };
-		A92C88731F5AB0E300CD02C4 /* UIButton+KKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C88691F5AB0E300CD02C4 /* UIButton+KKButton.m */; };
+		A92C88731F5AB0E300CD02C4 /* UIButton+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C88691F5AB0E300CD02C4 /* UIButton+Category.m */; };
 		A92C88741F5AB0E300CD02C4 /* UIImage+KKImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C886B1F5AB0E300CD02C4 /* UIImage+KKImage.m */; };
 		A92C88751F5AB0E300CD02C4 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C886D1F5AB0E300CD02C4 /* UIView+Extension.m */; };
 		A92C88761F5AB0E300CD02C4 /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C886F1F5AB0E300CD02C4 /* UIViewController+Extension.m */; };
@@ -63,14 +63,14 @@
 		A92C885D1F5AADDD00CD02C4 /* MainNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavViewController.h; sourceTree = "<group>"; };
 		A92C885E1F5AADDD00CD02C4 /* MainNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavViewController.m; sourceTree = "<group>"; };
 		A92C88611F5AB0E300CD02C4 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
-		A92C88621F5AB0E300CD02C4 /* NSArray+KKNSArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+KKNSArray.h"; sourceTree = "<group>"; };
-		A92C88631F5AB0E300CD02C4 /* NSArray+KKNSArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+KKNSArray.m"; sourceTree = "<group>"; };
+		A92C88621F5AB0E300CD02C4 /* NSArray+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Category.h"; sourceTree = "<group>"; };
+		A92C88631F5AB0E300CD02C4 /* NSArray+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Category.m"; sourceTree = "<group>"; };
 		A92C88641F5AB0E300CD02C4 /* NSDate+KKDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+KKDate.h"; sourceTree = "<group>"; };
 		A92C88651F5AB0E300CD02C4 /* NSDate+KKDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+KKDate.m"; sourceTree = "<group>"; };
 		A92C88661F5AB0E300CD02C4 /* NSObject+KKCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KKCommon.h"; sourceTree = "<group>"; };
 		A92C88671F5AB0E300CD02C4 /* NSObject+KKCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KKCommon.m"; sourceTree = "<group>"; };
-		A92C88681F5AB0E300CD02C4 /* UIButton+KKButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+KKButton.h"; sourceTree = "<group>"; };
-		A92C88691F5AB0E300CD02C4 /* UIButton+KKButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+KKButton.m"; sourceTree = "<group>"; };
+		A92C88681F5AB0E300CD02C4 /* UIButton+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Category.h"; sourceTree = "<group>"; };
+		A92C88691F5AB0E300CD02C4 /* UIButton+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Category.m"; sourceTree = "<group>"; };
 		A92C886A1F5AB0E300CD02C4 /* UIImage+KKImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KKImage.h"; sourceTree = "<group>"; };
 		A92C886B1F5AB0E300CD02C4 /* UIImage+KKImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KKImage.m"; sourceTree = "<group>"; };
 		A92C886C1F5AB0E300CD02C4 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
@@ -216,14 +216,14 @@
 				A9775E781F6C9D8A00A1FEDE /* UITableViewCell+Category.m */,
 				A9775E661F6B03F900A1FEDE /* NSAttributedString+Extension.h */,
 				A9775E671F6B03F900A1FEDE /* NSAttributedString+Extension.m */,
-				A92C88621F5AB0E300CD02C4 /* NSArray+KKNSArray.h */,
-				A92C88631F5AB0E300CD02C4 /* NSArray+KKNSArray.m */,
+				A92C88621F5AB0E300CD02C4 /* NSArray+Category.h */,
+				A92C88631F5AB0E300CD02C4 /* NSArray+Category.m */,
 				A92C88641F5AB0E300CD02C4 /* NSDate+KKDate.h */,
 				A92C88651F5AB0E300CD02C4 /* NSDate+KKDate.m */,
 				A92C88661F5AB0E300CD02C4 /* NSObject+KKCommon.h */,
 				A92C88671F5AB0E300CD02C4 /* NSObject+KKCommon.m */,
-				A92C88681F5AB0E300CD02C4 /* UIButton+KKButton.h */,
-				A92C88691F5AB0E300CD02C4 /* UIButton+KKButton.m */,
+				A92C88681F5AB0E300CD02C4 /* UIButton+Category.h */,
+				A92C88691F5AB0E300CD02C4 /* UIButton+Category.m */,
 				A92C886A1F5AB0E300CD02C4 /* UIImage+KKImage.h */,
 				A92C886B1F5AB0E300CD02C4 /* UIImage+KKImage.m */,
 				A92C886C1F5AB0E300CD02C4 /* UIView+Extension.h */,
@@ -410,7 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A92C88811F5AB49400CD02C4 /* UILabelViewController.m in Sources */,
-				A92C88701F5AB0E300CD02C4 /* NSArray+KKNSArray.m in Sources */,
+				A92C88701F5AB0E300CD02C4 /* NSArray+Category.m in Sources */,
 				A92C88871F5AB70800CD02C4 /* UILabel+Extension.m in Sources */,
 				A92C887C1F5AB34F00CD02C4 /* TableViewCell.m in Sources */,
 				A92C88461F5AA9EB00CD02C4 /* AppDelegate.m in Sources */,
@@ -428,7 +428,7 @@
 				A92C88431F5AA9EB00CD02C4 /* main.m in Sources */,
 				A92C88741F5AB0E300CD02C4 /* UIImage+KKImage.m in Sources */,
 				A9A7F2161F61EDF700D460AE /* AutoLayoutViewController.m in Sources */,
-				A92C88731F5AB0E300CD02C4 /* UIButton+KKButton.m in Sources */,
+				A92C88731F5AB0E300CD02C4 /* UIButton+Category.m in Sources */,
 				A9775E791F6C9D8A00A1FEDE /* UITableViewCell+Category.m in Sources */,
 				A92C88B31F5B8AD800CD02C4 /* TableViewCell2.m in Sources */,
 				A92C88711F5AB0E300CD02C4 /* NSDate+KKDate.m in Sources */,

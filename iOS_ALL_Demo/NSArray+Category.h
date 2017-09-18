@@ -16,9 +16,14 @@ typedef NS_ENUM(NSUInteger, GetArraySomeNumType) {
     GetArraySomeNumTypeMin = 4
 };
 
-@interface NSArray (KKNSArray)
+@interface NSArray (Category)
+
+/**
+ 打印数组
+ */
+- (void)logs;
 
 /// NSArray 快速求总和 最大值 最小值 和 平均值
-- (float)KK_getArraySomeNumWithType:(GetArraySomeNumType)getArraySomeNumType;
+- (float)getArraySomeNumWithType:(GetArraySomeNumType)getArraySomeNumType;
 
 @end

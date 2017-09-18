@@ -10,7 +10,6 @@
 #import <sys/utsname.h>
 #import <AdSupport/AdSupport.h>
 
-
 @implementation UIView (Extension)
 
 - (UIViewController *_Nonnull)viewController{
@@ -31,6 +30,49 @@
     CGRect rect = [self convertRect:self.bounds toView:window];
     return rect;
 }
+
+- (void)logViewHierarchy{
+    NSString *description = [self showViewHierarchyWithlevel:0];
+
+    NSLog(@"%@", description);
+}
+
+- (NSString *)showViewHierarchyWithlevel:(NSInteger)level{
+    NSMutableString * description = [NSMutableString string];
+    NSMutableString * indent = [NSMutableString string];
+    
+    for (NSInteger i = 0; i < level; i++){
+        [indent appendString:@"  |"];
+    }
+    
+    [description appendFormat:@"\n%@%@", indent, [self description]];
+    for (UIView * item in self.subviews){
+        [description appendFormat:@"%@", [item showViewHierarchyWithlevel:level + 1]];
+    }
+    
+    return description.copy;
+}
+
+//- (NSString *_Nonnull)logViewWithlevel:(NSInteger)level{
+//    NSMutableString * description = [NSMutableString string];
+//    NSMutableString * indent = [NSMutableString string];
+//    
+//    for (NSInteger i = 0; i < level; i++){
+//        [indent appendString:@"  |"];
+//    }
+//    
+//    [description appendFormat:@"\n%@%@", indent, [self description]];
+//    for (UIView * item in self.subviews){
+//        [description appendFormat:@"%@", [item logViewWithlevel:level + 1]];
+//    }
+//    NSLog(@"%@", description);
+//    return [description copy];
+//}
+//
+//// 实现view的循环打印
+//- (NSString *)recursiveDiscription{
+//    return [self logViewWithlevel:0];
+//}
 
 #pragma mark - 添加查看测试信息按钮
 -(void)addDebugInfoButtonToWindowWithRect:(CGRect)rect color:(UIColor *_Nonnull)color{
@@ -177,7 +219,7 @@
         return xibViews[viewIndex];
     }
     
-    DEBUGLOG(@"%@view of viewIndex is null!!!", WRONG_TIP);
+    NSAssert(NO, @"view of viewIndex is null!!!");
     return nil;
 }
 
