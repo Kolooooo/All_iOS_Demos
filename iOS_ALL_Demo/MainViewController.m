@@ -9,10 +9,9 @@
 #import "MainViewController.h"
 #import "TableViewCell.h"
 #import "UILabelViewController.h"
-#import "Config.h"
 #import "TableViewController.h"
 #import "AutoLayoutViewController.h"
-#import "UIViewController+Extension.h"
+#import "UILableViewController2.h"
 
 @interface MainViewController ()
 <UITableViewDelegate,
@@ -58,13 +57,18 @@ UITableViewDataSource>
         AutoLayoutViewController *vc = [AutoLayoutViewController viewControllerWithStoryboardName:@"AutoLayoutViewController" identifier:@"AutoLayoutViewController"];
         [self.navigationController pushViewController:vc animated:YES];
     }
+    else if (indexPath.row == 3) {
+        UILableViewController2 *vc = [[UILableViewController2 alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 - (void)initData{
     self.titles = @[
                     @"UILabel",
                     @"UITableViewController",
-                    @"AutoLayoutViewController"
+                    @"AutoLayoutViewController",
+                    @"UILabel2"
                     ];
 }
 

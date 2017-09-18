@@ -12,15 +12,15 @@
 /**
  最大显示宽度
  */
-//@property (nonatomic, assign) CGFloat qsConstrainedWidth;
+@property (nonatomic, assign) CGFloat qsConstrainedWidth;
 //
 //
 ///**
 // 行间距
 // */
-//@property (nonatomic, assign) CGFloat qsLineSpacing;
+@property (nonatomic, assign) CGFloat qsLineSpacing;
 
-//- (BOOL)qs_adjustTextToFitLines:(NSInteger)numberOfLines;
+- (BOOL)qs_adjustTextToFitLines:(NSInteger)numberOfLines;
 
 // -----
 

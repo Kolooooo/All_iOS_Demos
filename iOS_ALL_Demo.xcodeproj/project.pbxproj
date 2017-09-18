@@ -46,6 +46,8 @@
 		A9A7F2181F61EE0100D460AE /* AutoLayoutViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9A7F2171F61EE0100D460AE /* AutoLayoutViewController.storyboard */; };
 		A9A7F21B1F61F1D400D460AE /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A7F21A1F61F1D400D460AE /* NSObject+Extension.m */; };
 		A9A7F21E1F61F50800D460AE /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A7F21D1F61F50800D460AE /* NSString+Extension.m */; };
+		A9C2CE4B1F6ECEA70029DBDE /* UILableViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C2CE4A1F6ECEA70029DBDE /* UILableViewController2.m */; };
+		A9C2CE4E1F6ECEFF0029DBDE /* QSShowTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C2CE4D1F6ECEFF0029DBDE /* QSShowTextCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +131,10 @@
 		A9A7F21A1F61F1D400D460AE /* NSObject+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
 		A9A7F21C1F61F50800D460AE /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		A9A7F21D1F61F50800D460AE /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		A9C2CE491F6ECEA70029DBDE /* UILableViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILableViewController2.h; sourceTree = "<group>"; };
+		A9C2CE4A1F6ECEA70029DBDE /* UILableViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILableViewController2.m; sourceTree = "<group>"; };
+		A9C2CE4C1F6ECEFF0029DBDE /* QSShowTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSShowTextCell.h; sourceTree = "<group>"; };
+		A9C2CE4D1F6ECEFF0029DBDE /* QSShowTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSShowTextCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +266,7 @@
 			children = (
 				A92C887F1F5AB49400CD02C4 /* UILabelViewController.h */,
 				A92C88801F5AB49400CD02C4 /* UILabelViewController.m */,
+				A9C2CE481F6ECE720029DBDE /* UILabel2 */,
 			);
 			name = UILabel;
 			sourceTree = "<group>";
@@ -314,6 +321,17 @@
 				A9A7F2171F61EE0100D460AE /* AutoLayoutViewController.storyboard */,
 			);
 			name = AutoLayout;
+			sourceTree = "<group>";
+		};
+		A9C2CE481F6ECE720029DBDE /* UILabel2 */ = {
+			isa = PBXGroup;
+			children = (
+				A9C2CE491F6ECEA70029DBDE /* UILableViewController2.h */,
+				A9C2CE4A1F6ECEA70029DBDE /* UILableViewController2.m */,
+				A9C2CE4C1F6ECEFF0029DBDE /* QSShowTextCell.h */,
+				A9C2CE4D1F6ECEFF0029DBDE /* QSShowTextCell.m */,
+			);
+			name = UILabel2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,6 +422,7 @@
 				A9A7F21E1F61F50800D460AE /* NSString+Extension.m in Sources */,
 				A92C88751F5AB0E300CD02C4 /* UIView+Extension.m in Sources */,
 				A92C88B01F5B860700CD02C4 /* ViewController+MASAdditions.m in Sources */,
+				A9C2CE4E1F6ECEFF0029DBDE /* QSShowTextCell.m in Sources */,
 				A92C88721F5AB0E300CD02C4 /* NSObject+KKCommon.m in Sources */,
 				A9775E701F6B0F9A00A1FEDE /* KUILabel.m in Sources */,
 				A92C88431F5AA9EB00CD02C4 /* main.m in Sources */,
@@ -423,6 +442,7 @@
 				A92C88AF1F5B860700CD02C4 /* View+MASAdditions.m in Sources */,
 				A92C88AC1F5B860700CD02C4 /* MASViewConstraint.m in Sources */,
 				A92C88A81F5B860700CD02C4 /* MASConstraint.m in Sources */,
+				A9C2CE4B1F6ECEA70029DBDE /* UILableViewController2.m in Sources */,
 				A92C885F1F5AADDD00CD02C4 /* MainNavViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
