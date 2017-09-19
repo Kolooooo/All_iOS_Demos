@@ -48,6 +48,7 @@
 		A9A7F21E1F61F50800D460AE /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A7F21D1F61F50800D460AE /* NSString+Extension.m */; };
 		A9C2CE4B1F6ECEA70029DBDE /* UILableViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C2CE4A1F6ECEA70029DBDE /* UILableViewController2.m */; };
 		A9C2CE4E1F6ECEFF0029DBDE /* QSShowTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C2CE4D1F6ECEFF0029DBDE /* QSShowTextCell.m */; };
+		A9C2CE501F7095B60029DBDE /* iOS.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = A9C2CE4F1F7095B60029DBDE /* iOS.rtfd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +136,7 @@
 		A9C2CE4A1F6ECEA70029DBDE /* UILableViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILableViewController2.m; sourceTree = "<group>"; };
 		A9C2CE4C1F6ECEFF0029DBDE /* QSShowTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSShowTextCell.h; sourceTree = "<group>"; };
 		A9C2CE4D1F6ECEFF0029DBDE /* QSShowTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSShowTextCell.m; sourceTree = "<group>"; };
+		A9C2CE4F1F7095B60029DBDE /* iOS.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = iOS.rtfd; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 		A92C88351F5AA9EB00CD02C4 = {
 			isa = PBXGroup;
 			children = (
+				A9C2CE4F1F7095B60029DBDE /* iOS.rtfd */,
 				A92C88401F5AA9EB00CD02C4 /* iOS_ALL_Demo */,
 				A92C883F1F5AA9EB00CD02C4 /* Products */,
 			);
@@ -393,6 +396,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9C2CE501F7095B60029DBDE /* iOS.rtfd in Resources */,
 				A92C88B51F5B8AE700CD02C4 /* TableViewCell2.xib in Resources */,
 				A92C88A61F5B860700CD02C4 /* Info.plist in Resources */,
 				A92C88511F5AA9EB00CD02C4 /* LaunchScreen.storyboard in Resources */,

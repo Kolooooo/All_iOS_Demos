@@ -53,27 +53,6 @@
     return description.copy;
 }
 
-//- (NSString *_Nonnull)logViewWithlevel:(NSInteger)level{
-//    NSMutableString * description = [NSMutableString string];
-//    NSMutableString * indent = [NSMutableString string];
-//    
-//    for (NSInteger i = 0; i < level; i++){
-//        [indent appendString:@"  |"];
-//    }
-//    
-//    [description appendFormat:@"\n%@%@", indent, [self description]];
-//    for (UIView * item in self.subviews){
-//        [description appendFormat:@"%@", [item logViewWithlevel:level + 1]];
-//    }
-//    NSLog(@"%@", description);
-//    return [description copy];
-//}
-//
-//// 实现view的循环打印
-//- (NSString *)recursiveDiscription{
-//    return [self logViewWithlevel:0];
-//}
-
 #pragma mark - 添加查看测试信息按钮
 -(void)addDebugInfoButtonToWindowWithRect:(CGRect)rect color:(UIColor *_Nonnull)color{
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
