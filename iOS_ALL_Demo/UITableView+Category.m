@@ -17,13 +17,23 @@
 
 // ken.todo: 改变iOS7上tableview的分割线长度问题
 - (void)setBottomLineWidthEdgeInsets:(UIEdgeInsets)edgeInsets{
-//    if ([self respondsToSelector:@selector (setSeparatorInset:)]) {
-//        [self setLayoutMargins:edgeInsets];
-//    }
+    //    if ([self respondsToSelector:@selector (setSeparatorInset:)]) {
+    //        [self setLayoutMargins:edgeInsets];
+    //    }
     
     //分割线设置 上 左 下
     //    [self setSeparatorInset:edgeInsets];
     // [self setSeparatorInset:UIEdgeInsetsMake(0, 30, 0, 0)];//分割线设置 上 左 下
+}
+
+- (void)reloadForSection:(NSInteger)section
+                     row:(NSInteger)row
+               animation:(UITableViewRowAnimation)animation{
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:section];
+    NSArray *indexPaths = @[indexPath];
+    
+    [self reloadRowsAtIndexPaths:indexPaths withRowAnimation:animation];
 }
 
 @end

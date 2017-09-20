@@ -17,8 +17,12 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-//    self.textLabel.numberOfLines = 0;
-    [self.textLabel sizeToFit];
+    // How do I get the tableView by the custom cell?
+}
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
+
 }
 
 @end

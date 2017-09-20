@@ -6,11 +6,11 @@
 //  Copyright © 2017年 模特. All rights reserved.
 //
 
-#import "UIImage+KKImage.h"
+#import "UIImage+Category.h"
 
-@implementation UIImage (KKImage)
+@implementation UIImage (Category)
 
-- (UIImage*)KK_imageScale:(float)scale{
+- (UIImage *_Nonnull)imageScale:(float)scale{
     CGSize size = self.size;
     CGFloat width = size.width;
     CGFloat height = size.height;
@@ -20,10 +20,11 @@
     [self drawInRect:CGRectMake(0,0,scaledWidth,scaledHeight)];
     UIImage* newImage= UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    
     return newImage;
 }
 
-- (UIImage *)KK_imageScaledToSize:(CGSize)size{
+- (UIImage *)imageScaledToSize:(CGSize)size{
     UIGraphicsBeginImageContext(size);
     [self drawInRect:CGRectMake(0,0,size.width,size.height)];
     UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -31,7 +32,7 @@
     return newImage;
 }
 
-- (BOOL)KK_saveImageToDocmentWithFileName:(NSString*)fileName{
+- (BOOL)saveImageToDocmentWithFileName:(NSString*)fileName{
     NSString *fileName1 = @"";
     if (![fileName containsString:@".png"]) {
         fileName1 = [NSString stringWithFormat:@"%@.png", fileName];
@@ -49,6 +50,20 @@
         NSAssert(NO, @"图片保存失败");
         return NO;
     }
+}
+
++ (UIImage *_Nonnull)imageWithColor:(UIColor *)color {
+    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
 }
 
 @end

@@ -19,4 +19,15 @@
 
 - (void)setBottomLineWidthEdgeInsets:(UIEdgeInsets)edgeInsets;
 
+/**
+ 刷新某组某行
+
+ @param section 组
+ @param row 行
+ @param animation 动画类型
+ */
+- (void)reloadForSection:(NSInteger)section
+                     row:(NSInteger)row
+           animation:(UITableViewRowAnimation)animation;
+
 @end
