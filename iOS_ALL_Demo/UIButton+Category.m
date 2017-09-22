@@ -13,7 +13,7 @@
 - (void)titleOnLeftAndIconOnRight{
     CGFloat imageWidth = self.imageView.image.size.width;
     CGFloat titleLabelWidth = self.titleLabel.bounds.size.width;
-
+    
     [self setTitleEdgeInsets:UIEdgeInsetsMake(0, -imageWidth, 0, imageWidth)];
     [self setImageEdgeInsets:UIEdgeInsetsMake(0, titleLabelWidth, 0, -titleLabelWidth)];
 }

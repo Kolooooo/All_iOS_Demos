@@ -68,6 +68,20 @@
     [self.view addSubview:self.contantHeightView];
     [self.view addSubview:self.lineHeightHeight];
     [self.view addSubview:self.contantHeightLabel];
+    
+    // ----
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(200, 400, 100, 100);
+    button.backgroundColor = [UIColor orangeColor];
+    
+    [self.view addSubview:button];
+    
+    [button addTarget:self action:@selector(touchButton) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)touchButton{
+    NSString *ken;
 }
 
 @end

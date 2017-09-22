@@ -19,12 +19,8 @@
 UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView  *tableView;
-
 @property (nonatomic, strong) NSArray<NSString *>  *titles;
 
-
-@property(nonatomic,assign) BOOL  isone;
-@property(nonatomic,assign) NSInteger  count;
 @end
 
 @implementation MainViewController
@@ -35,17 +31,6 @@ UITableViewDataSource>
     [self initUI];
     [self initData];
     [self initRequest];
-    
-    self.count = 2;
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    self.isone = self.isone==YES ? NO : YES;
-        
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:3 inSection:0];
-    NSArray *indexPaths = @[indexPath];
-    self.count+=1;
-    [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -55,27 +40,6 @@ UITableViewDataSource>
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableViewCell" forIndexPath:indexPath];
     cell.titleLabel.text = self.titles[indexPath.row];
-    
-    if (indexPath.row == 3) {
-        if (!_isone) {
-            tableViewInCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tableViewInCell" forIndexPath:indexPath];
-            cell.count = self.count;
-            WeakSelf;
-            cell.BlockName = ^{
-                [weakSelf.tableView reloadData];
-            };
-            return cell;
-        }
-        else{
-            tableViewInCell2 *cell = [tableView dequeueReusableCellWithIdentifier:@"tableViewInCell2" forIndexPath:indexPath];
-            cell.count = self.count;
-            WeakSelf;
-            cell.BlockName = ^{
-                [weakSelf.tableView reloadData];
-            };
-            return cell;
-        }
-    }
     
     return cell;
 }
@@ -100,7 +64,6 @@ UITableViewDataSource>
                     @"UILabel",
                     @"UITableViewController",
                     @"AutoLayoutViewController",
-                    @"ken"
                     ];
 }
 
@@ -113,14 +76,12 @@ UITableViewDataSource>
     
     self.tableView = [[UITableView alloc] init];
     self.tableView.frame = CGRectMake(0, 0, ScreenWidth, 600);
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.estimatedRowHeight = 150;
+    self.tableView.rowHeight = 50;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerNib:[UINib nibWithNibName:@"TableViewCell" bundle:nil] forCellReuseIdentifier:@"TableViewCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"tableViewInCell" bundle:nil] forCellReuseIdentifier:@"tableViewInCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"tableViewInCell2" bundle:nil] forCellReuseIdentifier:@"tableViewInCell2"];
-    
     
     
     [self.view addSubview:self.tableView];

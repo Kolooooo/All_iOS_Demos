@@ -18,6 +18,7 @@
 #import "UIViewController+Extension.h"
 #import "NSArray+Category.h"
 #import "NSObject+Extension.h"
+#import "UIButton+Category.h"
 
 
 #import "Config.h"
