@@ -12,6 +12,7 @@
 
 @implementation UIView (Extension)
 
+
 - (UIViewController *_Nonnull)viewController{
     UIViewController *viewController = nil;
     UIResponder *next = self.nextResponder;
@@ -35,6 +36,16 @@
     NSString *description = [self showViewHierarchyWithlevel:0];
 
     NSLog(@"%@", description);
+}
+
+- (instancetype _Nonnull)setCornerRadius:(CGSize)cornerRadii type:(UIRectCorner)corners{
+    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:corners cornerRadii:cornerRadii];
+    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+    maskLayer.frame = self.bounds;
+    maskLayer.path = maskPath.CGPath;
+    self.layer.mask = maskLayer;
+    
+    return self;
 }
 
 - (NSString *)showViewHierarchyWithlevel:(NSInteger)level{

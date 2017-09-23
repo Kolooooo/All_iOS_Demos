@@ -34,6 +34,15 @@
  */
 - (void)logViewHierarchy;
 
+/**
+ 设置圆角
+ 
+ @param cornerRadii 圆角的size
+ @param corners 圆角的四个位置
+ @return 返回设置好的视图
+ */
+- (instancetype _Nonnull)setCornerRadius:(CGSize)cornerRadii type:(UIRectCorner)corners;
+
 #pragma mark - 添加查看测试信息按钮
 /// 添加测试信息按钮到视图窗
 ///

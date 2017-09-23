@@ -15,6 +15,9 @@
 @property (nonatomic, strong) UIView  *contantHeightView;
 @property (nonatomic, strong) UIView  *lineHeightHeight;
 
+@property (nonatomic, strong) UITextField *textTF1;
+@property (nonatomic, strong) UITextField *textTF2;
+
 @end
 
 @implementation UILabelViewController
@@ -78,10 +81,29 @@
     [self.view addSubview:button];
     
     [button addTarget:self action:@selector(touchButton) forControlEvents:UIControlEventTouchUpInside];
+    [button setCornerRadius:CGSizeMake(20, 30) type:UIRectCornerTopLeft|UIRectCornerTopRight|UIRectCornerBottomLeft];
+    
+    UITextField *textTF1 = [[UITextField alloc] initWithFrame:CGRectMake(100, 300, 50, 50)];
+    self.textTF1 = textTF1;
+    textTF1.backgroundColor = [UIColor purpleColor];
+    
+    UITextField *textTF2 = [[UITextField alloc] initWithFrame:CGRectMake(100, 400, 50, 50)];
+    self.textTF2 = textTF2;
+    textTF2.backgroundColor = [UIColor purpleColor];
+    
+    [self.view addSubview:textTF1];
+    [self.view addSubview:textTF2];
 }
 
 - (void)touchButton{
-    NSString *ken;
+    
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    NSLog(@"%@ - %@", touches, event);
+    
+    [self.textTF1 resignFirstResponder];
+    [self.textTF2 resignFirstResponder];
 }
 
 @end

@@ -1,28 +1,27 @@
-//
-//  UILabel+Extension.h
-//  iOS_ALL_Demo
-//
-//  Created by Ken_lu on 02/09/2017.
-//  Copyright © 2017 Ken lu. All rights reserved.
-//
+
+#pragma mark 字体加粗/倾斜
+/*
+ * label.font = [UIFont fontWithName:@"Helvetica-Bold" size:15];
+ * Helvetica-Bold还可以换成
+ * "Arial-BoldMT",
+ * ArialMT,
+ * "Arial-ItalicMT",
+ * "Arial-BoldItalicMT等等
+ * 字体族科后面加-Bold就是加粗 加-Oblique就是倾斜 
+ */
+
+#pragma mark 文本自动收缩
+/*
+ * minimumScaleFactor 设置最小收缩比例，如果Label宽度小于文字长度时，文字进行收缩，收缩超过比例后，停止收缩。
+ * minimumFontSize 设置最小收缩字号，如果label宽度小于文字长度时，文字字号减小，低于设定字号以后，不再减小。
+ * label.adjustsLetterSpacingToFitWidth = YES; 改变字母之间的间距来适应Label大小
+ * label.adjustsFontSizeToFitWidth = YES; 设置字体大小适应label宽度
+ */
+
 
 #import <UIKit/UIKit.h>
 
 @interface UILabel (Extension)
-/**
- 最大显示宽度
- */
-@property (nonatomic, assign) CGFloat qsConstrainedWidth;
-//
-//
-///**
-// 行间距
-// */
-@property (nonatomic, assign) CGFloat qsLineSpacing;
-
-- (BOOL)qs_adjustTextToFitLines:(NSInteger)numberOfLines;
-
-// -----
 
 /**
  自适应的高度
@@ -58,5 +57,12 @@
  @param lineSpacing 行间距大小
  */
 - (void)lineSpacingWithFloat:(CGFloat)lineSpacing;
+
+/**
+ 根据图片，设置花纹，渐变字体
+
+ @param patternImage 花纹图片、渐变图...
+ */
+- (void)settitleColorPatternImage:(UIImage *_Nonnull)patternImage;
 
 @end

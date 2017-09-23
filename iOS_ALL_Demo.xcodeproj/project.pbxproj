@@ -12,6 +12,7 @@
 		A923E60C1F71A39800567E96 /* tableViewInCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = A923E60B1F71A39800567E96 /* tableViewInCell2.m */; };
 		A923E60E1F71A69000567E96 /* tableViewInCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = A923E60D1F71A69000567E96 /* tableViewInCell2.xib */; };
 		A923E6111F71E6C600567E96 /* UISearchController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A923E6101F71E6C600567E96 /* UISearchController+Category.m */; };
+		A9282A141F75AE35009C2659 /* UITextField+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A9282A131F75AE35009C2659 /* UITextField+Category.m */; };
 		A92C88431F5AA9EB00CD02C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C88421F5AA9EB00CD02C4 /* main.m */; };
 		A92C88461F5AA9EB00CD02C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C88451F5AA9EB00CD02C4 /* AppDelegate.m */; };
 		A92C884E1F5AA9EB00CD02C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A92C884D1F5AA9EB00CD02C4 /* Assets.xcassets */; };
@@ -63,6 +64,8 @@
 		A923E60D1F71A69000567E96 /* tableViewInCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = tableViewInCell2.xib; sourceTree = "<group>"; };
 		A923E60F1F71E6C600567E96 /* UISearchController+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchController+Category.h"; sourceTree = "<group>"; };
 		A923E6101F71E6C600567E96 /* UISearchController+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchController+Category.m"; sourceTree = "<group>"; };
+		A9282A121F75AE35009C2659 /* UITextField+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Category.h"; sourceTree = "<group>"; };
+		A9282A131F75AE35009C2659 /* UITextField+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Category.m"; sourceTree = "<group>"; };
 		A92C883E1F5AA9EB00CD02C4 /* iOS_ALL_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_ALL_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A92C88421F5AA9EB00CD02C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A92C88441F5AA9EB00CD02C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -226,6 +229,8 @@
 				A92C88611F5AB0E300CD02C4 /* Config.h */,
 				A92C88851F5AB70800CD02C4 /* UILabel+Extension.h */,
 				A92C88861F5AB70800CD02C4 /* UILabel+Extension.m */,
+				A9282A121F75AE35009C2659 /* UITextField+Category.h */,
+				A9282A131F75AE35009C2659 /* UITextField+Category.m */,
 				A9775E741F6C98CC00A1FEDE /* UITableView+Category.h */,
 				A9775E751F6C98CC00A1FEDE /* UITableView+Category.m */,
 				A9775E771F6C9D8A00A1FEDE /* UITableViewCell+Category.h */,
@@ -447,6 +452,7 @@
 				A9775E681F6B03F900A1FEDE /* NSAttributedString+Extension.m in Sources */,
 				A92C88761F5AB0E300CD02C4 /* UIViewController+Extension.m in Sources */,
 				A92C888A1F5AC70B00CD02C4 /* TableViewController.m in Sources */,
+				A9282A141F75AE35009C2659 /* UITextField+Category.m in Sources */,
 				A9775E761F6C98CC00A1FEDE /* UITableView+Category.m in Sources */,
 				A92C88AF1F5B860700CD02C4 /* View+MASAdditions.m in Sources */,
 				A92C88AC1F5B860700CD02C4 /* MASViewConstraint.m in Sources */,

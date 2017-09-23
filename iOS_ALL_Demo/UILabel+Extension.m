@@ -60,6 +60,11 @@
     self.attributedText = attributedString;
 }
 
+- (void)settitleColorPatternImage:(UIImage *_Nonnull)patternImage{
+    UIColor *titleColor = [UIColor colorWithPatternImage:patternImage];
+    self.textColor= titleColor;
+}
+
 // -------
 
 /**
@@ -123,43 +128,5 @@
     self.bounds = CGRectMake(0, 0, textSize.width, textSize.height);
     return isLimitedToLines;
 }
-
-
-//- (BOOL)qs_adjustTextToFitLines:(NSInteger)numberOfLines lineSpacing:(CGFloat)lineSpacing width:(CGFloat)constraineWidth textframe:(CGRect *)textframe{
-//    
-//    if (!self.text || self.text.length == 0) {
-//        return NO;
-//    }
-//    
-//    self.numberOfLines = numberOfLines;
-//    BOOL isLimitedToLines = NO;
-//    
-//    CGSize textSize = [self.text textSizeWithFont:self.font numberOfLines:numberOfLines lineSpacing:lineSpacing constrainedWidth:constraineWidth isLimitedToLines:&isLimitedToLines];
-//    
-//    // 单行的情况
-//    if (fabs(textSize.height - self.font.lineHeight) < 0.00001f) {
-//        lineSpacing = 0.0f;
-//    }
-//    
-//    // 设置文字的属性
-//    NSMutableAttributedString * attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
-//    
-//    NSMutableParagraphStyle * paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-//    [paragraphStyle setLineSpacing:lineSpacing];
-//    paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;//结尾部分的内容以……方式省略
-//    
-//    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, self.text.length)];
-//    [attributedString addAttribute:NSForegroundColorAttributeName value:self.textColor range:NSMakeRange(0, self.text.length)];
-//    [attributedString addAttribute:NSFontAttributeName value:self.font range:NSMakeRange(0, self.text.length)];
-//    [self setAttributedText:attributedString];
-//    
-//    
-//    self.frame = CGRectMake(0, 0, textSize.width, textSize.height);
-//    if (textframe) {
-//        *textframe = self.frame;
-//    }
-//    
-//    return isLimitedToLines;
-//}
 
 @end
