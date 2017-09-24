@@ -1,10 +1,22 @@
-//
-//  UIImage+KKImage.h
-//  SeekStar
-//
-//  Created by Ken_lu on 17/1/7.
-//  Copyright © 2017年 模特. All rights reserved.
-//
+
+#pragma mark 将图片保存到相册
+/*
+ * ① UIImageWriteToSavedPhotosAlbum(image, self, @selector(imageSavedToPhotosAlbum:didFinishSavingWithError:contextInfo:), nil);
+ *
+ * ②
+  // image:保存的图片
+  // self:保存以后的target
+  // @selector:保存以后的回调
+  // contextInfo:??
+ - (void)imageSavedToPhotosAlbum:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo{
+     NSString *message = @"";
+     if (!error) {
+         message = @"成功保存到相册";
+     }else{
+         message = [error description];
+     }
+ }
+ */
 
 #import <UIKit/UIKit.h>
 
@@ -43,25 +55,3 @@
 + (UIImage *_Nonnull)imageWithColor:(UIColor *_Nonnull)color;
 
 @end
-
-#pragma mark - 记录系统的一些方法
-// 将图片保存到手机相册
-// image:保存的图片
-// self:保存以后的target
-// @selector:保存以后的回调
-// contextInfo:??
-// imageSavedToPhotosAlbum:didFinishSavingWithError:contextInfo:
-// UIImageWriteToSavedPhotosAlbum(image, self, @selector(imageSavedToPhotosAlbum:didFinishSavingWithError:contextInfo:), nil);
-/*
- 实现imageSavedToPhotosAlbum:didFinishSavingWithError:contextInfo:方法
- - (void)imageSavedToPhotosAlbum:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo{
- NSString *message = @"";
- if (!error) {
- message = @"成功保存到相册";
- }else{
- message = [error description];
- }
- }
- */
-// ---------------------------------------------------------------------------------------
-// ---------------------------------------------------------------------------------------

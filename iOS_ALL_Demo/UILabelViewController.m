@@ -83,6 +83,8 @@
     [button addTarget:self action:@selector(touchButton) forControlEvents:UIControlEventTouchUpInside];
     [button setCornerRadius:CGSizeMake(20, 30) type:UIRectCornerTopLeft|UIRectCornerTopRight|UIRectCornerBottomLeft];
     
+    
+    
     UITextField *textTF1 = [[UITextField alloc] initWithFrame:CGRectMake(100, 300, 50, 50)];
     self.textTF1 = textTF1;
     textTF1.backgroundColor = [UIColor purpleColor];
@@ -104,6 +106,11 @@
     
     [self.textTF1 resignFirstResponder];
     [self.textTF2 resignFirstResponder];
+    
+
+    [UIView animateWithDuration:0.0 animations:^{
+        self.textTF1.transform = CGAffineTransformRotate(self.textTF1.transform, M_PI_4);//在当前的head.transform的基础上再旋转
+    }];
 }
 
 @end

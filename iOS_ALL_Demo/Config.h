@@ -1,10 +1,52 @@
-//
-//  KKConfig.h
-//  SeekStar
-//
-//  Created by Ken_lu on 17/1/5.
-//  Copyright © 2017年 模特. All rights reserved.
-//
+
+#pragma mark 宏(define)与常量(const)的正确使用
+/*
+ * http://blog.csdn.net/sunnyboy9/article/details/50739328
+ *
+ * 当我们想全局共用一些数据时，可以用宏、变量、常量
+ * #define HSCoder @"汉斯哈哈哈" 宏
+ * NSString *HSCoder = @"汉斯哈哈哈"; 变量
+ * 常量四种写法：
+       static const NSString *HSCoder = @"汉斯哈哈哈";
+       const NSString *HSCoder = @"汉斯哈哈哈";
+       NSString const *HSCoder = @"汉斯哈哈哈";
+       NSString * const HSCoder = @"汉斯哈哈哈";
+ *
+ *
+ * 常量区分
+ * 全局常量：不管你定义在任何文件夹，外部都能访问
+       #import "ViewController.h"
+       const NSString *HSCoder = @"汉斯哈哈哈";
+ *
+ * 局部常量：用static修饰后，不能提供外界访问
+       #import "ViewController.h"
+       static const NSString *HSCoder = @"汉斯哈哈哈";
+ *
+ *
+ * const修饰位置不同，代表什么？
+       1.const NSString *HSCoder = @"汉斯哈哈哈";
+       2.NSString const *HSCoder = @"汉斯哈哈哈";
+       3.NSString * const HSCoder = @"汉斯哈哈哈";
+ 
+       1.const NSString *HSCoder = @"汉斯哈哈哈";
+       "*HSCoder"不能被修改， "HSCoder"能被修改
+ 
+       2.NSString const *HSCoder = @"汉斯哈哈哈";
+       "*HSCoder"不能被修改， "HSCoder"能被修改
+ 
+       3.NSString * const HSCoder = @"汉斯哈哈哈";
+       "HSCoder"不能被修改，"*HSCoder"能被修改
+ 
+       注意：1和2其实没什么区别
+       结论：const右边的总不能被修改
+      
+       所以一般我们定义一个常量又不想被修改应该这样：
+       NSString * const HSCoder = @"汉斯哈哈哈";
+ *
+ *
+ *
+ */
+
 
 #ifndef Config_h
 #define Config_h

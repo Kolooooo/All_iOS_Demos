@@ -45,17 +45,33 @@ UITableViewDataSource>
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 0) {
-        UILabelViewController *vc = [[UILabelViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
-    }
-    else if (indexPath.row == 1) {
-        TableViewController *vc = [[TableViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
-    }
-    else if (indexPath.row == 2) {
-        AutoLayoutViewController *vc = [AutoLayoutViewController viewControllerWithStoryboardName:@"AutoLayoutViewController" identifier:@"AutoLayoutViewController"];
-        [self.navigationController pushViewController:vc animated:YES];
+    switch (indexPath.row) {
+        case 0:{
+            UILabelViewController *vc = [[UILabelViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 1:{
+            TableViewController *vc = [[TableViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 2:{
+            AutoLayoutViewController *vc = [AutoLayoutViewController viewControllerWithStoryboardName:@"AutoLayoutViewController" identifier:@"AutoLayoutViewController"];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 3:{
+            [self.navigationController pushViewController:[[NSClassFromString(@"UITextFieldViewController") alloc] init] animated:YES];
+            break;
+        }
+        case 4:{
+            [self.navigationController pushViewController:[[NSClassFromString(@"UIBezierPathViewController") alloc] init] animated:YES];
+            break;
+        }
+            
+        default:
+            break;
     }
 }
 
@@ -64,6 +80,8 @@ UITableViewDataSource>
                     @"UILabel",
                     @"UITableViewController",
                     @"AutoLayoutViewController",
+                    @"UITextFieldViewController",
+                    @"UIBezierPathViewController"
                     ];
 }
 

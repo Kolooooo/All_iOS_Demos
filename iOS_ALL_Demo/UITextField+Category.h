@@ -154,4 +154,18 @@
 
 @interface UITextField (Category)
 
+/**
+ 设置Placeholder 字体颜色
+
+ @param color 字体颜色
+ */
+- (void)setPlaceholderColor:(UIColor *_Nonnull)color;
+
+/**
+ 设置Placeholder 字体
+
+ @param placeholderFont 字体
+ */
+- (void)setPlaceholderFont:(UIFont *_Nonnull)placeholderFont;
+
 @end

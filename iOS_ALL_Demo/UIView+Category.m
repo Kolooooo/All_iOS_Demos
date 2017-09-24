@@ -6,11 +6,11 @@
 //  Copyright © 2016年 sengo. All rights reserved.
 //
 
-#import "UIView+Extension.h"
+#import "UIView+Category.h"
 #import <sys/utsname.h>
 #import <AdSupport/AdSupport.h>
 
-@implementation UIView (Extension)
+@implementation UIView (Category)
 
 
 - (UIViewController *_Nonnull)viewController{
@@ -26,8 +26,8 @@
     return viewController;
 }
 
-- (CGRect)rectForWindow{
-    UIWindow * window=[[[UIApplication sharedApplication] delegate] window];
+- (CGRect)rectFromWindow{
+    UIWindow * window = [[[UIApplication sharedApplication] delegate] window];
     CGRect rect = [self convertRect:self.bounds toView:window];
     return rect;
 }
@@ -38,14 +38,12 @@
     NSLog(@"%@", description);
 }
 
-- (instancetype _Nonnull)setCornerRadius:(CGSize)cornerRadii type:(UIRectCorner)corners{
+- (void)setCornerRadius:(CGSize)cornerRadii type:(UIRectCorner)corners{
     UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:corners cornerRadii:cornerRadii];
     CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
     maskLayer.frame = self.bounds;
     maskLayer.path = maskPath.CGPath;
     self.layer.mask = maskLayer;
-    
-    return self;
 }
 
 - (NSString *)showViewHierarchyWithlevel:(NSInteger)level{
@@ -211,66 +209,6 @@
     
     NSAssert(NO, @"view of viewIndex is null!!!");
     return nil;
-}
-
-- (void)setX:(CGFloat)x {
-    CGRect frame = self.frame;
-    frame.origin.x = x;
-    self.frame = frame;
-}
-
-- (CGFloat)x {
-    return self.frame.origin.x;
-}
-
-- (void)setY:(CGFloat)y {
-    CGRect frame = self.frame;
-    frame.origin.y = y;
-    self.frame = frame;
-}
-
-- (CGFloat)y {
-    return self.frame.origin.y;
-}
-
-- (void)setWidth:(CGFloat)width {
-    CGRect frame = self.frame;
-    frame.size.width = width;
-    self.frame = frame;
-}
-
-- (CGFloat)width {
-    return self.frame.size.width;
-}
-
-- (void)setHeight:(CGFloat)height {
-    CGRect frame = self.frame;
-    frame.size.height = height;
-    self.frame = frame;
-}
-
-- (CGFloat)height {
-    return self.frame.size.height;
-}
-
-- (void)setCenterX:(CGFloat)centerX {
-    CGPoint center = self.center;
-    center.x = centerX;
-    self.center = center;
-}
-
-- (CGFloat)centerX {
-    return self.center.x;
-}
-
-- (void)setCenterY:(CGFloat)centerY {
-    CGPoint center = self.center;
-    center.y = centerY;
-    self.center = center;
-}
-
-- (CGFloat)centerY {
-    return self.center.y;
 }
 
 @end

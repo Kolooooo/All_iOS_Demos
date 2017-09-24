@@ -22,7 +22,7 @@
                                                   paragraphSpacing:(CGFloat)paragraphSpacing;
 
 /**
- 修改文本文字
+ 修改文本文字颜色
  
  @param text 文本
  @param color 修改文本文字的颜色

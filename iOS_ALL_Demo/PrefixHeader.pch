@@ -10,7 +10,8 @@
 #define PrefixHeader_pch
 
 #import "UILabel+Extension.h"
-#import "UIView+Extension.h"
+#import "UIView+Category.h"
+#import "UIView+Frame.h"
 #import "NSString+Extension.h"
 #import "UITableView+Category.h"
 #import "UITableViewCell+Category.h"
@@ -19,6 +20,7 @@
 #import "NSArray+Category.h"
 #import "NSObject+Extension.h"
 #import "UIButton+Category.h"
+#import "UITextField+Category.h"
 
 
 #import "Config.h"

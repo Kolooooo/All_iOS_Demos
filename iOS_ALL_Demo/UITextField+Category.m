@@ -10,5 +10,12 @@
 
 @implementation UITextField (Category)
 
+- (void)setPlaceholderColor:(UIColor *_Nonnull)color{
+    [self setValue:color forKeyPath:@"_placeholderLabel.textColor"];
+}
+
+- (void)setPlaceholderFont:(UIFont *_Nonnull)placeholderFont{
+    [self setValue:placeholderFont forKeyPath:@"_placeholderLabel.font"];
+}
 
 @end
