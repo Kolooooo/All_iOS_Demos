@@ -55,6 +55,14 @@
                                     <constraint firstItem="c8m-Y8-GoO" firstAttribute="top" secondItem="6P6-qJ-K08" secondAttribute="top" id="ueU-dd-3Rh"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSG-CJ-6fD">
+                                <rect key="frame" x="126" y="204" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="touchKen:" destination="sJg-qq-yR6" eventType="touchUpInside" id="ZAk-QU-eDK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

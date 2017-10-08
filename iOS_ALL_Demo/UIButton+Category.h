@@ -11,6 +11,6 @@
 @interface UIButton (Category)
 
 /// 按钮文字在左边，iocn 在右边的布局
-- (void)titleOnLeftAndIconOnRight;
+- (void)setTitleOnLeftIconOnRight;
 
 @end

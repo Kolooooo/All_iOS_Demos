@@ -15,7 +15,7 @@
     return [[objectClass alloc] init];
 }
 
-+ (NSArray<NSString *> *_Nonnull)array_SomeTextLocationWith:(NSString *_Nonnull)text searchText:(NSString *_Nonnull)searchText{
++ (NSArray<NSString *> *_Nonnull)__array_SomeTextLocationWith:(NSString *_Nonnull)text searchText:(NSString *_Nonnull)searchText{
     NSString *replaceSign = @"+";
     
     NSString *replacedText = [text stringByReplacingOccurrencesOfString:searchText withString:replaceSign];

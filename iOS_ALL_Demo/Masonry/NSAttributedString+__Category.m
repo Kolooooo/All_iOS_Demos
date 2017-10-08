@@ -1,14 +1,8 @@
-//
-//  NSAttributedString+Extension.m
-//  iOS_ALL_Demo
-//
-//  Created by Ken_lu on 15/09/2017.
-//  Copyright © 2017 Ken lu. All rights reserved.
-//
 
-#import "NSAttributedString+Extension.h"
 
-@implementation NSAttributedString (Extension)
+#import "NSAttributedString+__Category.h"
+
+@implementation NSAttributedString (__Category)
 
 + (instancetype _Nonnull)attributedString_ParagraphSpacingWithText:(NSString *_Nonnull)text paragraphSpacing:(CGFloat)paragraphSpacing{
     NSAttributedString *attributedText = [[NSAttributedString alloc] init];

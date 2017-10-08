@@ -20,6 +20,14 @@
 - (void)setBottomLineWidthEdgeInsets:(UIEdgeInsets)edgeInsets;
 
 /**
+ 滚动到指定坐标位置
+
+ @param point 坐标
+ @param animated 是否需要动画
+ */
+- (void)scrollToPoint:(CGPoint)point animated:(BOOL)animated;
+
+/**
  刷新某组某行
 
  @param section 组

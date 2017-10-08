@@ -1,15 +1,9 @@
-//
-//  NSAttributedString+Extension.h
-//  iOS_ALL_Demo
-//
-//  Created by Ken_lu on 15/09/2017.
-//  Copyright © 2017 Ken lu. All rights reserved.
-//
+
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface NSAttributedString (Extension)
+@interface NSAttributedString (__Category)
 
 /**
  段落间距，段与段之间需要有 "\n" 才有效果

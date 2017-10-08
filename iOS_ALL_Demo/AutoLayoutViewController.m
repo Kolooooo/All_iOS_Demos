@@ -19,7 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+}
+
+- (IBAction)touchKen:(UIButton *)sender {
     
 }
+
 
 @end

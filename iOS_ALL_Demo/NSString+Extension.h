@@ -24,7 +24,7 @@
  @param searchText 需要查找的文本
  @return 若干个文本位置坐标 NSString -> NSInteger
  */
-+ (NSArray<NSString *> *_Nonnull)array_SomeTextLocationWith:(NSString *_Nonnull)text searchText:(NSString *_Nonnull)searchText;
++ (NSArray<NSString *> *_Nonnull)__array_SomeTextLocationWith:(NSString *_Nonnull)text searchText:(NSString *_Nonnull)searchText;
 
 /**
  根据字体、行数、行间距和constrainedWidth计算文本占据的size

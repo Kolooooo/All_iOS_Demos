@@ -10,9 +10,9 @@
 
 @implementation UIImageView (Category)
 
-- (void)setAnimationWithImages:(NSArray<UIImage *> *_Nonnull)animationImages
-          animationRepeatCount:(NSInteger)animationRepeatCount
-             animationDuration:(NSTimeInterval)animationDuration{
+- (void)__setAnimationWithImages:(NSArray<UIImage *> *_Nonnull)animationImages
+            animationRepeatCount:(NSInteger)animationRepeatCount
+               animationDuration:(NSTimeInterval)animationDuration{
     // 设置图片的序列帧 图片数组
     self.animationImages = animationImages;
     //动画重复次数

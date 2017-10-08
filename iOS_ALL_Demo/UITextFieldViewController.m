@@ -26,8 +26,8 @@
     textTF.backgroundColor = [UIColor grayColor];
     textTF.frame = CGRectMake(0, 64, self.view.width, 300);
     textTF.placeholder = @"我是输入框啊";
-    [textTF setPlaceholderColor:[UIColor orangeColor]];
-    [textTF setPlaceholderFont:[UIFont boldSystemFontOfSize:14.0]];
+    [textTF __setPlaceholderColor:[UIColor orangeColor]];
+    [textTF __setPlaceholderFont:[UIFont boldSystemFontOfSize:14.0]];
     
     
     [self.view addSubview:textTF];

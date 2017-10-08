@@ -39,7 +39,7 @@
     self.lineHeightHeight.height  = [self.contantLabel lineHeight];
     
     
-    [[[UISearchController alloc] init] logPrivateProperty];
+    [[[UISearchController alloc] init] __logIvarList];
     [self.view logViewHierarchy];
 }
 
@@ -77,8 +77,9 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(200, 400, 100, 100);
     button.backgroundColor = [UIColor orangeColor];
+    button.borderColor = [UIColor redColor];
+    button.borderWidth = 1.0f;
     
-    [self.view addSubview:button];
     
     [button addTarget:self action:@selector(touchButton) forControlEvents:UIControlEventTouchUpInside];
     [button setCornerRadius:CGSizeMake(20, 30) type:UIRectCornerTopLeft|UIRectCornerTopRight|UIRectCornerBottomLeft];

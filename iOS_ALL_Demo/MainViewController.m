@@ -69,6 +69,11 @@ UITableViewDataSource>
             [self.navigationController pushViewController:[[NSClassFromString(@"UIBezierPathViewController") alloc] init] animated:YES];
             break;
         }
+        case 5:{
+            [self.navigationController pushViewController:[[NSClassFromString(@"RuntimeViewController") alloc] init] animated:YES];
+            break;
+        }
+            
             
         default:
             break;
@@ -81,7 +86,8 @@ UITableViewDataSource>
                     @"UITableViewController",
                     @"AutoLayoutViewController",
                     @"UITextFieldViewController",
-                    @"UIBezierPathViewController"
+                    @"UIBezierPathViewController",
+                    @"RuntimeViewController"
                     ];
 }
 

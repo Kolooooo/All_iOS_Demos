@@ -1,47 +1,37 @@
-//
-//  NSObject+common.h
-//  no
-//
-//  Created by Ken_lu on 17/1/2.
-//  Copyright © 2017年 Ken lu. All rights reserved.
-//
+
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
 
-#define KK_isNull(object) (object == NULL)
-#define KK_isNil(object) (object == nil)
-#define KK_isNilAndNull(object) (object == NULL && object == nil)
 
-
-@interface NSObject (common)
+@interface NSObject (__Common)
 
 #pragma mark - 数据持久化
 /// 删除NSUserDefaults所有记录
--(void)KK_removeAllUserDefaults;
+- (void)__removeAllUserDefaults;
 
 #pragma mark - 杂类模块
 /// 获取一个类的所有子类
 ///
 /// return 所有子类的数组
-+ (NSArray *)KK_getAllSubclasses;
++ (NSArray *)__getAllSubclasses;
 /// 手动更改iOS状态栏的颜色
-- (void)KK_setStatusBarBackgroundColor:(UIColor *)color;
+- (void)__setStatusBarBackgroundColor:(UIColor *)color;
 /// 禁止锁屏
--(void)KK_banLockScreen;
+- (void)__banLockScreen;
 /// 打印系统所有已注册的字体名称
-void KK_enumerateFonts();
+void __enumerateFonts();
 
 #pragma mark - 防御式编程
 /// 是否为null，如果为null，那么就返回YES
--(BOOL)KK_isNull;
+- (BOOL)__isNull;
 /// 是否为nil，如果为nil，那么就返回YES
--(BOOL)KK_isNil;
+- (BOOL)__isNil;
 /// 是否为nil && null，如果为nil && null，那么就返回YES
--(BOOL)KK_isNilAndNull;
+- (BOOL)__isNilAndNull;
 /// 是否一个都没有，如果是一个都没有，那么就返回YES
--(BOOL)KK_isNoOne;
+- (BOOL)__isNoOne;
 
 @end
 

@@ -1,16 +1,10 @@
-//
-//  UILabel+Extension.m
-//  iOS_ALL_Demo
-//
-//  Created by Ken_lu on 02/09/2017.
-//  Copyright © 2017 Ken lu. All rights reserved.
-//
 
-#import "UILabel+Extension.h"
+
+#import "UILabel+__Category.h"
 #import <objc/runtime.h>
-#import "KUILabel.h"
+#import "__UILabel.h"
 
-@implementation UILabel (Extension)
+@implementation UILabel (__Category)
 
 - (CGFloat)contantHeight{
     CGSize size = [self sizeThatFits:CGSizeMake(self.frame.size.width, MAXFLOAT)];

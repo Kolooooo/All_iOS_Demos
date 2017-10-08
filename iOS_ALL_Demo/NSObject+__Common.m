@@ -1,23 +1,17 @@
-//
-//  NSObject+common.m
-//  no
-//
-//  Created by Ken_lu on 17/1/2.
-//  Copyright © 2017年 Ken lu. All rights reserved.
-//
 
-#import "NSObject+KKCommon.h"
 
-@implementation NSObject (KKCommon)
+#import "NSObject+__Common.h"
+
+@implementation NSObject (__Common)
 
 #pragma mark - 数据持久化
--(void)KK_removeAllUserDefaults{
+- (void)__removeAllUserDefaults{
     NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
     [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
 }
 
 #pragma mark - 杂类模块
-+ (NSArray *)KK_getAllSubclasses{
++ (NSArray *)__getAllSubclasses{
     Class myClass = [self class];
     NSMutableArray *mySubclasses = [NSMutableArray array];
     unsigned int numOfClasses;
@@ -38,7 +32,7 @@
     return mySubclasses;
 }
 
-- (void)KK_setStatusBarBackgroundColor:(UIColor *)color{
+- (void)__setStatusBarBackgroundColor:(UIColor *)color{
     UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
     
     if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]){
@@ -47,14 +41,14 @@
     
 }
 
--(void)KK_banLockScreen{
+- (void)__banLockScreen{
     // 第一种
     [UIApplication sharedApplication].idleTimerDisabled = YES;
     // 第二种
     // [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
 }
 
-void KK_enumerateFonts(){
+void __enumerateFonts(){
     for(NSString *familyName in [UIFont familyNames]){
         NSLog(@"%@",familyName);
         NSArray *fontNames = [UIFont fontNamesForFamilyName:familyName];
@@ -65,20 +59,20 @@ void KK_enumerateFonts(){
 }
 
 #pragma mark - 防御式编程
--(BOOL)KK_isNull{
+- (BOOL)__isNull{
     return (self == NULL);
 }
 
--(BOOL)KK_isNil{
+- (BOOL)__isNil{
     return (self == nil);
 }
 
--(BOOL)KK_isNilAndNull{
+- (BOOL)__isNilAndNull{
     return (self == NULL && self == nil);
 }
 
--(BOOL)KK_isNoOne{
-    if ([self KK_isNilAndNull]) {
+- (BOOL)__isNoOne{
+    if ([self __isNilAndNull]) {
         NSAssert(NO, @"这个对象为空");
         return NO;
     }
