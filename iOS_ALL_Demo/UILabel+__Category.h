@@ -9,42 +9,42 @@
 
  @return 自适应高度数据
  */
-- (CGFloat)contantHeight;
+- (CGFloat)__contantHeight;
 
 /**
  每行文字的高度
 
  @return 每行文字的高度
  */
-- (CGFloat)lineHeight;
+- (CGFloat)__lineHeight;
 
 /**
  UILabel 文字左上角对齐
 
  @return 文字是否折叠，YES：折叠，NO：没有折叠
  */
-- (BOOL)alignLeftTop;
+- (BOOL)__alignLeftTop;
 
 /**
  设置字体间距
 
  @param wordSpacing 间距大小
  */
-- (void)wordSpacingWithFloat:(CGFloat)wordSpacing;
+- (void)__wordSpacingWithFloat:(CGFloat)wordSpacing;
 
 /**
  设置字体行间距
  
  @param lineSpacing 行间距大小
  */
-- (void)lineSpacingWithFloat:(CGFloat)lineSpacing;
+- (void)__lineSpacingWithFloat:(CGFloat)lineSpacing;
 
 /**
  根据图片，设置花纹，渐变字体
 
  @param patternImage 花纹图片、渐变图...
  */
-- (void)settitleColorPatternImage:(UIImage *_Nonnull)patternImage;
+- (void)__settitleColorPatternImage:(UIImage *_Nonnull)patternImage;
 
 @end
 

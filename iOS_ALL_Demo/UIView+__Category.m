@@ -1,19 +1,13 @@
-//
-//  UIView+SGExtension.m
-//  seller
-//
-//  Created by admin on 16/3/2.
-//  Copyright © 2016年 sengo. All rights reserved.
-//
 
-#import "UIView+Category.h"
+
+#import "UIView+__Category.h"
 #import <sys/utsname.h>
 #import <AdSupport/AdSupport.h>
 
-@implementation UIView (Category)
+@implementation UIView (__Category)
 
 
-- (UIViewController *_Nonnull)viewController{
+- (UIViewController *_Nonnull)__viewController{
     UIViewController *viewController = nil;
     UIResponder *next = self.nextResponder;
     while (next){
@@ -26,19 +20,19 @@
     return viewController;
 }
 
-- (CGRect)rectFromWindow{
+- (CGRect)__rectFromWindow{
     UIWindow * window = [[[UIApplication sharedApplication] delegate] window];
     CGRect rect = [self convertRect:self.bounds toView:window];
     return rect;
 }
 
-- (void)logViewHierarchy{
-    NSString *description = [self showViewHierarchyWithlevel:0];
+- (void)__logViewHierarchy{
+    NSString *description = [self __showViewHierarchyWithlevel:0];
 
     NSLog(@"%@", description);
 }
 
-- (void)setCornerRadius:(CGSize)cornerRadii type:(UIRectCorner)corners{
+- (void)__setCornerRadius:(CGSize)cornerRadii type:(UIRectCorner)corners{
     UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:corners cornerRadii:cornerRadii];
     CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
     maskLayer.frame = self.bounds;
@@ -46,7 +40,7 @@
     self.layer.mask = maskLayer;
 }
 
-- (NSString *)showViewHierarchyWithlevel:(NSInteger)level{
+- (NSString *)__showViewHierarchyWithlevel:(NSInteger)level{
     NSMutableString * description = [NSMutableString string];
     NSMutableString * indent = [NSMutableString string];
     
@@ -56,14 +50,14 @@
     
     [description appendFormat:@"\n%@%@", indent, [self description]];
     for (UIView * item in self.subviews){
-        [description appendFormat:@"%@", [item showViewHierarchyWithlevel:level + 1]];
+        [description appendFormat:@"%@", [item __showViewHierarchyWithlevel:level + 1]];
     }
     
     return description.copy;
 }
 
 #pragma mark - 添加查看测试信息按钮
--(void)addDebugInfoButtonToWindowWithRect:(CGRect)rect color:(UIColor *_Nonnull)color{
+-(void)__addDebugInfoButtonToWindowWithRect:(CGRect)rect color:(UIColor *_Nonnull)color{
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setFrame:rect];
     btn.backgroundColor = color;
@@ -197,11 +191,11 @@
     return deviceModel;
 }
 
-+ (instancetype _Nonnull)viewFromXib {
++ (instancetype _Nonnull)__viewFromXib {
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
 }
 
-+ (instancetype _Nullable)viewFromXibWithViewIndex:(NSInteger)viewIndex {
++ (instancetype _Nullable)__viewFromXibWithViewIndex:(NSInteger)viewIndex {
     NSArray *xibViews = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil];
     if (xibViews.count > viewIndex) {
         return xibViews[viewIndex];

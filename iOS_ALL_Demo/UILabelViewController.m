@@ -30,30 +30,30 @@
 }
 
 - (void)showTheMethod{
-    [self.contantLabel wordSpacingWithFloat:10];
-    [self.contantLabel lineSpacingWithFloat:10];
-    [self.contantLabel alignLeftTop];
+    [self.contantLabel __wordSpacingWithFloat:10];
+    [self.contantLabel __lineSpacingWithFloat:10];
+    [self.contantLabel __alignLeftTop];
     
     
-    self.contantHeightView.height = [self.contantLabel contantHeight];
-    self.lineHeightHeight.height  = [self.contantLabel lineHeight];
+    self.contantHeightView.height = [self.contantLabel __contantHeight];
+    self.lineHeightHeight.height  = [self.contantLabel __lineHeight];
     
     
     [[[UISearchController alloc] init] __logIvarList];
-    [self.view logViewHierarchy];
+    [self.view __logViewHierarchy];
 }
 
 - (void)initUI{
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.contantLabel = [[UILabel alloc] init];
-    self.contantLabel.frame = CGRectMake(0, 64, ScreenWidth, 500);
+    self.contantLabel.frame = CGRectMake(0, 64, __ScreenWidth, 500);
     self.contantLabel.backgroundColor = [UIColor grayColor];
     self.contantLabel.numberOfLines = 0;
     self.contantLabel.text = @"我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角。\n 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角, 我需要对齐到左上角。";
     
     self.contantHeightLabel = [[UILabel alloc] init];
-    self.contantHeightLabel.frame = CGRectMake(0, 0, ScreenWidth, 0);
+    self.contantHeightLabel.frame = CGRectMake(0, 0, __ScreenWidth, 0);
     self.contantHeightLabel.backgroundColor = [UIColor brownColor];
     self.contantHeightLabel.numberOfLines = 0;
     self.contantHeightLabel.text = @"通过文字属性和宽度，计算文本高度, 通过文字属性和宽度，计算文本高度, 通过文字属性和宽度，计算文本高度, 通过文字属性和宽度，计算文本高度, 通过文字属性和宽度，计算文本高度, 通过文字属性和宽度，计算文本高度, 通过文字属性和宽度，计算文本高度, 通过文字属性和宽度，计算文本高度。";
@@ -82,7 +82,7 @@
     
     
     [button addTarget:self action:@selector(touchButton) forControlEvents:UIControlEventTouchUpInside];
-    [button setCornerRadius:CGSizeMake(20, 30) type:UIRectCornerTopLeft|UIRectCornerTopRight|UIRectCornerBottomLeft];
+    [button __setCornerRadius:CGSizeMake(20, 30) type:UIRectCornerTopLeft|UIRectCornerTopRight|UIRectCornerBottomLeft];
     
     
     

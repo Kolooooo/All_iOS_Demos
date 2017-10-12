@@ -42,8 +42,8 @@
                    logoCornerRadius:(CGFloat)cornerRadius {
     UIImage *qrCodeImage = [UIImage createQrCodeWithString:string imageSize:imageSize];
     UIImage *backgroundImage = [UIImage pureColorImageWithSize:logoSize color:[UIColor whiteColor] cornerRadius:cornerRadius];
-    UIImage *newLogoImage = [backgroundImage addWatermarkImage:logoImage size:CGSizeMake(logoSize.width - 5, logoSize.height - 5)];
-    UIImage *resultImage = [qrCodeImage addWatermarkImage:newLogoImage size:logoSize];
+    UIImage *newLogoImage = [backgroundImage __addWatermarkImage:logoImage size:CGSizeMake(logoSize.width - 5, logoSize.height - 5)];
+    UIImage *resultImage = [qrCodeImage __addWatermarkImage:newLogoImage size:logoSize];
     return resultImage;
 }
 
@@ -52,8 +52,8 @@
                             logoSize:(CGSize)logoSize
                     logoCornerRadius:(CGFloat)cornerRadius {
     UIImage *backgroundImage = [UIImage pureColorImageWithSize:logoSize color:[UIColor whiteColor] cornerRadius:cornerRadius];
-    UIImage *newLogoImage = [backgroundImage addWatermarkImage:logoImage size:CGSizeMake(logoSize.width - 5, logoSize.height - 5)];
-    UIImage *resultImage = [currentImage addWatermarkImage:newLogoImage size:logoSize];
+    UIImage *newLogoImage = [backgroundImage __addWatermarkImage:logoImage size:CGSizeMake(logoSize.width - 5, logoSize.height - 5)];
+    UIImage *resultImage = [currentImage __addWatermarkImage:newLogoImage size:logoSize];
     return resultImage;
 }
 

@@ -1,16 +1,10 @@
-//
-//  NSString+Extension.m
-//  iOS_ALL_Demo
-//
-//  Created by Ken_lu on 08/09/2017.
-//  Copyright © 2017 Ken lu. All rights reserved.
-//
 
-#import "NSString+Extension.h"
 
-@implementation NSString (Extension)
+#import "NSString+__Category.h"
 
-- (id _Nonnull)objectFromClassName{
+@implementation NSString (__Category)
+
+- (id _Nonnull)__objectFromClassName{
     Class objectClass = NSClassFromString(self);
     return [[objectClass alloc] init];
 }
@@ -32,7 +26,7 @@
 }
 
 #pragma mark - 格式字符串验证
-- (BOOL)isValidateMobile {
+- (BOOL)__isValidateMobile {
     //手机号以13， 15，18开头，八个 \d 数字字符
     NSString *phoneRegex = @"^((13[0-9])|(15[^4,\\D])|(18[0,0-9])|(17[0-9])|(14[0-9]))\\d{8}$";
     NSPredicate *phoneNumber = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",phoneRegex];
@@ -44,8 +38,8 @@
     return isPhone;
 }
 
-#pragma mark - 根据字符串，计算文本高度
-- (CGSize)textSizeWithFont:(UIFont *_Nonnull)font
+#pragma mark 根据字符串，计算文本高度
+- (CGSize)__textSizeWithFont:(UIFont *_Nonnull)font
              numberOfLines:(NSInteger)numberOfLines
                lineSpacing:(CGFloat)lineSpacing
           constrainedWidth:(CGFloat)constrainedWidth

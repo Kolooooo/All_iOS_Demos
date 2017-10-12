@@ -1,32 +1,32 @@
 
 
-#ifndef Config_h
-#define Config_h
+#ifndef __Config_h
+#define __Config_h
 
 
 #pragma mark DEBUGLOG
 #ifdef DEBUG
-#define DEBUGLOG(...) NSLog(@"CLASS=%@, LINE=%d -> %@", [self class], __LINE__, [NSString stringWithFormat:__VA_ARGS__])
+#define DEBUGLOG(...) NSLog(@"Class = %@, Line = %d -> %@", [self class], __LINE__, [NSString stringWithFormat:__VA_ARGS__])
 #else
 #define DEBUGLOG(...) {}
 #endif
 
 
-#define WeakSelf __weak typeof(self) weakSelf = self;
-#define SharedAppDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
+#define __WeakSelf __weak typeof(self) weakSelf = self;
+#define __ApplicationDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
 
-#pragma mark 颜色
-#define RGBAColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
-#define HexRGBAlpha(rgbValue, a) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:(a)]
-/// 随机颜色
-#define KKRandomColor [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
+//#pragma mark 颜色
+//#define __RGBAColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+//#define __HexRGBAlpha(rgbValue, a) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:(a)]
+///// 随机颜色
+//#define __RandomColor [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
 
 
-#pragma mark - 尺寸
+#pragma mark - Frame
 #pragma mark Screen frame
-#define ScreenHeight [UIScreen mainScreen].bounds.size.height
-#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define __ScreenHeight [UIScreen mainScreen].bounds.size.height
+#define __ScreenWidth [UIScreen mainScreen].bounds.size.width
 
 
 #pragma mark 机型 
@@ -38,27 +38,27 @@
 /// 机器采用了retina屏幕，坐标是375, 667，屏幕像素750 x 1334，他们之间关系式1:2关系。即一个坐标对应2个像素。
 /// iPhone 6 plus
 /// 机器采用了retina屏幕，坐标是414, 736，屏幕像素1080 x 1920，他们之间关系式1:2.6关系。即一个坐标对应2.6个像素
-#define KKiPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
-#define KKiPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
-#define KKiPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
-#define KKiPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+#define __iPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+#define __iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define __iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+#define __iPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
 
 
 #pragma mark 机型尺寸适配
 /// 均已iphone6 的尺寸为基准计算机型尺寸
-#define KKiphoneXW(a) (KKiPhone5?(a*0.853):(KKiPhone6?(a):(KKiPhone6Plus?(a/0.906):(a*0.853))))
-#define KKiphoneXH(a) (KKiPhone5?(a*0.852):(KKiPhone6?(a):((KKiPhone6Plus?(a/0.906):(a*0.720)))))
+#define __iphoneXW(a) (KKiPhone5?(a*0.853):(KKiPhone6?(a):(KKiPhone6Plus?(a/0.906):(a*0.853))))
+#define __iphoneXH(a) (KKiPhone5?(a*0.852):(KKiPhone6?(a):((KKiPhone6Plus?(a/0.906):(a*0.720)))))
 
-#define KKiphoneXN(a) (KKiPhone5?(a*0.834):(KKiPhone6?(a):(KKiPhone6Plus?(a/0.897):(a*0.690))))
-#define KKiphoneXNT(a) (KKiPhone5?(a*0.821):(KKiPhone6?(a):(KKiPhone6Plus?(a/0.889):(a*0.662))))
-#define KKiphoneXT(a) (KKiPhone5?(a*0.840):(KKiPhone6?(a):(KKiPhone6Plus?(a/0.896):(a*0.697))))
+#define __iphoneXN(a) (KKiPhone5?(a*0.834):(KKiPhone6?(a):(KKiPhone6Plus?(a/0.897):(a*0.690))))
+#define __iphoneXNT(a) (KKiPhone5?(a*0.821):(KKiPhone6?(a):(KKiPhone6Plus?(a/0.889):(a*0.662))))
+#define __iphoneXT(a) (KKiPhone5?(a*0.840):(KKiPhone6?(a):(KKiPhone6Plus?(a/0.896):(a*0.697))))
 
-#define KKiphoneX(a,b,c)  (KKiPhone5?(a):(KKiPhone6?(b):(KKiPhone6Plus?(c):(a))))
-#define KKiphoneZ(a,b,c,d) (KKiPhone5?(a):(KKiPhone6?(b):(KKiPhone6Plus?(c):(d))))
-#define KKiphoneSize(a,b,c) CGSizeMake((a)*(c),(b)*(c))
+#define __iphoneX(a,b,c)  (KKiPhone5?(a):(KKiPhone6?(b):(KKiPhone6Plus?(c):(a))))
+#define __iphoneZ(a,b,c,d) (KKiPhone5?(a):(KKiPhone6?(b):(KKiPhone6Plus?(c):(d))))
+#define __iphoneSize(a,b,c) CGSizeMake((a)*(c),(b)*(c))
 
 
-#endif /* KKConfig_h */
+#endif /* __Config_h */
 
 
 

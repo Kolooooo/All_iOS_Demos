@@ -1,14 +1,8 @@
-//
-//  UIImageView+Category.m
-//  iOS_ALL_Demo
-//
-//  Created by Ken_lu on 24/09/2017.
-//  Copyright © 2017 Ken lu. All rights reserved.
-//
 
-#import "UIImageView+Category.h"
 
-@implementation UIImageView (Category)
+#import "UIImageView+__Category.h"
+
+@implementation UIImageView (__Category)
 
 - (void)__setAnimationWithImages:(NSArray<UIImage *> *_Nonnull)animationImages
             animationRepeatCount:(NSInteger)animationRepeatCount

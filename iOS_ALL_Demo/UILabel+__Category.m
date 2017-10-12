@@ -6,17 +6,17 @@
 
 @implementation UILabel (__Category)
 
-- (CGFloat)contantHeight{
+- (CGFloat)__contantHeight{
     CGSize size = [self sizeThatFits:CGSizeMake(self.frame.size.width, MAXFLOAT)];
     return size.height;
 }
 
-- (CGFloat)lineHeight{
+- (CGFloat)__lineHeight{
     CGFloat lineHeight = self.font.lineHeight;
     return lineHeight;
 }
 
-- (BOOL)alignLeftTop{
+- (BOOL)__alignLeftTop{
     CGFloat selfX = self.frame.origin.x;
     CGFloat selfY = self.frame.origin.y;
     CGFloat selfWidth = self.frame.size.width;
@@ -38,7 +38,7 @@
     }
 }
 
-- (void)wordSpacingWithFloat:(CGFloat)wordSpacing{
+- (void)__wordSpacingWithFloat:(CGFloat)wordSpacing{
     
     NSRange range = NSMakeRange(0, self.text.length);
     NSAttributedString *attributedString = [NSAttributedString attributedString_WordSpacingWithText:self.text wordSpacing:wordSpacing range:range];
@@ -46,7 +46,7 @@
     self.attributedText = attributedString;
 }
 
-- (void)lineSpacingWithFloat:(CGFloat)lineSpacing{
+- (void)__lineSpacingWithFloat:(CGFloat)lineSpacing{
     
     NSRange range = NSMakeRange(0, self.text.length);
     NSAttributedString *attributedString = [NSAttributedString attributedString_LineSpacingWithText:self.text lineSpacing:lineSpacing range:range];
@@ -54,7 +54,7 @@
     self.attributedText = attributedString;
 }
 
-- (void)settitleColorPatternImage:(UIImage *_Nonnull)patternImage{
+- (void)__settitleColorPatternImage:(UIImage *_Nonnull)patternImage{
     UIColor *titleColor = [UIColor colorWithPatternImage:patternImage];
     self.textColor= titleColor;
 }

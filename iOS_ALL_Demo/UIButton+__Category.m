@@ -1,18 +1,12 @@
-//
-//  UIButton+KKButton.m
-//  SeekStar
-//
-//  Created by Ken_lu on 17/1/5.
-//  Copyright © 2017年 模特. All rights reserved.
-//
 
-#import "UIButton+Category.h"
+
+#import "UIButton+__Category.h"
 #import <objc/runtime.h>
 
 
-@implementation UIButton (Category)
+@implementation UIButton (__Category)
 
-- (void)setTitleOnLeftIconOnRight{
+- (void)__setTitleOnLeftIconOnRight{
     CGFloat imageWidth = self.imageView.image.size.width;
     CGFloat titleLabelWidth = self.titleLabel.bounds.size.width;
     
@@ -27,8 +21,11 @@
      *   2.利用runtime 替换sendAction:to:forEvent: 方法成自定义的__sendAction:to:forEvent: 方法，其中加入打印代码。
      *   3.重新调用原来按钮事件的实现逻辑。
      */
+#ifdef DEBUG
     [self __exchangeMethodWithOriginSEL:@selector(sendAction:to:forEvent:)
                             exchangeSEL:@selector(__sendAction:to:forEvent:)];
+#else
+#endif
 }
 
 - (void)__sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event{

@@ -1,16 +1,10 @@
-//
-//  UIImage+Color.m
-//  ShareJobStudent
-//
-//  Created by Sunnyyoung on 15/8/16.
-//  Copyright (c) 2015年 GeekBean Technology Co., Ltd. All rights reserved.
-//
 
-#import "UIImage+Color.h"
 
-@implementation UIImage (Color)
+#import "UIImage+__Color.h"
 
-+ (UIImage *)imageWithColor:(UIColor *)color {
+@implementation UIImage (__Color)
+
++ (UIImage *)__imageWithColor:(UIColor *)color {
     CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -24,7 +18,7 @@
     return image;
 }
 
-- (UIColor *)colorAtPixel:(CGPoint)point {
+- (UIColor *)__colorAtPixel:(CGPoint)point {
     // Cancel if point is outside image coordinates
     if (!CGRectContainsPoint(CGRectMake(0.0f, 0.0f, self.size.width, self.size.height), point)) {
         return nil;
@@ -65,7 +59,7 @@
     return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
-- (BOOL)hasAlphaChannel {
+- (BOOL)__hasAlphaChannel {
     CGImageAlphaInfo alpha = CGImageGetAlphaInfo(self.CGImage);
     return (alpha == kCGImageAlphaFirst ||
             alpha == kCGImageAlphaLast ||

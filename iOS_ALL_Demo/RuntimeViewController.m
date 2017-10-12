@@ -1,13 +1,7 @@
-//
-//  RuntimeViewController.m
-//  iOS_ALL_Demo
-//
-//  Created by Ken_lu on 01/10/2017.
-//  Copyright © 2017 Ken lu. All rights reserved.
-//
+
 
 #import "RuntimeViewController.h"
-#import "UIButton+Category.h"
+#import "UIButton+__Category.h"
 
 @interface RuntimeViewController ()
 

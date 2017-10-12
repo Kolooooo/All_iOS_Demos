@@ -99,7 +99,7 @@ UITableViewDataSource>
     self.title = @"首页";
     
     self.tableView = [[UITableView alloc] init];
-    self.tableView.frame = CGRectMake(0, 0, ScreenWidth, 600);
+    self.tableView.frame = CGRectMake(0, 0, __ScreenWidth, 600);
     self.tableView.rowHeight = 50;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;

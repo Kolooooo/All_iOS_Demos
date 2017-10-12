@@ -103,7 +103,7 @@ UITableViewDataSource>
 
 - (void)initUI{
     self.tableView = [[UITableView alloc] init];
-    self.tableView.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight);
+    self.tableView.frame = CGRectMake(0, 0, __ScreenWidth, __ScreenHeight);
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerNib:[UINib nibWithNibName:@"TableViewCell2" bundle:nil] forCellReuseIdentifier:@"TableViewCell2"];
