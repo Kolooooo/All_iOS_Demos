@@ -30,7 +30,7 @@
 }
 
 - (void)takeThePhone:(NSString *_Nonnull)phoneNumber{
-    if ([phoneNumber isValidateMobile] == NO) {
+    if ([phoneNumber __isValidateMobile] == NO) {
         return;
     }
     

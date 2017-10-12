@@ -100,7 +100,7 @@
     self.numberOfLines = numberOfLines;
     BOOL isLimitedToLines = NO;
     
-    CGSize textSize = [self.text textSizeWithFont:self.font numberOfLines:self.numberOfLines lineSpacing:self.qsLineSpacing constrainedWidth:self.qsConstrainedWidth isLimitedToLines:&isLimitedToLines];
+    CGSize textSize = [self.text __textSizeWithFont:self.font numberOfLines:self.numberOfLines lineSpacing:self.qsLineSpacing constrainedWidth:self.qsConstrainedWidth isLimitedToLines:&isLimitedToLines];
     
     //单行的情况
     if (fabs(textSize.height - self.font.lineHeight) < 0.00001f) {
