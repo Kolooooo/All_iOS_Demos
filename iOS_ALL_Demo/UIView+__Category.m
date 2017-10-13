@@ -28,7 +28,7 @@
 
 - (void)__logViewHierarchy{
     NSString *description = [self __showViewHierarchyWithlevel:0];
-
+    
     NSLog(@"%@", description);
 }
 
