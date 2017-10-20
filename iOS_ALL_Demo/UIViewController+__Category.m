@@ -1,16 +1,10 @@
-//
-//  UIViewController+KKUIViewController.m
-//  SeekStar
-//
-//  Created by Ken_lu on 17/1/7.
-//  Copyright © 2017年 模特. All rights reserved.
-//
 
-#import "UIViewController+Extension.h"
 
-@implementation UIViewController (Extension)
+#import "UIViewController+__Category.h"
 
--(PushType)pushTypeOfCurrentViewController{
+@implementation UIViewController (__Category)
+
+- (PushType)__pushTypeOfCurrentViewController{
     NSArray *viewcontrollers = self.navigationController.viewControllers;
     if (viewcontrollers.count > 1){
         if ([viewcontrollers objectAtIndex:viewcontrollers.count - 1] == self){
@@ -24,12 +18,12 @@
     return PushTypeNone;
 }
 
-+ (__kindof UIViewController * _Nonnull)viewControllerWithStoryboardName:(NSString *_Nonnull)storyboardName identifier:(NSString *_Nonnull)identifier{
++ (__kindof UIViewController * _Nonnull)__viewControllerWithStoryboardName:(NSString *_Nonnull)storyboardName identifier:(NSString *_Nonnull)identifier{
     UIStoryboard *sb = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
     return [sb instantiateViewControllerWithIdentifier:identifier];
 }
 
-- (void)takeThePhone:(NSString *_Nonnull)phoneNumber{
+- (void)__takeThePhone:(NSString *_Nonnull)phoneNumber{
     if ([phoneNumber __isValidateMobile] == NO) {
         return;
     }

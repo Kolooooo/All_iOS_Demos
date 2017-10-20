@@ -1,14 +1,8 @@
-//
-//  UITableViewCell+Category.h
-//  iOS_ALL_Demo
-//
-//  Created by Ken_lu on 16/09/2017.
-//  Copyright © 2017 Ken lu. All rights reserved.
-//
+
 
 #import <UIKit/UIKit.h>
 
-@interface UITableViewCell (Category)
+@interface UITableViewCell (__Category)
 
 /**
  去掉UITableView中的某cell条分割线
@@ -17,9 +11,9 @@
  @param section section
  @param row row
  */
-- (void)removeBottomLineWithIndexPath:(NSIndexPath *_Nonnull)indexPath
-                              section:(NSInteger)section
-                                  row:(NSInteger)row;
+- (void)__removeBottomLineWithIndexPath:(NSIndexPath *_Nonnull)indexPath
+                                section:(NSInteger)section
+                                    row:(NSInteger)row;
 
 /**
  获取cell 的上级UITableView 视图
@@ -31,7 +25,6 @@
  
  More generally, Apple did not provide such public API for a reason. It is indeed best practice for the cell to use other mechanisms to avoid querying the tableView, like using properties that can be configured at runtime by the user of the class in tableView:cellForRowAtIndexPath:.
  */
-- (UITableView *_Nullable)getParentTableView;
-
+- (UITableView *_Nullable)__getParentTableView;
 
 @end

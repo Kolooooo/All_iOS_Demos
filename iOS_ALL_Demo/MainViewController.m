@@ -58,7 +58,7 @@ UITableViewDataSource>
             break;
         }
         case 2:{
-            AutoLayoutViewController *vc = [AutoLayoutViewController viewControllerWithStoryboardName:@"AutoLayoutViewController" identifier:@"AutoLayoutViewController"];
+            AutoLayoutViewController *vc = [AutoLayoutViewController __viewControllerWithStoryboardName:@"AutoLayoutViewController" identifier:@"AutoLayoutViewController"];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }

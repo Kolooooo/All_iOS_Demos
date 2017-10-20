@@ -12,7 +12,7 @@
 #import "UITableView+Category.h"
 #import "UITableViewCell+Category.h"
 #import "NSAttributedString+__Category.h"
-#import "UIViewController+Extension.h"
+#import "UIViewController+__Category.h"
 #import "NSArray+Category.h"
 #import "NSObject+__Common.h"
 #import "UIButton+__Category.h"

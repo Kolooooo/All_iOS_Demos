@@ -1,10 +1,4 @@
-//
-//  NSFileManager+Paths.h
-//  ShareJobStudent
-//
-//  Created by Sunnyyoung on 16/2/24.
-//  Copyright © 2016年 GeekBean Technology Co., Ltd. All rights reserved.
-//
+
 
 #import <Foundation/Foundation.h>
 

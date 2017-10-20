@@ -1,17 +1,10 @@
 
 
-#import "NSArray+Category.h"
+#import "NSArray+__Category.h"
 
-@implementation NSArray (Category)
+@implementation NSArray (__Category)
 
-- (void)logs{
-    id obj;
-    for (obj in self) {
-        NSLog(@"obj: \n%@", obj);
-    }
-}
-
-- (float)getArraySomeNumWithType:(GetArraySomeNumType)getArraySomeNumType{
+- (CGFloat)__getArraySomeNumWithType:(GetArraySomeNumType)getArraySomeNumType{
     if (getArraySomeNumType == GetArraySomeNumTypeSum) {
         return [[self valueForKeyPath:@"@sum.floatValue"] floatValue];
     }

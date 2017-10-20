@@ -5,7 +5,6 @@
 
 #import "NSData+AES.h"
 #import "NSString+AES.h"
-#import "NSString+MD5.h"
 #import "NSString+__Hash.h"
 
 #endif

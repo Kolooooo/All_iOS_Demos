@@ -1,14 +1,8 @@
-//
-//  UISearchViewController+Category.m
-//  iOS_ALL_Demo
-//
-//  Created by Ken_lu on 20/09/2017.
-//  Copyright © 2017 Ken lu. All rights reserved.
-//
 
-#import "UISearchController+Category.h"
 
-@implementation UISearchController (Category)
+#import "UISearchController+__Category.h"
+
+@implementation UISearchController (__Category)
 
 - (void)setBackgroundColorWithImage:(UIImage *_Nonnull)image {
     // searchBar 背景颜色

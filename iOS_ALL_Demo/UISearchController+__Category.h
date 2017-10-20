@@ -1,12 +1,6 @@
-//
-//  UISearchViewController+Category.h
-//  iOS_ALL_Demo
-//
-//  Created by Ken_lu on 20/09/2017.
-//  Copyright © 2017 Ken lu. All rights reserved.
-//
 
-@interface UISearchController (Category)
+
+@interface UISearchController (__Category)
 
 /**
  根据图片，设置背景颜色
