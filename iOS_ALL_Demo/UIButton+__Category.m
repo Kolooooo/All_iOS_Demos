@@ -6,12 +6,27 @@
 
 @implementation UIButton (__Category)
 
-- (void)__setTitleOnLeftIconOnRight{
+- (void)__setTitleOnLeftIconOnRight:(CGFloat)spacing{
     CGFloat imageWidth = self.imageView.image.size.width;
     CGFloat titleLabelWidth = self.titleLabel.bounds.size.width;
     
-    [self setTitleEdgeInsets:UIEdgeInsetsMake(0, -imageWidth, 0, imageWidth)];
-    [self setImageEdgeInsets:UIEdgeInsetsMake(0, titleLabelWidth, 0, -titleLabelWidth)];
+    CGFloat spacing_0_5 = spacing * 0.5;
+    [self setTitleEdgeInsets:UIEdgeInsetsMake(0, -imageWidth - spacing_0_5, 0, imageWidth + spacing_0_5)];
+    [self setImageEdgeInsets:UIEdgeInsetsMake(0, titleLabelWidth + spacing_0_5, 0, -titleLabelWidth - spacing_0_5)];
+}
+
+- (void)__setImageTopAndTitleBottom:(CGFloat)spacing{
+    self.titleLabel.backgroundColor = [UIColor greenColor];
+    CGSize imageSize = self.imageView.frame.size;
+    CGSize titleSize = self.titleLabel.frame.size;
+    CGSize textSize = [self.titleLabel.text sizeWithFont:self.titleLabel.font];
+    CGSize frameSize = CGSizeMake(ceilf(textSize.width), ceilf(textSize.height));
+    if (titleSize.width + 0.5 < frameSize.width) {
+        titleSize.width = frameSize.width;
+    }
+    CGFloat totalHeight = (imageSize.height + titleSize.height + spacing);
+    self.imageEdgeInsets = UIEdgeInsetsMake(- (totalHeight - imageSize.height), 0.0, 0.0, - titleSize.width);
+    self.titleEdgeInsets = UIEdgeInsetsMake(0, - imageSize.width, - (totalHeight - titleSize.height), 0);
 }
 
 + (void)load{

@@ -1,10 +1,4 @@
-//
-//  NSArray+KKNSArray.h
-//  SeekStar
-//
-//  Created by Ken_lu on 17/1/7.
-//  Copyright © 2017年 模特. All rights reserved.
-//
+
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>

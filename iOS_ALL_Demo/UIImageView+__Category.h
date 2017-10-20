@@ -15,4 +15,13 @@
             animationRepeatCount:(NSInteger)animationRepeatCount
                animationDuration:(NSTimeInterval)animationDuration;
 
+/**
+ 设置毛玻璃效果
+
+ @param frame frame
+ @param style 毛玻璃类型
+ @param visualEffectView 返回的毛玻璃视图对象，正对它的contentView 还可以在毛玻璃上添加视图
+ */
+- (void)__setblurStyleWithFrame:(CGRect)frame style:(UIBlurEffectStyle)style returnVisualEffectView:(UIVisualEffectView *_Nullable*_Nullable)visualEffectView;
+
 @end

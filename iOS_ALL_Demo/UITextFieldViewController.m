@@ -29,7 +29,6 @@
     [textTF __setPlaceholderColor:[UIColor orangeColor]];
     [textTF __setPlaceholderFont:[UIFont boldSystemFontOfSize:14.0]];
     
-    
     [self.view addSubview:textTF];
 }
 

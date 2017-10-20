@@ -17,4 +17,11 @@
     [self startAnimating];
 }
 
+- (void)__setblurStyleWithFrame:(CGRect)frame style:(UIBlurEffectStyle)style returnVisualEffectView:(UIVisualEffectView **)visualEffectView{
+    UIVisualEffectView *visualEfView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:style]];
+    visualEfView.frame = frame;
+    *visualEffectView = visualEfView;
+    [self addSubview:visualEfView];
+}
+
 @end

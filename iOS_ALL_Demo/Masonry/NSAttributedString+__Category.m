@@ -4,52 +4,118 @@
 
 @implementation NSAttributedString (__Category)
 
-+ (instancetype _Nonnull)attributedString_ParagraphSpacingWithText:(NSString *_Nonnull)text paragraphSpacing:(CGFloat)paragraphSpacing{
-    NSAttributedString *attributedText = [[NSAttributedString alloc] init];
-    
-    NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
-    paraStyle.paragraphSpacing = paragraphSpacing;
-    NSDictionary *attrDict = @{
-                               NSParagraphStyleAttributeName: paraStyle
-                               };
-    attributedText = [[NSAttributedString alloc] initWithString:text attributes: attrDict];
-    
-    return attributedText;
-}
-
-+ (instancetype _Nonnull)attributedString_FontColorWithText:(NSString *_Nonnull)text color:(UIColor *_Nonnull)color range:(NSRange)range{
-    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc]initWithString:text];
-    
-    [attributedText addAttribute:NSForegroundColorAttributeName
-                          value:color
-                          range:range];
-    
-    return attributedText;
-}
-
-+ (instancetype _Nullable)attributedString_WordSpacingWithText:(NSString *_Nonnull)text wordSpacing:(CGFloat)wordSpacing range:(NSRange)range{
-    
-    if (text.length == 0) {
-        return nil;
+- (instancetype _Nonnull)__setFontSize:(CGFloat)fontSize{
+    if (!self.string || self.string.length == 0) {
+        return [[NSMutableAttributedString alloc] init];
     }
     
-    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc]initWithString:text];
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithAttributedString:self];
+    
+    NSRange range = NSMakeRange(0, self.string.length);
+    [attributedText addAttribute:NSFontAttributeName
+                           value:@(fontSize)
+                           range:range];
+    
+    return attributedText.copy;
+}
+
+- (instancetype _Nonnull)__setFontSize:(CGFloat)fontSize range:(NSRange)range{
+    if (!self.string || self.string.length == 0) {
+        return [[NSMutableAttributedString alloc] init];
+    }
+    
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithAttributedString:self];
+    
+    [attributedText addAttribute:NSFontAttributeName
+                           value:@(fontSize)
+                           range:range];
+    
+    return attributedText.copy;
+}
+
+- (instancetype _Nonnull)__setFontColor:(UIColor *_Nonnull)color{
+    if (!self.string || self.string.length == 0) {
+        return [[NSMutableAttributedString alloc] init];
+    }
+    
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithAttributedString:self];
+    
+    NSRange range = NSMakeRange(0, self.string.length);
+    [attributedText addAttribute:NSForegroundColorAttributeName
+                           value:color
+                           range:range];
+    
+    return attributedText.copy;
+}
+
+- (instancetype _Nonnull)__setFontColor:(UIColor *_Nonnull)color range:(NSRange)range{
+    if (!self.string || self.string.length == 0) {
+        return [[NSMutableAttributedString alloc] init];
+    }
+    
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithAttributedString:self];
+    
+    [attributedText addAttribute:NSForegroundColorAttributeName
+                           value:color
+                           range:range];
+    
+    return attributedText.copy;
+}
+
+- (instancetype _Nonnull)__setWordSpacing:(CGFloat)wordSpacing{
+    if (!self.string || self.string.length == 0) {
+        return [[NSMutableAttributedString alloc] init];
+    }
+    
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithAttributedString:self];
+    
+    NSRange range = NSMakeRange(0, self.string.length);
+    [attributedText addAttribute:NSKernAttributeName
+                           value:@(wordSpacing)
+                           range:range];
+    
+    return attributedText.copy;
+}
+
+- (instancetype _Nonnull)__setWordSpacing:(CGFloat)wordSpacing range:(NSRange)range{
+    if (!self.string || self.string.length == 0) {
+        return [[NSMutableAttributedString alloc] init];
+    }
+    
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithAttributedString:self];
     
     [attributedText addAttribute:NSKernAttributeName
                            value:@(wordSpacing)
                            range:range];
     
     
-    return attributedText;
+    return attributedText.copy;
 }
 
-+ (instancetype _Nullable)attributedString_LineSpacingWithText:(NSString *_Nonnull)text lineSpacing:(CGFloat)lineSpacing range:(NSRange)range{
-    
-    if (text.length == 0) {
-        return nil;
+- (instancetype _Nonnull)__setLineSpacing:(CGFloat)lineSpacing{
+    if (!self.string || self.string.length == 0) {
+        return [[NSMutableAttributedString alloc] init];
     }
     
-    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:text];
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithAttributedString:self];
+    
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    [paragraphStyle setLineSpacing:lineSpacing];
+    
+    NSRange range = NSMakeRange(0, self.string.length);
+    [attributedText addAttribute:NSParagraphStyleAttributeName
+                           value:paragraphStyle
+                           range:range];
+    
+    return attributedText.copy;
+}
+
+- (instancetype _Nonnull)__setLineSpacing:(CGFloat)lineSpacing range:(NSRange)range{
+    if (!self.string || self.string.length == 0) {
+        return [[NSMutableAttributedString alloc] init];
+    }
+    
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithAttributedString:self];
     
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     [paragraphStyle setLineSpacing:lineSpacing];
@@ -58,7 +124,22 @@
                            value:paragraphStyle
                            range:range];
     
-    return attributedText;
+    return attributedText.copy;
+}
+
+- (instancetype _Nonnull)__setParagraphSpacing:(CGFloat)paragraphSpacing{
+    if (!self.string || self.string.length == 0) {
+        return [[NSMutableAttributedString alloc] init];
+    }
+    
+    NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
+    paraStyle.paragraphSpacing = paragraphSpacing;
+    NSDictionary *attrDict = @{
+                               NSParagraphStyleAttributeName: paraStyle
+                               };
+    NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:self.string attributes:attrDict];
+    
+    return attributedText.copy;
 }
 
 @end

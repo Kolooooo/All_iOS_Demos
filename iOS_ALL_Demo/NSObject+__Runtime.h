@@ -4,7 +4,7 @@
 #import <objc/runtime.h>
 
 @interface NSObject (__Runtime)
-/// 对象ID
+/// 对象ID: 给个分类添加属性
 @property (nonatomic, copy) NSString * _Nullable objectID;
 
 /**

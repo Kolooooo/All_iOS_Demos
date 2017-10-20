@@ -13,6 +13,7 @@
 #import "AutoLayoutViewController.h"
 #import "tableViewInCell.h"
 #import "tableViewInCell2.h"
+#import "GCDViewController.h"
 
 @interface MainViewController ()
 <UITableViewDelegate,
@@ -73,7 +74,10 @@ UITableViewDataSource>
             [self.navigationController pushViewController:[[NSClassFromString(@"RuntimeViewController") alloc] init] animated:YES];
             break;
         }
-            
+        case 6:{
+            [self.navigationController pushViewController:[[NSClassFromString(@"GCDViewController") alloc] init] animated:YES];
+            break;
+        }
             
         default:
             break;
@@ -87,7 +91,8 @@ UITableViewDataSource>
                     @"AutoLayoutViewController",
                     @"UITextFieldViewController",
                     @"UIBezierPathViewController",
-                    @"RuntimeViewController"
+                    @"RuntimeViewController",
+                    @"GCDViewController"
                     ];
 }
 

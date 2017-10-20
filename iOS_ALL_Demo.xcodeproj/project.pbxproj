@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A904FF011F931CFD00AC2A53 /* __StarsControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A904FF001F931CFD00AC2A53 /* __StarsControl.m */; };
+		A904FF041F931D3900AC2A53 /* __StarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A904FF021F931D3900AC2A53 /* __StarButton.m */; };
+		A904FF091F93524C00AC2A53 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A904FF081F93524B00AC2A53 /* GCDViewController.m */; };
 		A90BFDCB1F7FFC3B008EFA09 /* __UIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A90BFDCA1F7FFC3B008EFA09 /* __UIButton.m */; };
 		A90BFDCE1F7FFDD5008EFA09 /* __UIImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A90BFDCC1F7FFDD5008EFA09 /* __UIImageView.m */; };
 		A923E6081F719D9000567E96 /* tableViewInCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A923E6061F719D9000567E96 /* tableViewInCell.m */; };
@@ -43,6 +46,7 @@
 		A929529C1F77874300504B10 /* UIBezierPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A929529B1F77874300504B10 /* UIBezierPathViewController.m */; };
 		A929529F1F778EA700504B10 /* BezierView.m in Sources */ = {isa = PBXBuildFile; fileRef = A929529E1F778EA700504B10 /* BezierView.m */; };
 		A92952A31F77969100504B10 /* UITextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92952A21F77969100504B10 /* UITextFieldViewController.m */; };
+		A92AAC3F1F92FDE00042AC1A /* NSNumber+__Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A92AAC3E1F92FDE00042AC1A /* NSNumber+__Category.m */; };
 		A92C88431F5AA9EB00CD02C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C88421F5AA9EB00CD02C4 /* main.m */; };
 		A92C88461F5AA9EB00CD02C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C88451F5AA9EB00CD02C4 /* AppDelegate.m */; };
 		A92C884E1F5AA9EB00CD02C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A92C884D1F5AA9EB00CD02C4 /* Assets.xcassets */; };
@@ -85,6 +89,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A904FEFF1F931CFD00AC2A53 /* __StarsControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __StarsControl.h; sourceTree = "<group>"; };
+		A904FF001F931CFD00AC2A53 /* __StarsControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __StarsControl.m; sourceTree = "<group>"; };
+		A904FF021F931D3900AC2A53 /* __StarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __StarButton.m; sourceTree = "<group>"; };
+		A904FF031F931D3900AC2A53 /* __StarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __StarButton.h; sourceTree = "<group>"; };
+		A904FF071F93524B00AC2A53 /* GCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
+		A904FF081F93524B00AC2A53 /* GCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
 		A90BFDC91F7FFC3B008EFA09 /* __UIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __UIButton.h; sourceTree = "<group>"; };
 		A90BFDCA1F7FFC3B008EFA09 /* __UIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __UIButton.m; sourceTree = "<group>"; };
 		A90BFDCC1F7FFDD5008EFA09 /* __UIImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __UIImageView.m; sourceTree = "<group>"; };
@@ -156,6 +166,8 @@
 		A929529E1F778EA700504B10 /* BezierView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierView.m; sourceTree = "<group>"; };
 		A92952A11F77969100504B10 /* UITextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldViewController.h; sourceTree = "<group>"; };
 		A92952A21F77969100504B10 /* UITextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldViewController.m; sourceTree = "<group>"; };
+		A92AAC3D1F92FDE00042AC1A /* NSNumber+__Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+__Category.h"; sourceTree = "<group>"; };
+		A92AAC3E1F92FDE00042AC1A /* NSNumber+__Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+__Category.m"; sourceTree = "<group>"; };
 		A92C883E1F5AA9EB00CD02C4 /* iOS_ALL_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_ALL_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A92C88421F5AA9EB00CD02C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A92C88441F5AA9EB00CD02C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -249,6 +261,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A904FEFE1F931CF000AC2A53 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				A904FF051F931D3E00AC2A53 /* __Stars */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		A904FF051F931D3E00AC2A53 /* __Stars */ = {
+			isa = PBXGroup;
+			children = (
+				A904FEFF1F931CFD00AC2A53 /* __StarsControl.h */,
+				A904FF001F931CFD00AC2A53 /* __StarsControl.m */,
+				A904FF021F931D3900AC2A53 /* __StarButton.m */,
+				A904FF031F931D3900AC2A53 /* __StarButton.h */,
+			);
+			name = __Stars;
+			sourceTree = "<group>";
+		};
+		A904FF061F93522600AC2A53 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				A904FF071F93524B00AC2A53 /* GCDViewController.h */,
+				A904FF081F93524B00AC2A53 /* GCDViewController.m */,
+			);
+			name = GCD;
+			sourceTree = "<group>";
+		};
 		A90BFDC71F7FFBB3008EFA09 /* UIButton+Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,8 +467,10 @@
 				A92952A01F77967A00504B10 /* UITextField */,
 				A92952991F77871900504B10 /* UIBezierPath */,
 				A929019B1F80DFD40002DBD3 /* Runtime_ViewController */,
+				A904FF061F93522600AC2A53 /* GCD */,
 				A92C885B1F5AABB900CD02C4 /* Main */,
 				A92C88601F5AB0C100CD02C4 /* Category */,
+				A904FEFE1F931CF000AC2A53 /* Tools */,
 				A92C88411F5AA9EB00CD02C4 /* Supporting Files */,
 			);
 			path = iOS_ALL_Demo;
@@ -491,6 +533,8 @@
 				A92C88631F5AB0E300CD02C4 /* NSArray+Category.m */,
 				A929015F1F805F150002DBD3 /* NSDate+Utilities.h */,
 				A929015E1F805F150002DBD3 /* NSDate+Utilities.m */,
+				A92AAC3D1F92FDE00042AC1A /* NSNumber+__Category.h */,
+				A92AAC3E1F92FDE00042AC1A /* NSNumber+__Category.m */,
 				A92901641F805FA30002DBD3 /* NSDictionary+__Category.h */,
 				A92901651F805FA30002DBD3 /* NSDictionary+__Category.m */,
 				A92901681F8060940002DBD3 /* NSFileManager+Paths.h */,
@@ -688,6 +732,7 @@
 				A92901561F8059E70002DBD3 /* __UITextField.m in Sources */,
 				A99733AD1F7B097400C18A45 /* NSObject+__Runtime.m in Sources */,
 				A92901661F805FA30002DBD3 /* NSDictionary+__Category.m in Sources */,
+				A904FF091F93524C00AC2A53 /* GCDViewController.m in Sources */,
 				A9A7F21E1F61F50800D460AE /* NSString+__Category.m in Sources */,
 				A92901911F806C7E0002DBD3 /* UIImage+QRCode.m in Sources */,
 				A92C88751F5AB0E300CD02C4 /* UIView+__Category.m in Sources */,
@@ -698,6 +743,7 @@
 				A92C88721F5AB0E300CD02C4 /* NSObject+__Common.m in Sources */,
 				A929528D1F76C9E000504B10 /* UIView+__Transform.m in Sources */,
 				A9775E701F6B0F9A00A1FEDE /* __UILabel.m in Sources */,
+				A904FF041F931D3900AC2A53 /* __StarButton.m in Sources */,
 				A92C88431F5AA9EB00CD02C4 /* main.m in Sources */,
 				A92901851F8069190002DBD3 /* NSString+Regex.m in Sources */,
 				A90BFDCB1F7FFC3B008EFA09 /* __UIButton.m in Sources */,
@@ -710,6 +756,7 @@
 				A9775E791F6C9D8A00A1FEDE /* UITableViewCell+Category.m in Sources */,
 				A92C88B31F5B8AD800CD02C4 /* TableViewCell2.m in Sources */,
 				A92901691F8060940002DBD3 /* NSFileManager+Paths.m in Sources */,
+				A904FF011F931CFD00AC2A53 /* __StarsControl.m in Sources */,
 				A929015D1F805D250002DBD3 /* __UIView.m in Sources */,
 				A92901601F805F150002DBD3 /* NSDate+Utilities.m in Sources */,
 				A92952911F76D27000504B10 /* CAAnimation+WAnimation.m in Sources */,
@@ -734,6 +781,7 @@
 				A923E6081F719D9000567E96 /* tableViewInCell.m in Sources */,
 				A92C885F1F5AADDD00CD02C4 /* MainNavViewController.m in Sources */,
 				A985F3C21F8EDC01000F5325 /* UIColor+__Category.m in Sources */,
+				A92AAC3F1F92FDE00042AC1A /* NSNumber+__Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
