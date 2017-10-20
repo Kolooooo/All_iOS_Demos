@@ -1,0 +1,79 @@
+{
+    "success": "获取咨询列表成功",
+    "data": {
+        "list": [
+            {
+                "userId": "ZJ6xndRlp5OaBNmYvK7GQ3X8",
+                "avatarThumb": "http://static-avatar-user-cdn.kdjz.com/v2.0/default/v1/bg_mine_defaultface_boys.png",
+                "nickname": "<234566",
+                "content": "我要咨询啊我要咨询啊我要咨询啊我要咨询啊我要咨询啊我要咨询啊我要咨询啊",
+                "answers": [{
+                    "content" : "you are so beautiful for me you are so beautiful for me you are so beautiful for me you are so beautiful for me",
+                    "timeSpan" : "234234234324"
+                    },
+                    {
+                    "content" : "you are so beautiful for me",
+                    "timeSpan" : "234234234324"
+                    },
+                    {
+                    "content" : "you are so beautiful for me",
+                    "timeSpan" : "234234234324"
+                    },
+                    {
+                    "content" : "you ",
+                    "timeSpan" : "234234234324"
+                    }],
+                "timeSpan": "三天前"
+            },
+            {
+                "userId": "ZJ6xndRlp5OaBNmYvK7GQ3X8",
+                "avatarThumb": "http://static-avatar-user-cdn.kdjz.com/v2.0/default/v1/bg_mine_defaultface_boys.png",
+                "nickname": "<234566",
+                "content": "我要咨询啊",
+                "answers": [{
+                    "content" : "you are so beautiful for me you are so beautiful for me you are so beautiful for me you are so beautiful for me",
+                    "timeSpan" : "234234234324"
+                    },
+                    {
+                    "content" : "you are so beautiful for me",
+                    "timeSpan" : "234234234324"
+                    }],
+                "timeSpan": "三天前"
+            },
+            {
+                "userId": "ZJ6xndRlp5OaBNmYvK7GQ3X8",
+                "avatarThumb": "http://static-avatar-user-cdn.kdjz.com/v2.0/default/v1/bg_mine_defaultface_boys.png",
+                "nickname": "<234566",
+                "content": "我要咨询啊",
+                "answers": [{
+                    "content" : "you are  for me you are so beautiful for me you are so beautiful for me",
+                    "timeSpan" : "234234234324"
+                    }],
+                "timeSpan": "三天前"
+            },
+            {
+                "userId": "ZJ6xndRlp5OaBNmYvK7GQ3X8",
+                "avatarThumb": "http://static-avatar-user-cdn.kdjz.com/v2.0/default/v1/bg_mine_defaultface_boys.png",
+                "nickname": "<234566",
+                "content": "我要咨询啊",
+                "answers": [{
+                    "content" : "you are  for me you are so beautiful for me you are so beautiful for me",
+                    "timeSpan" : "234234234324"
+                    },
+                    {
+                    "content" : "you are  for me you are so beautiful for me you are so beautiful for me",
+                    "timeSpan" : "234234234324"
+                    }],
+                "timeSpan": "三天前"
+            },
+            {
+                "userId": "ZJ6xndRlp5OaBNmYvK7GQ3X8",
+                "avatarThumb": "http://static-avatar-user-cdn.kdjz.com/v2.0/default/v1/bg_mine_defaultface_boys.png",
+                "nickname": "<234566",
+                "content": "我要咨询啊",
+                "answers": [],
+                "timeSpan": "三天前"
+            }
+        ]
+    }
+}

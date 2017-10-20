@@ -39,17 +39,21 @@
 }
 
 - (void)__wordSpacingWithFloat:(CGFloat)wordSpacing{
+    if (!self.text || self.text.length == 0) {
+        return;
+    }
     
-    NSRange range = NSMakeRange(0, self.text.length);
-    NSAttributedString *attributedString = [NSAttributedString attributedString_WordSpacingWithText:self.text wordSpacing:wordSpacing range:range];
+    NSAttributedString *attributedString = [[[NSAttributedString alloc] initWithString:self.text] __setWordSpacing:wordSpacing];
     
     self.attributedText = attributedString;
 }
 
 - (void)__lineSpacingWithFloat:(CGFloat)lineSpacing{
-    
-    NSRange range = NSMakeRange(0, self.text.length);
-    NSAttributedString *attributedString = [NSAttributedString attributedString_LineSpacingWithText:self.text lineSpacing:lineSpacing range:range];
+    if (!self.text || self.text.length == 0) {
+        return;
+    }
+
+    NSAttributedString *attributedString = [[[NSAttributedString alloc] initWithString:self.text] __setLineSpacing:lineSpacing];
     
     self.attributedText = attributedString;
 }

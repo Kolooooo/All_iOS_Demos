@@ -8,12 +8,22 @@
 @property (nonatomic, copy) NSString * _Nullable objectID;
 
 /**
- 交换方法
+ 交换实例方法
 
  @param originSEL 原方法
  @param exchangeSEL 需要交换的方法
  */
-+ (void)__exchangeMethodWithOriginSEL:(SEL _Nonnull)originSEL exchangeSEL:(SEL _Nonnull)exchangeSEL;
++ (void)__exchangeInstanceMethodWithOriginSEL:(SEL _Nonnull)originSEL
+                                  exchangeSEL:(SEL _Nonnull)exchangeSEL;
+
+/**
+ 交换类方法
+ 
+ @param originSEL 原来的方法
+ @param exchangeSEL 更换的方法
+ */
++ (void)__exchangeClassMethodWithOriginSEL:(SEL _Nonnull)originSEL
+                               exchangeSEL:(SEL _Nonnull)exchangeSEL;
 
 /**
  打印类的实例变量列表

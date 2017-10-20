@@ -1,0 +1,146 @@
+{
+    "success": "获取进度与动态列表成功",
+    "data": {
+        "list": [
+            {
+                "processId": "L4nVeGJPdKR2m76YyEM1Wgzb",
+                "content": "在 技能任务附件 上传了",
+                "images": [{
+                    "thumb": "http:static-avatar-company-cdn.kdjz.com/v2.0/default/v1/ic_avatar_business.png",
+                                   "origin": "http://common-static-cdn.kdjz.com/test/company/common/2017/08/24/2/673e46d253a14b039d41b69ffa4ddeac.jpg"
+                             }],
+                "type": 1,
+                "atUsername": "",
+                "createdAt": "2017-08-08 15:26:22",
+                "attachmentInfo": {
+                    "attachmentId": "6XAvEwz3qe2RPWOa9LpJxogN",
+                    "size": "0Bytes",
+                    "extension": "jpg",
+                    "filename": "清明上河图.jpg",
+                    "url": "https://baidu.com/a.jpg",
+                    "visibility": "0",
+                    "canDownload": 1
+                },
+                "author": "测试修改咯",
+                "authorAvatarThumb": "http://static-avatar-company-cdn.kdjz.com/v2.0/default/v1/ic_avatar_business.png"
+            },
+            {
+                "processId": "8a2x6BEGbXqNVqk3joYeA05D",
+                "content": "在 技能任务附件 上传了",
+                "images": [],
+                "type": 1,
+                "atUsername": "",
+                "createdAt": "2017-08-08 15:33:54",
+                "attachmentInfo": {
+                    "attachmentId": "bP1MZQdVjm2Ap0Ao4NrgKXlR",
+                    "size": "0Bytes",
+                    "extension": "jpg",
+                    "filename": "清明上河图.jpg",
+                    "url": "https://baidu.com/a.jpg",
+                    "visibility": "2",
+                    "canDownload": 1
+                },
+                "author": "测试修改咯",
+                "authorAvatarThumb": "http://static-avatar-company-cdn.kdjz.com/v2.0/default/v1/ic_avatar_business.png"
+            },
+            {
+                "processId": "AkEvOZwBzpqepRLmerbJxl1K",
+                "content": "在 技能任务附件 上传了",
+                "images": [],
+                "type": 1,
+                "atUsername": "",
+                "createdAt": "2017-08-08 17:02:31",
+                "attachmentInfo": {
+                    "attachmentId": "4rKJ3OpVXe24Q7lMdzn1P5AE",
+                    "size": "200Bytes",
+                    "extension": "jpg",
+                    "filename": "清明上河图.jpg",
+                    "url": "https://baidu.com/a.jpg",
+                    "visibility": "0",
+                    "canDownload": 1
+                },
+                "author": "测试修改咯",
+                "authorAvatarThumb": "http://static-avatar-company-cdn.kdjz.com/v2.0/default/v1/ic_avatar_business.png"
+            },
+            {
+                "processId": "K4Gw32PmAxRrjRJOMlWd90zX",
+                "content": "完成所有参与者结算，期待与你的下次合作~",
+                "images": [],
+                "type": 0,
+                "atUsername": "",
+                "createdAt": "2017-08-10 18:02:55",
+                "attachmentInfo": {},
+                "author": "测试修改咯",
+                "authorAvatarThumb": "http://static-avatar-company-cdn.kdjz.com/v2.0/default/v1/ic_avatar_business.png"
+            },
+            {
+                "processId": "3XaBO28ye4QKZqnEDkvNlLm0",
+                "content": "在 技能任务附件 上传了",
+                "images": [],
+                "type": 1,
+                "atUsername": "",
+                "createdAt": "2017-08-11 11:52:53",
+                "attachmentInfo": {
+                    "attachmentId": "RZknwQmVa87xO2ebNl5EAO31",
+                    "size": "200Bytes",
+                    "extension": "jpg",
+                    "filename": "清明上河图.jpg",
+                    "url": "https://baidu.com/a.jpg",
+                    "visibility": "0",
+                    "canDownload": 1
+                },
+                "author": "",
+                "authorAvatarThumb": ""
+            },
+            {
+                "processId": "wmgWzKNOGMR0o7bDALe3kx0l",
+                "content": "在 技能任务附件 上传了",
+                "images": [],
+                "type": 1,
+                "atUsername": "",
+                "createdAt": "2017-08-15 14:02:39",
+                "attachmentInfo": {
+                    "attachmentId": "vq5j9MmyeEWBL21dzPAbQaGV",
+                    "size": "200Bytes",
+                    "extension": "jpg",
+                    "filename": "清明上河图.jpg",
+                    "url": "https://baidu.com/a.jpg",
+                    "visibility": "1",
+                    "canDownload": 1
+                },
+                "author": "测试修改咯",
+                "authorAvatarThumb": "http://static-avatar-company-cdn.kdjz.com/v2.0/default/v1/ic_avatar_business.png"
+            },
+            {
+                "processId": "6n8ml2WEgbROmQordO3GBZ0M",
+                "content": "发起了参与者举报，理由：未准时参与项目",
+                "images": [],
+                "type": 0,
+                "atUsername": "",
+                "createdAt": "2017-08-16 16:53:26",
+                "attachmentInfo": {},
+                "author": "测试修改咯",
+                "authorAvatarThumb": "http://static-avatar-company-cdn.kdjz.com/v2.0/default/v1/ic_avatar_business.png"
+            },
+            {
+                "processId": "1ENO3KAvBgqw3qLzbPMYaVj2",
+                "content": "在 技能任务附件 上传了",
+                "images": [],
+                "type": 1,
+                "atUsername": "",
+                "createdAt": "2017-08-18 10:49:05",
+                "attachmentInfo": {
+                    "attachmentId": "joXld5GbBe2oQWxNwpmYPqQZ",
+                    "size": "200Bytes",
+                    "extension": "jpg",
+                    "filename": "清明上河图.jpg",
+                    "url": "https://baidu.com/a.jpg",
+                    "visibility": "0",
+                    "canDownload": 1
+                },
+                "author": "测试修改咯",
+                "authorAvatarThumb": "http://static-avatar-company-cdn.kdjz.com/v2.0/default/v1/ic_avatar_business.png"
+            }
+        ]
+    }
+}

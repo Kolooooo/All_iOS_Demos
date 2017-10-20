@@ -27,7 +27,7 @@
     [self use_dispatch_group_t];
     
 #pragma mark 信号量
-    //[self use_dispatch_semaphore];
+    [self use_dispatch_semaphore];
 }
 
 - (void)use_dispatch_semaphore{
@@ -51,10 +51,10 @@
     [self use_dispatch_semaphore_t];
     
 #pragma mark 异步添加数据到数组
-    [self use_dispatch_semaphore_t_safe_add_the_array];
+    [self use_dispatch_semaphore_t_safe_add_array];
 }
 
-- (void)use_dispatch_semaphore_t_safe_add_the_array{
+- (void)use_dispatch_semaphore_t_safe_add_array{
     dispatch_queue_t  queue = dispatch_get_global_queue(0, 0);
     NSMutableArray *array = [NSMutableArray array];
     

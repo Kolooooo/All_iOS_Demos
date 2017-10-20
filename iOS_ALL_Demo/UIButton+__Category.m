@@ -37,8 +37,8 @@
      *   3.重新调用原来按钮事件的实现逻辑。
      */
 #ifdef DEBUG
-    [self __exchangeMethodWithOriginSEL:@selector(sendAction:to:forEvent:)
-                            exchangeSEL:@selector(__sendAction:to:forEvent:)];
+    [self __exchangeInstanceMethodWithOriginSEL:@selector(sendAction:to:forEvent:)
+                                    exchangeSEL:@selector(__sendAction:to:forEvent:)];
 #else
 #endif
 }

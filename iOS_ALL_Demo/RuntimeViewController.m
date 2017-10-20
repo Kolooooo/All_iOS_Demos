@@ -17,7 +17,7 @@
 }
 
 - (void)showTheMethod{
-    [self.class __exchangeMethodWithOriginSEL:@selector(origin) exchangeSEL:@selector(exchange)];
+    [self.class __exchangeInstanceMethodWithOriginSEL:@selector(origin) exchangeSEL:@selector(exchange)];
     [self origin];
     
     

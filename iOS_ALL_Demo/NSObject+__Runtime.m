@@ -23,7 +23,7 @@
  return image;
  }
  */
-+ (void)__exchangeMethodWithOriginSEL:(SEL _Nonnull)originSEL
++ (void)__exchangeInstanceMethodWithOriginSEL:(SEL _Nonnull)originSEL
                           exchangeSEL:(SEL _Nonnull)exchangeSEL{
     
     Method originMethod = class_getInstanceMethod(self, originSEL);
@@ -53,6 +53,16 @@
         }
         
     });
+}
+
++ (void)__exchangeClassMethodWithOriginSEL:(SEL _Nonnull)originSEL exchangeSEL:(SEL _Nonnull)exchangeSEL
+{
+    // class_getClassMethod：得到类的类方法
+    Method otherMehtod = class_getClassMethod(self, exchangeSEL);
+    Method originMehtod = class_getClassMethod(self, originSEL);
+    // 交换2个方法的实现
+    // method_exchangeImplementations：运行时动态交换两个方法
+    method_exchangeImplementations(otherMehtod, originMehtod);
 }
 
 - (void)__logIvarList{

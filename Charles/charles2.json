@@ -1,0 +1,40 @@
+{
+    "success": "获取已报名技能任务列表成功",
+    "data": {
+        "list": [
+            {
+                "privateJobId": "07ZQDpkal3zLg2br84AXWGL6",
+                "icon": "https://static-cdn.kdjz.com/user-pc/icon/job-category/ic_list_industry_tuiguang.png",
+                "title": "handle方法测试哈",
+                "createdAt": "2017-09-05 15:59:00",
+                "resumeStatus": "已报名",
+                "canClick": 1
+            },
+            {
+                "privateJobId": "GBJAMmEQZoyElzNxDa1erXwv",
+                "icon": "https://static-cdn.kdjz.com/user-pc/icon/job-category/ic_list_industry_tuiguang.png",
+                "title": "测试标题来了",
+                "createdAt": "2017-08-25 18:15:00",
+                "resumeStatus": "不合适",
+                "canClick": 1
+            },
+            {
+                "privateJobId": "Nn8J7kaXVoyV1zqKrde1jxEA",
+                "icon": "https://static-cdn.kdjz.com/user-pc/icon/job-category/ic_list_industry_tuiguang.png",
+                "title": "测试标题来了",
+                "createdAt": "2017-08-25 17:04:00",
+                "resumeStatus": "已报名",
+                "canClick": 0,
+                "tips": "该信息已停止招聘"
+            },
+            {
+                "privateJobId": "pXLeWo7nrMyek2JDNElv9Qxg",
+                "icon": "https://static-cdn.kdjz.com/user-pc/icon/job-category/ic_list_industry_tuiguang.png",
+                "title": "测试标题来了",
+                "createdAt": "2017-08-07 17:52:00",
+                "resumeStatus": "进行中",
+                "canClick": 1
+            }
+        ]
+    }
+}
