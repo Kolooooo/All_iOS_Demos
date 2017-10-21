@@ -11,4 +11,8 @@ target 'iOS_ALL_Demo' do
   pod 'MJRefresh'
   pod 'SVProgressHUD'
   
+  pod 'Reveal-SDK', '7',:configurations => ['Debug']
+  pod 'JPFPSStatus', :configurations => ['Debug']
+
+  
 end

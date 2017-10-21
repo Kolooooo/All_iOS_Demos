@@ -86,6 +86,10 @@ UITableViewDataSource>
             [self.navigationController pushViewController:[[NSClassFromString(@"SQLiteManagerViewController") alloc] init] animated:YES];
             break;
         }
+        case 9:{
+            [self.navigationController pushViewController:[[NSClassFromString(@"FMDBViewController") alloc] init] animated:YES];
+            break;
+        }
             
             
         default:
@@ -103,7 +107,8 @@ UITableViewDataSource>
                     @"RuntimeViewController",
                     @"GCDViewController",
                     @"GradientViewController 渐变",
-                    @"SQLiteManagerViewController"
+                    @"SQLiteManagerViewController",
+                    @"FMDBViewController"
                     ];
 }
 

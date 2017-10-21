@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>JPFPSStatus.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MJExtension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,11 +52,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2E2CF3F8BF23EFF13D27969B7DB3AAE7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>410B25DF16EA5C5B3E2698F74F9625FB</key>
 		<dict>
 			<key>primary</key>
@@ -62,17 +62,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>596E9221D9B6F8D15C0213B2A346DD31</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>70BC44266C6FFE30D2C57129458E070B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7AE2AD493935EE001C638E645EDE9341</key>
+		<key>744F7CD12F8BBD9F25362CDAD590D524</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -83,6 +78,21 @@
 			<true/>
 		</dict>
 		<key>9F12FB4A63E20F601CFB2E64A65B57C1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D10656F5CBAFB33620BC1C5B1C540B58</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D27995F55343266768C6D8A1F4E698B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E3B1B55066FBCEE49DEA644B947A3C64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
