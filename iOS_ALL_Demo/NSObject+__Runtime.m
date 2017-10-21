@@ -162,9 +162,9 @@
     return isSuccess;
 }
 
-- (void)setObjectID:(NSString *)objectID{
+- (void)set__ObjectID:(NSString *)__ObjectID{
     /// @selector(objectID): 属性关联的key，也可以定义一个char * ;
-    objc_setAssociatedObject(self, @selector(objectID), objectID, OBJC_ASSOCIATION_COPY);
+    objc_setAssociatedObject(self, @selector(__objectID), __ObjectID, OBJC_ASSOCIATION_COPY);
     
     /* 或：
      * static const char *OBJECT_ID = "objectID";
@@ -172,8 +172,8 @@
      */
 }
 
-- (NSString *)objectID{
-    return objc_getAssociatedObject(self, @selector(objectID));
+- (NSString *)__objectID{
+    return objc_getAssociatedObject(self, @selector(__objectID));
     
     /* 或：
      * static const char *OBJECT_ID = "objectID";

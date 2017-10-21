@@ -22,23 +22,23 @@
 }
 
 - (void)initUI{
-    BezierView *bezierView = [[BezierView alloc] init];
-    bezierView.backgroundColor = [UIColor grayColor];
-    bezierView.frame = CGRectMake(0, 80, 80, 80);
-    
-    [self.view addSubview:bezierView];
-    
-    
-//    // 创建path
-//    UIBezierPath *path = [UIBezierPath bezierPath];
+//    BezierView *bezierView = [[BezierView alloc] init];
+//    bezierView.backgroundColor = [UIColor grayColor];
+//    bezierView.frame = CGRectMake(0, 80, 80, 80);
 //    
-//    // 添加路径[1条点(100,100)到点(200,100)的线段]到path
-//    [path moveToPoint:CGPointMake(100 , 100)];
-//    
-//    [path addLineToPoint:CGPointMake(200, 100)];
-//    
-//    // 将path绘制出来
-//    [path stroke];
+//    [self.view addSubview:bezierView];
+    
+    
+    // 创建path
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    
+    // 添加路径[1条点(100,100)到点(200,100)的线段]到path
+    [path moveToPoint:CGPointMake(100 , 100)];
+    
+    [path addLineToPoint:CGPointMake(200, 100)];
+    
+    // 将path绘制出来
+    [path stroke];
 }
 
 @end

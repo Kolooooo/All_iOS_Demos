@@ -22,8 +22,8 @@
     
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.objectID = @"ken_button";
-    DEBUGLOG(@"%@", button.objectID);
+    button.__objectID = @"ken_button";
+    DEBUGLOG(@"%@", button.__objectID);
     
     
     // @selector() 就是取类方法的编号。

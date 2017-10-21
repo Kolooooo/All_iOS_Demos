@@ -78,6 +78,15 @@ UITableViewDataSource>
             [self.navigationController pushViewController:[[NSClassFromString(@"GCDViewController") alloc] init] animated:YES];
             break;
         }
+        case 7:{
+            [self.navigationController pushViewController:[[NSClassFromString(@"GradientViewController") alloc] init] animated:YES];
+            break;
+        }
+        case 8:{
+            [self.navigationController pushViewController:[[NSClassFromString(@"SQLiteManagerViewController") alloc] init] animated:YES];
+            break;
+        }
+            
             
         default:
             break;
@@ -92,7 +101,9 @@ UITableViewDataSource>
                     @"UITextFieldViewController",
                     @"UIBezierPathViewController",
                     @"RuntimeViewController",
-                    @"GCDViewController"
+                    @"GCDViewController",
+                    @"GradientViewController 渐变",
+                    @"SQLiteManagerViewController"
                     ];
 }
 

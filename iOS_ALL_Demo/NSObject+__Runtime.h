@@ -5,7 +5,7 @@
 
 @interface NSObject (__Runtime)
 /// 对象ID: 给个分类添加属性
-@property (nonatomic, copy) NSString * _Nullable objectID;
+@property (nonatomic, copy) NSString * _Nullable __objectID;
 
 /**
  交换实例方法
