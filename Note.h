@@ -19,3 +19,11 @@
  * pod install --verbose --no-repo-update (update / initialize librarys)
  *
  */
+
+/*
+ * 性能优化
+ * 
+ * 少使用半透明，因为 cpu 需要计算半透明层与底层的显示效果
+ *
+ * UIImageView 里面的图片大小尽量与 UIImageView 的大小一致，避免显示时候需要压缩尺寸大小后重新显示
+ */

@@ -9,6 +9,8 @@
 #import "FMDBViewController.h"
 #import <FMDB/FMDB.h>
 #import "__FMDBManager.h"
+#import <MJExtension/MJExtension.h>
+#import "fmdbTestModel.h"
 
 @interface FMDBViewController ()
 
@@ -21,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self initRequest];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -84,6 +87,19 @@
     }
     
     [personDatabase close];
+}
+
+- (void)initRequest{
+    [__AFNManager __requestWithType:__GET urlString:@"/fmdb" parameters:nil complete:^(BOOL isSuccess, id result, NSError *error) {
+        if (isSuccess) {
+            NSLog(@"request success");
+            NSArray<FmdbTestModel *> *fmdbTestModels = [FmdbTestModel mj_objectArrayWithKeyValuesArray:result[@"data"][@"list"]];
+            
+            for (FmdbTestModel *model in fmdbTestModels) {
+                [[FmdbTestModel sharedInstance] savaWithModel:model];
+            }
+        }
+    }];
 }
 
 - (void)info{

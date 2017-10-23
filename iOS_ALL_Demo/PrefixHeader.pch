@@ -21,6 +21,9 @@
 #import "NSString+Encrypt.h"
 #import "NSObject+__Runtime.h"
 #import "UIImage+__Category.h"
+#import "__AFNManager.h"
+
+#import "MJExtension.h"
 
 
 #import "__Config.h"

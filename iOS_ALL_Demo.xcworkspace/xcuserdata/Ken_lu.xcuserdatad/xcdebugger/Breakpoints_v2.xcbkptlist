@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOS_ALL_Demo/FMDBViewController.m"
-            timestampString = "530306350.657256"
+            timestampString = "530340978.279932"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "-touchesBegan:withEvent:"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOS_ALL_Demo/FMDBViewController.m"
-            timestampString = "530306350.657256"
+            timestampString = "530340978.279932"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "-touchesBegan:withEvent:"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOS_ALL_Demo/FMDBViewController.m"
-            timestampString = "530306350.657256"
+            timestampString = "530340978.279932"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "-touchesBegan:withEvent:"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOS_ALL_Demo/FMDBViewController.m"
-            timestampString = "530306350.657256"
+            timestampString = "530340978.279932"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "-touchesBegan:withEvent:"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOS_ALL_Demo/FMDBViewController.m"
-            timestampString = "530306350.657256"
+            timestampString = "530340978.279932"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "-touchesBegan:withEvent:"
             landmarkType = "7">
          </BreakpointContent>
@@ -89,13 +89,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "iOS_ALL_Demo/FMDBViewController.m"
-            timestampString = "530306350.657256"
+            filePath = "iOS_ALL_Demo/__AFNManager.m"
+            timestampString = "530340978.279932"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "-touchesBegan:withEvent:"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "+__requestWithType:urlString:parameters:complete:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS_ALL_Demo/FMDBViewController.m"
+            timestampString = "530367758.969684"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "-initRequest"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
