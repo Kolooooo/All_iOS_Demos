@@ -56,6 +56,10 @@
     return description.copy;
 }
 
+- (void)__setAntiAlias{
+    self.layer.allowsEdgeAntialiasing = YES;
+}
+
 #pragma mark - 添加查看测试信息按钮
 -(void)__addDebugInfoButtonToWindowWithRect:(CGRect)rect color:(UIColor *_Nonnull)color{
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];

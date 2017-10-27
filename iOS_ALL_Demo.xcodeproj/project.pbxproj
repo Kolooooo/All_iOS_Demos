@@ -31,6 +31,7 @@
 		A904FF211F99D81F00AC2A53 /* charles4.json in Resources */ = {isa = PBXBuildFile; fileRef = A904FF1D1F99D81F00AC2A53 /* charles4.json */; };
 		A90BFDCB1F7FFC3B008EFA09 /* __UIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A90BFDCA1F7FFC3B008EFA09 /* __UIButton.m */; };
 		A90BFDCE1F7FFDD5008EFA09 /* __UIImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A90BFDCC1F7FFDD5008EFA09 /* __UIImageView.m */; };
+		A91F256B1FA1C50F0099728A /* UIView+__Performance.m in Sources */ = {isa = PBXBuildFile; fileRef = A91F256A1FA1C50F0099728A /* UIView+__Performance.m */; };
 		A921E6071F9C2D1400717164 /* __AFNManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A921E6061F9C2D1400717164 /* __AFNManager.m */; };
 		A921E60B1F9C529C00717164 /* FmdbTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A921E60A1F9C529C00717164 /* FmdbTestModel.m */; };
 		A923E6081F719D9000567E96 /* tableViewInCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A923E6061F719D9000567E96 /* tableViewInCell.m */; };
@@ -95,6 +96,8 @@
 		A9A7F2181F61EE0100D460AE /* AutoLayoutViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9A7F2171F61EE0100D460AE /* AutoLayoutViewController.storyboard */; };
 		A9A7F21E1F61F50800D460AE /* NSString+__Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A7F21D1F61F50800D460AE /* NSString+__Category.m */; };
 		A9C2CE501F7095B60029DBDE /* iOS.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = A9C2CE4F1F7095B60029DBDE /* iOS.rtfd */; };
+		A9E1F1CD1FA0892E00D2C219 /* PerformanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E1F1CC1FA0892E00D2C219 /* PerformanceViewController.m */; };
+		A9E1F1D01FA089A200D2C219 /* PerformanceViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E1F1CF1FA089A200D2C219 /* PerformanceViewCell.m */; };
 		E2DCBCBA495CF0282EB8001A /* libPods-iOS_ALL_Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53155B1A59DB85FC8317E743 /* libPods-iOS_ALL_Demo.a */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +148,8 @@
 		A90BFDCA1F7FFC3B008EFA09 /* __UIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __UIButton.m; sourceTree = "<group>"; };
 		A90BFDCC1F7FFDD5008EFA09 /* __UIImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __UIImageView.m; sourceTree = "<group>"; };
 		A90BFDCD1F7FFDD5008EFA09 /* __UIImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __UIImageView.h; sourceTree = "<group>"; };
+		A91F25691FA1C50F0099728A /* UIView+__Performance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+__Performance.h"; sourceTree = "<group>"; };
+		A91F256A1FA1C50F0099728A /* UIView+__Performance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+__Performance.m"; sourceTree = "<group>"; };
 		A921E6051F9C2D1400717164 /* __AFNManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __AFNManager.h; sourceTree = "<group>"; };
 		A921E6061F9C2D1400717164 /* __AFNManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __AFNManager.m; sourceTree = "<group>"; };
 		A921E6091F9C529C00717164 /* FmdbTestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FmdbTestModel.h; sourceTree = "<group>"; };
@@ -270,6 +275,10 @@
 		A9A7F21C1F61F50800D460AE /* NSString+__Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+__Category.h"; sourceTree = "<group>"; };
 		A9A7F21D1F61F50800D460AE /* NSString+__Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+__Category.m"; sourceTree = "<group>"; };
 		A9C2CE4F1F7095B60029DBDE /* iOS.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = iOS.rtfd; sourceTree = "<group>"; };
+		A9E1F1CB1FA0892E00D2C219 /* PerformanceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerformanceViewController.h; sourceTree = "<group>"; };
+		A9E1F1CC1FA0892E00D2C219 /* PerformanceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformanceViewController.m; sourceTree = "<group>"; };
+		A9E1F1CE1FA089A200D2C219 /* PerformanceViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerformanceViewCell.h; sourceTree = "<group>"; };
+		A9E1F1CF1FA089A200D2C219 /* PerformanceViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformanceViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -448,11 +457,15 @@
 			name = __AFNManager;
 			sourceTree = "<group>";
 		};
-		A921E60C1F9DCCAE00717164 /* 性能优化 */ = {
+		A921E60C1F9DCCAE00717164 /* PerformanceViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A9E1F1CB1FA0892E00D2C219 /* PerformanceViewController.h */,
+				A9E1F1CC1FA0892E00D2C219 /* PerformanceViewController.m */,
+				A9E1F1CE1FA089A200D2C219 /* PerformanceViewCell.h */,
+				A9E1F1CF1FA089A200D2C219 /* PerformanceViewCell.m */,
 			);
-			name = "性能优化";
+			name = PerformanceViewController;
 			sourceTree = "<group>";
 		};
 		A92901571F8059EE0002DBD3 /* UITextField+Category */ = {
@@ -522,6 +535,8 @@
 				A929528C1F76C9E000504B10 /* UIView+__Transform.m */,
 				A903E1731F9AF6DF00950E6D /* UIView+__Gradient.h */,
 				A903E1741F9AF6DF00950E6D /* UIView+__Gradient.m */,
+				A91F25691FA1C50F0099728A /* UIView+__Performance.h */,
+				A91F256A1FA1C50F0099728A /* UIView+__Performance.m */,
 				A929015B1F805D250002DBD3 /* __UIView.h */,
 				A929015C1F805D250002DBD3 /* __UIView.m */,
 			);
@@ -594,8 +609,8 @@
 				A904FF061F93522600AC2A53 /* GCD */,
 				A903E16F1F9AF1BC00950E6D /* Gradient */,
 				A903E17D1F9B48FE00950E6D /* SQLiteManager */,
-				A921E60C1F9DCCAE00717164 /* 性能优化 */,
 				A903E1921F9BA03A00950E6D /* FMDBViewController */,
+				A921E60C1F9DCCAE00717164 /* PerformanceViewController */,
 				A92C885B1F5AABB900CD02C4 /* Main */,
 				A92C88601F5AB0C100CD02C4 /* Category */,
 				A904FEFE1F931CF000AC2A53 /* Tools */,
@@ -920,6 +935,8 @@
 				A92901831F8069190002DBD3 /* NSString+HTML.m in Sources */,
 				A92C88731F5AB0E300CD02C4 /* UIButton+__Category.m in Sources */,
 				A903E1721F9AF1FA00950E6D /* GradientViewController.m in Sources */,
+				A9E1F1D01FA089A200D2C219 /* PerformanceViewCell.m in Sources */,
+				A91F256B1FA1C50F0099728A /* UIView+__Performance.m in Sources */,
 				A9775E791F6C9D8A00A1FEDE /* UITableViewCell+__Category.m in Sources */,
 				A92C88B31F5B8AD800CD02C4 /* TableViewCell2.m in Sources */,
 				A92901691F8060940002DBD3 /* NSFileManager+Paths.m in Sources */,
@@ -936,6 +953,7 @@
 				A904FF0F1F99D02700AC2A53 /* NSString+__RegularExpression.m in Sources */,
 				A92C888A1F5AC70B00CD02C4 /* TableViewController.m in Sources */,
 				A9282A141F75AE35009C2659 /* UITextField+__Category.m in Sources */,
+				A9E1F1CD1FA0892E00D2C219 /* PerformanceViewController.m in Sources */,
 				A9775E761F6C98CC00A1FEDE /* UITableView+__Category.m in Sources */,
 				A92952971F777BFE00504B10 /* UIView+__Frame.m in Sources */,
 				A929529F1F778EA700504B10 /* BezierView.m in Sources */,

@@ -90,7 +90,10 @@ UITableViewDataSource>
             [self.navigationController pushViewController:[[NSClassFromString(@"FMDBViewController") alloc] init] animated:YES];
             break;
         }
-            
+        case 10:{
+            [self.navigationController pushViewController:[[NSClassFromString(@"PerformanceViewController") alloc] init] animated:YES];
+            break;
+        }
             
         default:
             break;
@@ -108,7 +111,8 @@ UITableViewDataSource>
                     @"GCDViewController",
                     @"GradientViewController 渐变",
                     @"SQLiteManagerViewController",
-                    @"FMDBViewController"
+                    @"FMDBViewController",
+                    @"PerformanceViewController 性能优化"
                     ];
 }
 

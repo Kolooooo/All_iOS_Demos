@@ -5,6 +5,13 @@
 @interface UIImageView (__Category)
 
 /**
+ 设置圆角（高效）
+
+ @param cornerRadius 设置圆角大小
+ */
+- (void)__setCornerRadius:(CGFloat)cornerRadius;
+
+/**
  设置图片动画
 
  @param animationImages 图片组

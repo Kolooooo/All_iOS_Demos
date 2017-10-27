@@ -4,9 +4,25 @@
 
 @interface UIImage (__Category)
 
+/**
+ 设置圆角
+
+ @param cornerRadius 圆角大小
+ @param size 图片要绘制的大小
+ @return 设置好的图片
+ */
+- (UIImage *_Nonnull)__setCornerRadius:(CGFloat)cornerRadius setImageSize:(CGSize)size;
+
+/**
+ 设置图片抗锯齿（图片旋转的时候会出现锯齿）
+
+ @return 处理后的图片
+ */
+- (UIImage *_Nonnull)__setAntiAlias;
+
 //按比例压缩图片，不失真
-+ (UIImage *_Nonnull)__scaleDownImage:(UIImage *_Nonnull)image scale:(CGFloat)scale;
-+ (UIImage *_Nonnull)__scaleDownImage:(UIImage *_Nonnull)image size:(CGSize)size;
+- (UIImage *_Nonnull)__scaleDownImageWithScale:(CGFloat)scale;
+- (UIImage *_Nonnull)__scaleDownImageWithSize:(CGSize)size;
 
 /**
  保存图片到本地

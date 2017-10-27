@@ -4,6 +4,10 @@
 
 @implementation UIImageView (__Category)
 
+- (void)__setCornerRadius:(CGFloat)cornerRadius{
+    [self.image __setCornerRadius:cornerRadius setImageSize:self.bounds.size];
+}
+
 - (void)__setAnimationWithImages:(NSArray<UIImage *> *_Nonnull)animationImages
             animationRepeatCount:(NSInteger)animationRepeatCount
                animationDuration:(NSTimeInterval)animationDuration{

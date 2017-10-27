@@ -59,7 +59,7 @@
     
     BOOL isUpdateSuccess = [_fmdbTestModelDatabase executeUpdate:insertSql, model.privateJobId, model.icon, model.createdAt, @(model.canClick)];
     if (!isUpdateSuccess) {
-        NSLog(@"delete data error -> %@", personDatabase.lastErrorMessage);
+        NSLog(@"delete data error -> %@", _fmdbTestModelDatabase.lastErrorMessage);
         NSAssert(NO, @"Update is error");
     }
     
@@ -72,9 +72,9 @@
     
     NSString *updateSql =
     [NSString stringWithFormat:@"UPDATE %@ SET icon = ? SET createdAt = ? SET canClick = ? WHERE privateJobId = ?", _tableName];
-    BOOL isUpdateSuccess = [personDatabase executeUpdate:updateSql, model.icon, model.createdAt, @(model.canClick), model.privateJobId];
+    BOOL isUpdateSuccess = [_fmdbTestModelDatabase executeUpdate:updateSql, model.icon, model.createdAt, @(model.canClick), model.privateJobId];
     if (!isUpdateSuccess) {
-        NSLog(@"update data error -> %@", personDatabase.lastErrorMessage);
+        NSLog(@"update data error -> %@", _fmdbTestModelDatabase.lastErrorMessage);
         NSAssert(NO, @"update data error");
     }
     
@@ -86,9 +86,9 @@
     [_fmdbTestModelDatabase open];
     
     NSString *deleteSql = [NSString stringWithFormat:@"DELETE FROM %@ WHERE _id = ?", _tableName];
-    BOOL isDeleteSuccess = [personDatabase executeUpdate:deleteSql, model.privateJobId];
+    BOOL isDeleteSuccess = [_fmdbTestModelDatabase executeUpdate:deleteSql, model.privateJobId];
     if (!isDeleteSuccess) {
-        NSLog(@"delete data error -> %@", personDatabase.lastErrorMessage);
+        NSLog(@"delete data error -> %@", _fmdbTestModelDatabase.lastErrorMessage);
         NSAssert(NO, @"delete data error");
     }
     
@@ -96,8 +96,10 @@
 }
 
 - (NSArray<FmdbTestModel *> *)getAllData{
+    [_fmdbTestModelDatabase open];
+    
     NSString *querySql = [NSString stringWithFormat:@"SELECT * FROM %@;", _tableName];
-    FMResultSet *set = [personDatabase executeQuery:querySql];
+    FMResultSet *set = [_fmdbTestModelDatabase executeQuery:querySql];
     
     NSMutableArray *dataArray = [[NSMutableArray alloc] init];
     while ([set next]) {
@@ -112,7 +114,7 @@
     
     return dataArray.copy;
     
-    [personDatabase close];
+    [_fmdbTestModelDatabase close];
 }
 
 @end

@@ -2,25 +2,69 @@
 
 #import "UIImage+__Category.h"
 
+typedef NS_ENUM(NSUInteger, ScaleDownImageType) {
+    ScaleDownImageTypeSize,
+    ScaleDownImageTypeScale
+};
+
 @implementation UIImage (__Category)
 
-+ (UIImage *)__scaleDownImage:(UIImage *)image scale:(CGFloat)scale{
-    CGSize size = CGSizeMake(image.size.width * scale, image.size.height * scale);
+- (UIImage *_Nonnull)__setCornerRadius:(CGFloat)cornerRadius setImageSize:(CGSize)size{
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
+    
+    UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(cornerRadius, cornerRadius)];
+    CGContextAddPath(ctx,path.CGPath);
+    CGContextClip(ctx);
+    
+    [self drawInRect:rect];
+    
+    CGContextDrawPath(ctx, kCGPathFillStroke);
+    UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
+}
+
+- (UIImage *_Nonnull)__setAntiAlias{
+    CGFloat border = 1.0f;
+    CGRect rect = CGRectMake(border, border, self.size.width-2*border, self.size.height-2*border);
+    UIImage *img = nil;
+    
+    UIGraphicsBeginImageContext(CGSizeMake(rect.size.width,rect.size.height));
+    [self drawInRect:CGRectMake(-1, -1, self.size.width, self.size.height)];
+    img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    UIGraphicsBeginImageContext(self.size);
+    [img drawInRect:rect];
+    UIImage* antiImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return antiImage;
+}
+
+- (UIImage *)__scaleDownImageWithScale:(CGFloat)scale{
+    CGSize size = CGSizeMake(self.size.width * scale, self.size.height * scale);
+    UIImage *scaledImage = [self scaleDownImageWithSize:size];
+    return scaledImage;
+}
+
+- (UIImage *)__scaleDownImageWithSize:(CGSize)size{
+    UIImage *scaledImage = [self scaleDownImageWithSize:size];
+    return scaledImage;
+}
+
+- (UIImage *)scaleDownImageWithSize:(CGSize)size{
     //第一个参数表示区域大小
     //第二个参数表示是否是非透明的。如果需要显示半透明效果，需要传NO，否则传YES
     //第三个参数就是屏幕密度
     UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
-    [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    [self drawInRect:CGRectMake(0, 0, size.width, size.height)];
     UIImage* scaledImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    return scaledImage;
-}
-
-+ (UIImage *)__scaleDownImage:(UIImage *)image size:(CGSize)size{
-    UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
-    [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
-    UIImage* scaledImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+    
     return scaledImage;
 }
 

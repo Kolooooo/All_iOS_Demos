@@ -42,6 +42,11 @@
  */
 + (instancetype _Nullable)__viewFromXibWithViewIndex:(NSInteger)viewIndex;
 
+/**
+ 视图旋转时候可能会出现锯齿，这是抗锯齿设置
+ */
+- (void)__setAntiAlias;
+
 #pragma mark - 添加查看测试信息按钮
 /// 添加测试信息按钮到视图窗
 ///
