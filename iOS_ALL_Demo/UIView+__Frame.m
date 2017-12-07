@@ -98,4 +98,22 @@
     }
 }
 
+- (UIView *(^)(MK_FLOAT, MK_FLOAT, MK_FLOAT, MK_FLOAT)) com_frame {
+    return ^(MK_FLOAT x, MK_FLOAT y, MK_FLOAT w, MK_FLOAT h) {
+        self.frame = CGRectMake(x, y, w, h);
+        return self;
+    };
+}
+
+- (UIView *(^)(UIColor *)) com_backgroundColor {
+    return ^(UIColor *backgroundColor) {
+        self.backgroundColor = backgroundColor;
+        return self;
+    };
+}
+
++ (UIView *) news{
+    return [self new];
+}
+
 @end

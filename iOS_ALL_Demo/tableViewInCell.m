@@ -57,4 +57,20 @@ UITableViewDataSource>
     [self.tableView reloadData];
 }
 
+// 在 swift 的 view 里面怎么写这两个 oc 方法
+
+// setter method
+- (void)setFrame:(CGRect)frame{
+    
+}
+
+// init method
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
 @end

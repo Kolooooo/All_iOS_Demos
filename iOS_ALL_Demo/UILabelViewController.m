@@ -27,6 +27,12 @@
     
     [self initUI];
     [self showTheMethod];
+    
+    UIView *kenView = UIView.news
+    .com_frame(100, 100, 100, 100)
+    .com_backgroundColor([UIColor orangeColor]);
+    
+    [self.view addSubview:kenView];
 }
 
 - (void)showTheMethod{
