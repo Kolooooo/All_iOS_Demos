@@ -23,6 +23,7 @@
 #import "UIImage+__Category.h"
 #import "__AFNManager.h"
 #import "NSAttributedString+__Category.h"
+#import "UIControl+clickRepeatedly.h"
 
 #import <MJExtension/MJExtension.h>
 

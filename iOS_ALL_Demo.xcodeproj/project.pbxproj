@@ -101,6 +101,9 @@
 		A9C2CE501F7095B60029DBDE /* iOS.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = A9C2CE4F1F7095B60029DBDE /* iOS.rtfd */; };
 		A9E1F1CD1FA0892E00D2C219 /* PerformanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E1F1CC1FA0892E00D2C219 /* PerformanceViewController.m */; };
 		A9E1F1D01FA089A200D2C219 /* PerformanceViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E1F1CF1FA089A200D2C219 /* PerformanceViewCell.m */; };
+		BE0BBE1C1FE29C2B00C52EBA /* NSString+__Language.m in Sources */ = {isa = PBXBuildFile; fileRef = BE0BBE1B1FE29C2B00C52EBA /* NSString+__Language.m */; };
+		BE0BBE1F1FE2A06200C52EBA /* UIControl+__Click.m in Sources */ = {isa = PBXBuildFile; fileRef = BE0BBE1E1FE2A06200C52EBA /* UIControl+__Click.m */; };
+		BE0BBE211FE2A66700C52EBA /* __Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BBE201FE2A66700C52EBA /* __Exchange.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -285,6 +288,11 @@
 		A9E1F1CC1FA0892E00D2C219 /* PerformanceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformanceViewController.m; sourceTree = "<group>"; };
 		A9E1F1CE1FA089A200D2C219 /* PerformanceViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerformanceViewCell.h; sourceTree = "<group>"; };
 		A9E1F1CF1FA089A200D2C219 /* PerformanceViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformanceViewCell.m; sourceTree = "<group>"; };
+		BE0BBE1A1FE29C2B00C52EBA /* NSString+__Language.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+__Language.h"; sourceTree = "<group>"; };
+		BE0BBE1B1FE29C2B00C52EBA /* NSString+__Language.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+__Language.m"; sourceTree = "<group>"; };
+		BE0BBE1D1FE2A06100C52EBA /* UIControl+__Click.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+__Click.h"; sourceTree = "<group>"; };
+		BE0BBE1E1FE2A06200C52EBA /* UIControl+__Click.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+__Click.m"; sourceTree = "<group>"; };
+		BE0BBE201FE2A66700C52EBA /* __Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __Exchange.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -490,6 +498,8 @@
 			children = (
 				A9A7F21C1F61F50800D460AE /* NSString+__Category.h */,
 				A9A7F21D1F61F50800D460AE /* NSString+__Category.m */,
+				BE0BBE1A1FE29C2B00C52EBA /* NSString+__Language.h */,
+				BE0BBE1B1FE29C2B00C52EBA /* NSString+__Language.m */,
 				A904FF131F99D33500AC2A53 /* NSString+__Path.h */,
 				A904FF141F99D33500AC2A53 /* NSString+__Path.m */,
 				A904FF0D1F99D02700AC2A53 /* NSString+__RegularExpression.h */,
@@ -666,6 +676,8 @@
 				A92901571F8059EE0002DBD3 /* UITextField+Category */,
 				A929016A1F8068EE0002DBD3 /* NSString+Category */,
 				A94A746C1F8AECB800ECD60B /* NSObject+Category */,
+				BE0BBE1D1FE2A06100C52EBA /* UIControl+__Click.h */,
+				BE0BBE1E1FE2A06200C52EBA /* UIControl+__Click.m */,
 				A92901581F805ACF0002DBD3 /* __UITextView.h */,
 				A92901591F805ACF0002DBD3 /* __UITextView.m */,
 				A9443E901FC7CF3C0012C3BF /* UITextView+__Category.h */,
@@ -751,6 +763,7 @@
 			isa = PBXGroup;
 			children = (
 				A94CE7441FC079E00067B8BB /* SwiftViewController.swift */,
+				BE0BBE201FE2A66700C52EBA /* __Exchange.swift */,
 				A94CE7431FC079DF0067B8BB /* iOS_ALL_Demo-Bridging-Header.h */,
 			);
 			name = SwiftViewController;
@@ -938,6 +951,7 @@
 				A904FF0C1F99CA2C00AC2A53 /* NSObject+__RangeRuntime.m in Sources */,
 				A92C88811F5AB49400CD02C4 /* UILabelViewController.m in Sources */,
 				A923E60C1F71A39800567E96 /* tableViewInCell2.m in Sources */,
+				BE0BBE1C1FE29C2B00C52EBA /* NSString+__Language.m in Sources */,
 				A92C88701F5AB0E300CD02C4 /* NSArray+__Category.m in Sources */,
 				A92C88871F5AB70800CD02C4 /* UILabel+__Category.m in Sources */,
 				A92C887C1F5AB34F00CD02C4 /* TableViewCell.m in Sources */,
@@ -974,6 +988,7 @@
 				A90BFDCB1F7FFC3B008EFA09 /* __UIButton.m in Sources */,
 				A92901841F8069190002DBD3 /* NSData+AES.m in Sources */,
 				A92952A31F77969100504B10 /* UITextFieldViewController.m in Sources */,
+				BE0BBE211FE2A66700C52EBA /* __Exchange.swift in Sources */,
 				A9A7F2161F61EDF700D460AE /* AutoLayoutViewController.m in Sources */,
 				A90BFDCE1F7FFDD5008EFA09 /* __UIImageView.m in Sources */,
 				A92901831F8069190002DBD3 /* NSString+HTML.m in Sources */,
@@ -997,6 +1012,7 @@
 				A92C88761F5AB0E300CD02C4 /* UIViewController+__Category.m in Sources */,
 				A904FF0F1F99D02700AC2A53 /* NSString+__RegularExpression.m in Sources */,
 				A92C888A1F5AC70B00CD02C4 /* TableViewController.m in Sources */,
+				BE0BBE1F1FE2A06200C52EBA /* UIControl+__Click.m in Sources */,
 				A9282A141F75AE35009C2659 /* UITextField+__Category.m in Sources */,
 				A9E1F1CD1FA0892E00D2C219 /* PerformanceViewController.m in Sources */,
 				A9775E761F6C98CC00A1FEDE /* UITableView+__Category.m in Sources */,

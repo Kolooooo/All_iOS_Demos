@@ -1,9 +1,5 @@
 
 
-
-
-
-
 #import "NSString+__RegularExpression.h"
 
 @implementation NSString (__RegularExpression)

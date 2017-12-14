@@ -1,10 +1,4 @@
-//
-//  UITextView+__Category.m
-//  iOS_ALL_Demo
-//
-//  Created by Ken_lu on 2017/11/24.
-//  Copyright © 2017年 Ken lu. All rights reserved.
-//
+
 
 #import "UITextView+__Category.h"
 

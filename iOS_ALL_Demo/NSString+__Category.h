@@ -39,9 +39,5 @@
 #pragma mark - 格式字符串验证
 /// 验证是否是正确的手机号码格式
 - (BOOL)__isValidateMobile;
-/// 验证是否是正确的邮箱号码格式
-//+(BOOL)KK_isValidateEmail:(NSString *)email;
-/// 验证是否是正确的密码格式
-//+ (BOOL)KK_isValiDatePassword:(NSString *)password;
 
 @end

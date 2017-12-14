@@ -14,16 +14,26 @@ class SwiftViewController: UIViewController {
     // MARK: - View property
     
     // MARK: - Data property
-
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         initUI()
         initData()
         initRequest()
+        
+        
+        let string = "1234"
+        
+        let intValue: Int = Int(string) ?? 0
+        print(intValue)
+        
+        let doubleValue: Double = Double(string) ?? 0.0
+        print(doubleValue)
     }
 }
+
 
 // MARK: - Public method
 
@@ -43,9 +53,9 @@ private func initRequest(){
 // MARK: - View layout
 private func initUI(){
     // MARK: View style
-
     
-
+    
+    
     
     // MARK: View structure
     // MARK: View layout
