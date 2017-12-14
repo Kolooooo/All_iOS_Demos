@@ -22,6 +22,7 @@
 #import "NSObject+__Runtime.h"
 #import "UIImage+__Category.h"
 #import "__AFNManager.h"
+#import "NSAttributedString+__Category.h"
 
 #import <MJExtension/MJExtension.h>
 

@@ -6,21 +6,21 @@
 @interface NSAttributedString (__Category)
 
 /**
- 修改文本字号
+ 修改文本字体
  
- @param fontSize 字号大小
+ @param font 字体
  @return 修改过文本文字样式
  */
-- (instancetype _Nonnull)__setFontSize:(CGFloat)fontSize;
+- (instancetype _Nonnull)__setFont:(UIFont *_Nonnull)font;
 
 /**
  修改文本字号
  
- @param fontSize 字号大小
+ @param font 字号
  @param range 修改文本文字的范围
  @return 修改过文本文字样式
  */
-- (instancetype _Nonnull)__setFontSize:(CGFloat)fontSize range:(NSRange)range;
+- (instancetype _Nonnull)__setFont:(UIFont *_Nonnull)font range:(NSRange)range;
 
 /**
  修改文本文字颜色

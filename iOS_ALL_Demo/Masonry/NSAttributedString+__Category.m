@@ -4,7 +4,7 @@
 
 @implementation NSAttributedString (__Category)
 
-- (instancetype _Nonnull)__setFontSize:(CGFloat)fontSize{
+- (instancetype _Nonnull)__setFont:(UIFont *)font{
     if (!self.string || self.string.length == 0) {
         return [[NSMutableAttributedString alloc] init];
     }
@@ -13,13 +13,13 @@
     
     NSRange range = NSMakeRange(0, self.string.length);
     [attributedText addAttribute:NSFontAttributeName
-                           value:@(fontSize)
+                           value:font
                            range:range];
     
     return attributedText.copy;
 }
 
-- (instancetype _Nonnull)__setFontSize:(CGFloat)fontSize range:(NSRange)range{
+- (instancetype _Nonnull)__setFont:(UIFont *)font range:(NSRange)range{
     if (!self.string || self.string.length == 0) {
         return [[NSMutableAttributedString alloc] init];
     }
@@ -27,7 +27,7 @@
     NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithAttributedString:self];
     
     [attributedText addAttribute:NSFontAttributeName
-                           value:@(fontSize)
+                           value:font
                            range:range];
     
     return attributedText.copy;
