@@ -5,7 +5,7 @@ import UIKit
 class __Exchange: NSObject {
 
     // String 转化成CGFloat
-    public class func CGFloatFromString(str: String)->(CGFloat){
+    public class func CGFloatFromString(_ str: String) -> (CGFloat){
         let string = str
         
         var cgFloat:CGFloat = 0
@@ -16,7 +16,7 @@ class __Exchange: NSObject {
         return cgFloat
     }
     
-    public class func IntFromString(str:String)->(Int){
+    public class func IntFromString(_ str:String) -> (Int){
         let string = str
         
         var int:Int?
