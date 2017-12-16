@@ -38,7 +38,6 @@
     if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]){
         statusBar.backgroundColor = color;
     }
-    
 }
 
 - (void)__banLockScreen{

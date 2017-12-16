@@ -104,6 +104,8 @@
 		BE0BBE1C1FE29C2B00C52EBA /* NSString+__Language.m in Sources */ = {isa = PBXBuildFile; fileRef = BE0BBE1B1FE29C2B00C52EBA /* NSString+__Language.m */; };
 		BE0BBE1F1FE2A06200C52EBA /* UIControl+__Click.m in Sources */ = {isa = PBXBuildFile; fileRef = BE0BBE1E1FE2A06200C52EBA /* UIControl+__Click.m */; };
 		BE0BBE211FE2A66700C52EBA /* __Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BBE201FE2A66700C52EBA /* __Exchange.swift */; };
+		BEBC0F1A1FE52A77004E6BED /* Ken_Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBC0F191FE52A77004E6BED /* Ken_Common.swift */; };
+		BEBC0F1D1FE52A99004E6BED /* UINavigationController+__Category.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBC0F1B1FE52A99004E6BED /* UINavigationController+__Category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -293,6 +295,9 @@
 		BE0BBE1D1FE2A06100C52EBA /* UIControl+__Click.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+__Click.h"; sourceTree = "<group>"; };
 		BE0BBE1E1FE2A06200C52EBA /* UIControl+__Click.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+__Click.m"; sourceTree = "<group>"; };
 		BE0BBE201FE2A66700C52EBA /* __Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __Exchange.swift; sourceTree = "<group>"; };
+		BEBC0F191FE52A77004E6BED /* Ken_Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ken_Common.swift; sourceTree = "<group>"; };
+		BEBC0F1B1FE52A99004E6BED /* UINavigationController+__Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+__Category.m"; sourceTree = "<group>"; };
+		BEBC0F1C1FE52A99004E6BED /* UINavigationController+__Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+__Category.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -706,6 +711,8 @@
 				A92C886F1F5AB0E300CD02C4 /* UIViewController+__Category.m */,
 				A923E60F1F71E6C600567E96 /* UISearchController+__Category.h */,
 				A923E6101F71E6C600567E96 /* UISearchController+__Category.m */,
+				BEBC0F1C1FE52A99004E6BED /* UINavigationController+__Category.h */,
+				BEBC0F1B1FE52A99004E6BED /* UINavigationController+__Category.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -764,6 +771,7 @@
 			children = (
 				A94CE7441FC079E00067B8BB /* SwiftViewController.swift */,
 				BE0BBE201FE2A66700C52EBA /* __Exchange.swift */,
+				BEBC0F191FE52A77004E6BED /* Ken_Common.swift */,
 				A94CE7431FC079DF0067B8BB /* iOS_ALL_Demo-Bridging-Header.h */,
 			);
 			name = SwiftViewController;
@@ -1016,10 +1024,12 @@
 				A9282A141F75AE35009C2659 /* UITextField+__Category.m in Sources */,
 				A9E1F1CD1FA0892E00D2C219 /* PerformanceViewController.m in Sources */,
 				A9775E761F6C98CC00A1FEDE /* UITableView+__Category.m in Sources */,
+				BEBC0F1A1FE52A77004E6BED /* Ken_Common.swift in Sources */,
 				A92952971F777BFE00504B10 /* UIView+__Frame.m in Sources */,
 				A929529F1F778EA700504B10 /* BezierView.m in Sources */,
 				A903E1791F9B47F000950E6D /* __SQLiteManager.m in Sources */,
 				A929017F1F8069190002DBD3 /* NSString+__Hash.m in Sources */,
+				BEBC0F1D1FE52A99004E6BED /* UINavigationController+__Category.m in Sources */,
 				A923E6111F71E6C600567E96 /* UISearchController+__Category.m in Sources */,
 				A903E18D1F9B53F200950E6D /* __CoreDataManager.m in Sources */,
 				A929018E1F806C7E0002DBD3 /* UIImage+__Color.m in Sources */,

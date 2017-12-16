@@ -3,7 +3,7 @@
 import UIKit
 
 class __Exchange: NSObject {
-
+    
     // String 转化成CGFloat
     public class func CGFloatFromString(_ str: String) -> (CGFloat){
         let string = str
