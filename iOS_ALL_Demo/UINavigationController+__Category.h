@@ -1,10 +1,4 @@
-//
-//  UINavigationController+__Category.h
-//  QunhuanTribe
-//
-//  Created by Ken on 2017/12/16.
-//  Copyright © 2017年 GarveyCalvin. All rights reserved.
-//
+
 
 #import <UIKit/UIKit.h>
 

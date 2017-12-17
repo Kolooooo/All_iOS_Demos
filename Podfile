@@ -10,14 +10,15 @@ target 'iOS_ALL_Demo' do
   pod 'MJExtension'
   pod 'MJRefresh'
   pod 'SVProgressHUD'
+  pod 'SYPhotoBrowser', :git => 'https://github.com/JeasonL/SYPhotoBrowser', :branch => 'develop'
   
-  
+  #调试
   pod 'Reveal-SDK', '7',:configurations => ['Debug']
   pod 'JPFPSStatus', :configurations => ['Debug']
   
-  
   #Swift frameworks
-  pod 'SnapKit', '~> 4.0.0'
+  #pod 'SnapKit'
+  pod 'Alamofire', '~> 4.5'
 
   
 end
