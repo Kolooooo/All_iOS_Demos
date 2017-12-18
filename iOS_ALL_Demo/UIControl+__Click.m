@@ -1,6 +1,6 @@
 
 
-#import "UIControl+clickRepeatedly.h"
+#import "UIControl+__Click.h"
 #import <objc/runtime.h>
 
 static const char *ClickIntervalKey;
