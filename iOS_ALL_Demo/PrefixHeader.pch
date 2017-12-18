@@ -24,6 +24,7 @@
 #import "__AFNManager.h"
 #import "NSAttributedString+__Category.h"
 #import "UIControl+__Click.h"
+#import "__StarsControl.h"
 
 #import <MJExtension/MJExtension.h>
 
