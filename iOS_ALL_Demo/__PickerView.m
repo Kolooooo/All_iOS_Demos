@@ -11,6 +11,7 @@
 /// pickerView 父视图高度
 static const CGFloat bigViewHeight = 400.0f;
 static const CGFloat toolBarViewHeight = 40.0f;
+static const NSTimeInterval animateDuration = 0.25f;
 
 
 @interface __PickerView()
@@ -20,21 +21,26 @@ static const CGFloat toolBarViewHeight = 40.0f;
 @property (nonatomic, strong) UIPickerView  *pickerView;
 @property (nonatomic, strong) UIButton  *coverButton;
 @property (nonatomic, strong) UIButton  *doneButton;
-@property (nonatomic, strong) UIButton  *cacelButton;
+@property (nonatomic, strong) UIButton  *cancelButton;
+
+@property (nonatomic, assign) BOOL isShow;
 
 @end
 
 @implementation __PickerView
 
-- (instancetype)init{
-    self = [super init];
+- (instancetype)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
     if (self) {
         [self initUI];
+        [self initData];
     }
     return self;
 }
 
 - (void)initUI{
+    self.alpha = 0;
+    
     self.coverButton.frame = CGRectMake(0, 0, self.width, self.height);
     self.bigView.frame = CGRectMake(0, self.height, self.width, bigViewHeight);
     self.toolBarView.frame = CGRectMake(0, 0, self.bigView.width, toolBarViewHeight);
@@ -45,6 +51,11 @@ static const CGFloat toolBarViewHeight = 40.0f;
     [self addSubview:self.bigView];
     [self.bigView addSubview:self.toolBarView];
     [self.bigView addSubview:self.pickerView];
+    
+    
+    [self.coverButton addTarget:self action:@selector(touchCoverButton) forControlEvents:UIControlEventTouchUpInside];
+    [self.doneButton addTarget:self action:@selector(touchCommitButton) forControlEvents:UIControlEventTouchUpInside];
+    [self.cancelButton addTarget:self action:@selector(touchCancelButton) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)layoutSubviews{
@@ -53,17 +64,48 @@ static const CGFloat toolBarViewHeight = 40.0f;
 }
 
 - (void)show{
+    if (self.isShow) {
+        return;
+    }
     
+    [UIView animateWithDuration:animateDuration animations:^{
+        self.isShow = YES;
+        self.alpha = 1.0;
+        self.bigView.y = self.height-self.bigView.height;
+    }];
 }
 
 - (void)hidden{
+    if (!self.isShow) {
+        return;
+    }
     
+    [UIView animateWithDuration:animateDuration animations:^{
+        self.isShow = NO;
+        self.alpha = 0.0;
+        self.bigView.y = self.height;
+    }];
 }
 
-- (void)setPickerViewDelegale:(id<UIPickerViewDelegate>)pickerViewDelegale{
-    _pickerViewDelegale = pickerViewDelegale;
-    
-    self.pickerView.delegate = pickerViewDelegale;
+- (void)touchCoverButton{
+    [self hidden];
+}
+
+- (void)touchCommitButton{
+    [self hidden];
+}
+
+- (void)touchCancelButton{
+    [self hidden];
+}
+
+- (void)initData{
+    self.isShow = NO;
+}
+
+- (void)setDelegale:(id<UIPickerViewDelegate>)delegale{
+    _delegale = delegale;
+    self.pickerView.delegate = delegale;
 }
 
 #pragma mark - lazy load
@@ -97,6 +139,22 @@ static const CGFloat toolBarViewHeight = 40.0f;
         _pickerView = [[UIPickerView alloc] init];
     }
     return _pickerView;
+}
+
+- (UIButton *)doneButton{
+    if (_doneButton == nil) {
+        _doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_doneButton setTitle:@"确定" forState:UIControlStateNormal];
+    }
+    return _doneButton;
+}
+
+- (UIButton *)cancelButton{
+    if (_cancelButton == nil) {
+        _cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_cancelButton setTitle:@"取消" forState:UIControlStateNormal];
+    }
+    return _cancelButton;
 }
 
 @end

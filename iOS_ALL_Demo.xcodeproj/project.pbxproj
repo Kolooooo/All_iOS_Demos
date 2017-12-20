@@ -90,6 +90,7 @@
 		A93217AB1FE68798005BF77A /* __AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93217AA1FE68798005BF77A /* __AlamofireManager.swift */; };
 		A9443E921FC7CF3D0012C3BF /* UITextView+__Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A9443E911FC7CF3C0012C3BF /* UITextView+__Category.m */; };
 		A94CE7451FC079E00067B8BB /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CE7441FC079E00067B8BB /* SwiftViewController.swift */; };
+		A94D8FD11FEAB7DA00B25E4E /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A94D8FD01FEAB7DA00B25E4E /* PickerViewController.m */; };
 		A9775E681F6B03F900A1FEDE /* NSAttributedString+__Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A9775E671F6B03F900A1FEDE /* NSAttributedString+__Category.m */; };
 		A9775E701F6B0F9A00A1FEDE /* __UILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9775E6F1F6B0F9A00A1FEDE /* __UILabel.m */; };
 		A9775E761F6C98CC00A1FEDE /* UITableView+__Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A9775E751F6C98CC00A1FEDE /* UITableView+__Category.m */; };
@@ -270,6 +271,8 @@
 		A9443E911FC7CF3C0012C3BF /* UITextView+__Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+__Category.m"; sourceTree = "<group>"; };
 		A94CE7431FC079DF0067B8BB /* iOS_ALL_Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS_ALL_Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		A94CE7441FC079E00067B8BB /* SwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
+		A94D8FCF1FEAB7DA00B25E4E /* PickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickerViewController.h; sourceTree = "<group>"; };
+		A94D8FD01FEAB7DA00B25E4E /* PickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickerViewController.m; sourceTree = "<group>"; };
 		A9775E661F6B03F900A1FEDE /* NSAttributedString+__Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+__Category.h"; path = "Masonry/NSAttributedString+__Category.h"; sourceTree = "<group>"; };
 		A9775E671F6B03F900A1FEDE /* NSAttributedString+__Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+__Category.m"; path = "Masonry/NSAttributedString+__Category.m"; sourceTree = "<group>"; };
 		A9775E6E1F6B0F9A00A1FEDE /* __UILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __UILabel.h; sourceTree = "<group>"; };
@@ -642,6 +645,7 @@
 				A903E1921F9BA03A00950E6D /* FMDBViewController */,
 				A921E60C1F9DCCAE00717164 /* PerformanceViewController */,
 				A94CE7421FC0793B0067B8BB /* SwiftViewController */,
+				A94D8FCE1FEAB7C600B25E4E /* PickerViewController */,
 				A92C885B1F5AABB900CD02C4 /* Main */,
 				A92C88601F5AB0C100CD02C4 /* Category */,
 				A904FEFE1F931CF000AC2A53 /* Tools */,
@@ -793,6 +797,15 @@
 				A94CE7441FC079E00067B8BB /* SwiftViewController.swift */,
 			);
 			name = SwiftViewController;
+			sourceTree = "<group>";
+		};
+		A94D8FCE1FEAB7C600B25E4E /* PickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A94D8FCF1FEAB7DA00B25E4E /* PickerViewController.h */,
+				A94D8FD01FEAB7DA00B25E4E /* PickerViewController.m */,
+			);
+			name = PickerViewController;
 			sourceTree = "<group>";
 		};
 		A9A7F2131F61EDBE00D460AE /* AutoLayout */ = {
@@ -991,6 +1004,7 @@
 				A92C88811F5AB49400CD02C4 /* UILabelViewController.m in Sources */,
 				A923E60C1F71A39800567E96 /* tableViewInCell2.m in Sources */,
 				BE0BBE1C1FE29C2B00C52EBA /* NSString+__Language.m in Sources */,
+				A94D8FD11FEAB7DA00B25E4E /* PickerViewController.m in Sources */,
 				A92C88701F5AB0E300CD02C4 /* NSArray+__Category.m in Sources */,
 				A92C88871F5AB70800CD02C4 /* UILabel+__Category.m in Sources */,
 				A92C887C1F5AB34F00CD02C4 /* TableViewCell.m in Sources */,

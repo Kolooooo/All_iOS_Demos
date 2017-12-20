@@ -10,6 +10,9 @@
 
 @interface __PickerView : UIView
 
-@property (nonatomic, weak) id <UIPickerViewDelegate> pickerViewDelegale;
+@property (nonatomic, weak) id <UIPickerViewDelegate> delegale;
+
+- (void)show;
+- (void)hidden;
 
 @end

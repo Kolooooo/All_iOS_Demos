@@ -98,6 +98,10 @@ UITableViewDataSource>
             [self.navigationController pushViewController:[[NSClassFromString(@"SwiftViewController") alloc] init] animated:YES];
             break;
         }
+        case 12:{
+            [self.navigationController pushViewController:[[NSClassFromString(@"PickerViewController") alloc] init] animated:YES];
+            break;
+        }
             
         default:
             break;
@@ -117,7 +121,8 @@ UITableViewDataSource>
                     @"SQLiteManagerViewController",
                     @"FMDBViewController",
                     @"PerformanceViewController 性能优化",
-                    @"SwiftViewController"
+                    @"SwiftViewController",
+                    @"PickerViewController"
                     ];
 }
 
