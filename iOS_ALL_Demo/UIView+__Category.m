@@ -20,6 +20,39 @@
     return viewController;
 }
 
+- (UIViewController *_Nonnull)__navigationController{
+    if (self.__viewController == nil) {
+        NSAssert(NO, @"view did not have viewController");
+        return [[UIViewController alloc] init];
+    }
+    
+    if (self.__viewController.navigationController == nil) {
+        NSAssert(NO, @"view did not have nav viewController");
+        return [[UIViewController alloc] init];
+    }
+    
+    return self.__viewController.navigationController;
+}
+
+- (UIViewController *_Nonnull)__tabBarController{
+    if (self.__viewController == nil) {
+        NSAssert(NO, @"view did not have viewController");
+        return [[UIViewController alloc] init];
+    }
+    
+    if (self.__viewController.navigationController == nil) {
+        NSAssert(NO, @"view did not have nav viewController");
+        return [[UIViewController alloc] init];
+    }
+    
+    if (self.__viewController.navigationController.tabBarController == nil) {
+        NSAssert(NO, @"view did not have tabBar viewController");
+        return [[UIViewController alloc] init];
+    }
+    
+    return self.__viewController.navigationController.tabBarController;
+}
+
 - (CGRect)__rectFromWindow{
     UIWindow * window = [[[UIApplication sharedApplication] delegate] window];
     CGRect rect = [self convertRect:self.bounds toView:window];

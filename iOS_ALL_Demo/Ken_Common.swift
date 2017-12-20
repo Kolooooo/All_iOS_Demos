@@ -17,3 +17,6 @@ func __print<T>(_ message : T, file : String = #file, lineNumber : Int = #line) 
         print("===>>> Class: \(fileName) | Line: \(lineNumber) - \n \(message)")
     #endif
 }
+
+/// 空操作
+func __nullOperation(){}

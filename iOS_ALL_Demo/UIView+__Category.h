@@ -12,6 +12,20 @@
 - (UIViewController *_Nonnull)__viewController;
 
 /**
+ 根据子视图 获取 子视图所在的nav控制器
+ 
+ @return 子视图所在的nav控制器
+ */
+- (UIViewController *_Nonnull)__navigationController;
+
+/**
+ 根据子视图 获取 子视图所在的tabbar控制器
+ 
+ @return 子视图所在的tabbar控制器
+ */
+- (UIViewController *_Nonnull)__tabBarController;
+
+/**
  获取视图在window 上的位置与大小
 
  @return 返回视图在window 上的位置与大小

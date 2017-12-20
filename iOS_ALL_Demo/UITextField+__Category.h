@@ -152,7 +152,7 @@
  - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string;{
  　
  //按回车可以改变
- if ([string isEqualToString:@"n"]){
+ if ([string isEqualToString:@"\n"]){
  return YES;
  }
  

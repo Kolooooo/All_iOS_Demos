@@ -102,6 +102,8 @@
 		A9C2CE501F7095B60029DBDE /* iOS.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = A9C2CE4F1F7095B60029DBDE /* iOS.rtfd */; };
 		A9E1F1CD1FA0892E00D2C219 /* PerformanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E1F1CC1FA0892E00D2C219 /* PerformanceViewController.m */; };
 		A9E1F1D01FA089A200D2C219 /* PerformanceViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E1F1CF1FA089A200D2C219 /* PerformanceViewCell.m */; };
+		BE08D9C51FEA54F300B8F0DE /* __PickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE08D9C41FEA54F300B8F0DE /* __PickerView.m */; };
+		BE08DA0D1FEA671700B8F0DE /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08DA0C1FEA671700B8F0DE /* NetworkRequest.swift */; };
 		BE0BBE1C1FE29C2B00C52EBA /* NSString+__Language.m in Sources */ = {isa = PBXBuildFile; fileRef = BE0BBE1B1FE29C2B00C52EBA /* NSString+__Language.m */; };
 		BE0BBE1F1FE2A06200C52EBA /* UIControl+__Click.m in Sources */ = {isa = PBXBuildFile; fileRef = BE0BBE1E1FE2A06200C52EBA /* UIControl+__Click.m */; };
 		BE0BBE211FE2A66700C52EBA /* __Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BBE201FE2A66700C52EBA /* __Exchange.swift */; };
@@ -292,6 +294,9 @@
 		A9E1F1CC1FA0892E00D2C219 /* PerformanceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformanceViewController.m; sourceTree = "<group>"; };
 		A9E1F1CE1FA089A200D2C219 /* PerformanceViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerformanceViewCell.h; sourceTree = "<group>"; };
 		A9E1F1CF1FA089A200D2C219 /* PerformanceViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformanceViewCell.m; sourceTree = "<group>"; };
+		BE08D9C31FEA54F300B8F0DE /* __PickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = __PickerView.h; sourceTree = "<group>"; };
+		BE08D9C41FEA54F300B8F0DE /* __PickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __PickerView.m; sourceTree = "<group>"; };
+		BE08DA0C1FEA671700B8F0DE /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		BE0BBE1A1FE29C2B00C52EBA /* NSString+__Language.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+__Language.h"; sourceTree = "<group>"; };
 		BE0BBE1B1FE29C2B00C52EBA /* NSString+__Language.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+__Language.m"; sourceTree = "<group>"; };
 		BE0BBE1D1FE2A06100C52EBA /* UIControl+__Click.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+__Click.h"; sourceTree = "<group>"; };
@@ -387,6 +392,7 @@
 		A904FEFE1F931CF000AC2A53 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				BE08D9C21FEA54BE00B8F0DE /* __PickerView */,
 				A921E6081F9C2D1E00717164 /* __AFNManager */,
 				A903E1981F9BBDB100950E6D /* __FMDBManager */,
 				A903E18A1F9B536800950E6D /* __CoreDataManager */,
@@ -623,6 +629,7 @@
 				A9775E721F6B14D100A1FEDE /* PrefixHeader.pch */,
 				A92C88441F5AA9EB00CD02C4 /* AppDelegate.h */,
 				A92C88451F5AA9EB00CD02C4 /* AppDelegate.m */,
+				BE08DA0C1FEA671700B8F0DE /* NetworkRequest.swift */,
 				A92C887E1F5AB47A00CD02C4 /* UILabel */,
 				A92C88771F5AB32200CD02C4 /* UITableView */,
 				A9A7F2131F61EDBE00D460AE /* AutoLayout */,
@@ -796,6 +803,15 @@
 				A9A7F2171F61EE0100D460AE /* AutoLayoutViewController.storyboard */,
 			);
 			name = AutoLayout;
+			sourceTree = "<group>";
+		};
+		BE08D9C21FEA54BE00B8F0DE /* __PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				BE08D9C31FEA54F300B8F0DE /* __PickerView.h */,
+				BE08D9C41FEA54F300B8F0DE /* __PickerView.m */,
+			);
+			name = __PickerView;
 			sourceTree = "<group>";
 		};
 		D531A055228450FD91131AFF /* Pods */ = {
@@ -997,6 +1013,7 @@
 				A904FF091F93524C00AC2A53 /* GCDViewController.m in Sources */,
 				A9A7F21E1F61F50800D460AE /* NSString+__Category.m in Sources */,
 				A92901911F806C7E0002DBD3 /* UIImage+QRCode.m in Sources */,
+				BE08DA0D1FEA671700B8F0DE /* NetworkRequest.swift in Sources */,
 				A921E60B1F9C529C00717164 /* FmdbTestModel.m in Sources */,
 				A92C88751F5AB0E300CD02C4 /* UIView+__Category.m in Sources */,
 				A929015A1F805ACF0002DBD3 /* __UITextView.m in Sources */,
@@ -1021,6 +1038,7 @@
 				A9E1F1D01FA089A200D2C219 /* PerformanceViewCell.m in Sources */,
 				A9443E921FC7CF3D0012C3BF /* UITextView+__Category.m in Sources */,
 				A91F256B1FA1C50F0099728A /* UIView+__Performance.m in Sources */,
+				BE08D9C51FEA54F300B8F0DE /* __PickerView.m in Sources */,
 				A9775E791F6C9D8A00A1FEDE /* UITableViewCell+__Category.m in Sources */,
 				A92C88B31F5B8AD800CD02C4 /* TableViewCell2.m in Sources */,
 				A92901691F8060940002DBD3 /* NSFileManager+Paths.m in Sources */,
