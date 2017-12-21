@@ -29,6 +29,7 @@
     [self initUI];
     [self showTheMethod];
     
+    return;
     UIView *kenView = UIView.news
     .com_frame(100, 100, 100, 100)
     .com_backgroundColor([UIColor orangeColor]);

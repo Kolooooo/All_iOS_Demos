@@ -95,4 +95,17 @@ void __enumerateFonts(){
     return NO;
 }
 
+- (id _Nullable)loadJsonDocument:(NSString *)name ofType:(NSString *)type{
+    NSString *file =[[NSBundle mainBundle] pathForResource:name ofType:type];
+    NSData *data = [NSData dataWithContentsOfFile:file];
+    NSError *error;
+    id jsonObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+    if (error != nil) {
+        NSAssert(NO, @"json 文件解析失败");
+        return nil;
+    }
+    
+    return jsonObject;
+}
+
 @end

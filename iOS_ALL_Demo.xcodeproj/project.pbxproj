@@ -108,6 +108,8 @@
 		BE0BBE1C1FE29C2B00C52EBA /* NSString+__Language.m in Sources */ = {isa = PBXBuildFile; fileRef = BE0BBE1B1FE29C2B00C52EBA /* NSString+__Language.m */; };
 		BE0BBE1F1FE2A06200C52EBA /* UIControl+__Click.m in Sources */ = {isa = PBXBuildFile; fileRef = BE0BBE1E1FE2A06200C52EBA /* UIControl+__Click.m */; };
 		BE0BBE211FE2A66700C52EBA /* __Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BBE201FE2A66700C52EBA /* __Exchange.swift */; };
+		BE136DE61FEBDC6600BBB964 /* place.json in Resources */ = {isa = PBXBuildFile; fileRef = BE136DE51FEBDC6400BBB964 /* place.json */; };
+		BE136DEC1FEBE28E00BBB964 /* PlaceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE136DEB1FEBE28E00BBB964 /* PlaceModel.m */; };
 		BEBC0F1A1FE52A77004E6BED /* Ken_Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBC0F191FE52A77004E6BED /* Ken_Common.swift */; };
 		BEBC0F1D1FE52A99004E6BED /* UINavigationController+__Category.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBC0F1B1FE52A99004E6BED /* UINavigationController+__Category.m */; };
 /* End PBXBuildFile section */
@@ -305,6 +307,9 @@
 		BE0BBE1D1FE2A06100C52EBA /* UIControl+__Click.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+__Click.h"; sourceTree = "<group>"; };
 		BE0BBE1E1FE2A06200C52EBA /* UIControl+__Click.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+__Click.m"; sourceTree = "<group>"; };
 		BE0BBE201FE2A66700C52EBA /* __Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __Exchange.swift; sourceTree = "<group>"; };
+		BE136DE51FEBDC6400BBB964 /* place.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = place.json; sourceTree = "<group>"; };
+		BE136DEA1FEBE28E00BBB964 /* PlaceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceModel.h; sourceTree = "<group>"; };
+		BE136DEB1FEBE28E00BBB964 /* PlaceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceModel.m; sourceTree = "<group>"; };
 		BEBC0F191FE52A77004E6BED /* Ken_Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ken_Common.swift; sourceTree = "<group>"; };
 		BEBC0F1B1FE52A99004E6BED /* UINavigationController+__Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+__Category.m"; sourceTree = "<group>"; };
 		BEBC0F1C1FE52A99004E6BED /* UINavigationController+__Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+__Category.h"; sourceTree = "<group>"; };
@@ -629,6 +634,9 @@
 		A92C88401F5AA9EB00CD02C4 /* iOS_ALL_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				BE136DE51FEBDC6400BBB964 /* place.json */,
+				BE136DEA1FEBE28E00BBB964 /* PlaceModel.h */,
+				BE136DEB1FEBE28E00BBB964 /* PlaceModel.m */,
 				A9775E721F6B14D100A1FEDE /* PrefixHeader.pch */,
 				A92C88441F5AA9EB00CD02C4 /* AppDelegate.h */,
 				A92C88451F5AA9EB00CD02C4 /* AppDelegate.m */,
@@ -904,6 +912,7 @@
 				A92C88B51F5B8AE700CD02C4 /* TableViewCell2.xib in Resources */,
 				A92C88511F5AA9EB00CD02C4 /* LaunchScreen.storyboard in Resources */,
 				A904FF211F99D81F00AC2A53 /* charles4.json in Resources */,
+				BE136DE61FEBDC6600BBB964 /* place.json in Resources */,
 				A904FF1F1F99D81F00AC2A53 /* charles2.json in Resources */,
 				A904FF201F99D81F00AC2A53 /* charles3.json in Resources */,
 				A904FF1E1F99D81F00AC2A53 /* charles1.json in Resources */,
@@ -1067,6 +1076,7 @@
 				A929529C1F77874300504B10 /* UIBezierPathViewController.m in Sources */,
 				A92C88761F5AB0E300CD02C4 /* UIViewController+__Category.m in Sources */,
 				A904FF0F1F99D02700AC2A53 /* NSString+__RegularExpression.m in Sources */,
+				BE136DEC1FEBE28E00BBB964 /* PlaceModel.m in Sources */,
 				A92C888A1F5AC70B00CD02C4 /* TableViewController.m in Sources */,
 				BE0BBE1F1FE2A06200C52EBA /* UIControl+__Click.m in Sources */,
 				A9282A141F75AE35009C2659 /* UITextField+__Category.m in Sources */,

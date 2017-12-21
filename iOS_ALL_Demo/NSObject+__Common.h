@@ -33,6 +33,8 @@ void __enumerateFonts();
 /// 是否一个都没有，如果是一个都没有，那么就返回YES
 - (BOOL)__isNoOne;
 
+- (id _Nullable)loadJsonDocument:(NSString *)name ofType:(NSString *)type;
+
 @end
 
 
