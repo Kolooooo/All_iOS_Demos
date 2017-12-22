@@ -11,6 +11,7 @@
 
 @interface PlaceModel : NSObject
 
+// 解析的字段
 @property (nonatomic, copy) NSString *ID;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, strong) NSArray<CityModel *> *son;
@@ -21,6 +22,13 @@
 
 @property (nonatomic, copy) NSString *ID;
 @property (nonatomic, copy) NSString *name;
+
+@end
+
+@interface SelectedPlace : NSObject
+
+@property (nonatomic, copy) NSString *selectedProvince;
+@property (nonatomic, copy) NSString *selectedCity;
 
 @end
 

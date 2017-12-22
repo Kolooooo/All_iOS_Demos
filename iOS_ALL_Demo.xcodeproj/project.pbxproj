@@ -103,6 +103,8 @@
 		A9C2CE501F7095B60029DBDE /* iOS.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = A9C2CE4F1F7095B60029DBDE /* iOS.rtfd */; };
 		A9E1F1CD1FA0892E00D2C219 /* PerformanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E1F1CC1FA0892E00D2C219 /* PerformanceViewController.m */; };
 		A9E1F1D01FA089A200D2C219 /* PerformanceViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E1F1CF1FA089A200D2C219 /* PerformanceViewCell.m */; };
+		BE053B3D1FECA2EB00E38289 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE053B3C1FECA2EB00E38289 /* PhotoViewController.m */; };
+		BE053B401FECA4AC00E38289 /* ZYQAssetPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE053B3E1FECA4AC00E38289 /* ZYQAssetPickerController.m */; };
 		BE08D9C51FEA54F300B8F0DE /* __PickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE08D9C41FEA54F300B8F0DE /* __PickerView.m */; };
 		BE08DA0D1FEA671700B8F0DE /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08DA0C1FEA671700B8F0DE /* NetworkRequest.swift */; };
 		BE0BBE1C1FE29C2B00C52EBA /* NSString+__Language.m in Sources */ = {isa = PBXBuildFile; fileRef = BE0BBE1B1FE29C2B00C52EBA /* NSString+__Language.m */; };
@@ -110,8 +112,16 @@
 		BE0BBE211FE2A66700C52EBA /* __Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BBE201FE2A66700C52EBA /* __Exchange.swift */; };
 		BE136DE61FEBDC6600BBB964 /* place.json in Resources */ = {isa = PBXBuildFile; fileRef = BE136DE51FEBDC6400BBB964 /* place.json */; };
 		BE136DEC1FEBE28E00BBB964 /* PlaceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE136DEB1FEBE28E00BBB964 /* PlaceModel.m */; };
+		BE656A011FED0BF50017321B /* __PhotoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE6569FE1FED0BF50017321B /* __PhotoItemCell.xib */; };
+		BE656A021FED0BF50017321B /* __PhotoItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE656A001FED0BF50017321B /* __PhotoItemCell.m */; };
 		BEBC0F1A1FE52A77004E6BED /* Ken_Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBC0F191FE52A77004E6BED /* Ken_Common.swift */; };
 		BEBC0F1D1FE52A99004E6BED /* UINavigationController+__Category.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBC0F1B1FE52A99004E6BED /* UINavigationController+__Category.m */; };
+		BEDF83351FECA6E50080B295 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDF83341FECA6E50080B295 /* UIView+Toast.m */; };
+		BEDF83451FECA9360080B295 /* ShowBigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDF833F1FECA9350080B295 /* ShowBigViewController.m */; };
+		BEDF83461FECA9360080B295 /* MessagePhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDF83411FECA9360080B295 /* MessagePhotoView.m */; };
+		BEDF83471FECA9360080B295 /* MessagePhotoMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDF83421FECA9360080B295 /* MessagePhotoMenuItem.m */; };
+		BEDF834C1FECA94E0080B295 /* ZBMessageShareMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDF83491FECA94D0080B295 /* ZBMessageShareMenuItem.m */; };
+		BEDF834D1FECA94E0080B295 /* ZBMessageShareMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDF834B1FECA94E0080B295 /* ZBMessageShareMenuView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -299,6 +309,10 @@
 		A9E1F1CC1FA0892E00D2C219 /* PerformanceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformanceViewController.m; sourceTree = "<group>"; };
 		A9E1F1CE1FA089A200D2C219 /* PerformanceViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerformanceViewCell.h; sourceTree = "<group>"; };
 		A9E1F1CF1FA089A200D2C219 /* PerformanceViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformanceViewCell.m; sourceTree = "<group>"; };
+		BE053B3B1FECA2EB00E38289 /* PhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		BE053B3C1FECA2EB00E38289 /* PhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		BE053B3E1FECA4AC00E38289 /* ZYQAssetPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYQAssetPickerController.m; sourceTree = "<group>"; };
+		BE053B3F1FECA4AC00E38289 /* ZYQAssetPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYQAssetPickerController.h; sourceTree = "<group>"; };
 		BE08D9C31FEA54F300B8F0DE /* __PickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = __PickerView.h; sourceTree = "<group>"; };
 		BE08D9C41FEA54F300B8F0DE /* __PickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __PickerView.m; sourceTree = "<group>"; };
 		BE08DA0C1FEA671700B8F0DE /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
@@ -310,9 +324,24 @@
 		BE136DE51FEBDC6400BBB964 /* place.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = place.json; sourceTree = "<group>"; };
 		BE136DEA1FEBE28E00BBB964 /* PlaceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceModel.h; sourceTree = "<group>"; };
 		BE136DEB1FEBE28E00BBB964 /* PlaceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceModel.m; sourceTree = "<group>"; };
+		BE6569FE1FED0BF50017321B /* __PhotoItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = __PhotoItemCell.xib; sourceTree = "<group>"; };
+		BE6569FF1FED0BF50017321B /* __PhotoItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __PhotoItemCell.h; sourceTree = "<group>"; };
+		BE656A001FED0BF50017321B /* __PhotoItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __PhotoItemCell.m; sourceTree = "<group>"; };
 		BEBC0F191FE52A77004E6BED /* Ken_Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ken_Common.swift; sourceTree = "<group>"; };
 		BEBC0F1B1FE52A99004E6BED /* UINavigationController+__Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+__Category.m"; sourceTree = "<group>"; };
 		BEBC0F1C1FE52A99004E6BED /* UINavigationController+__Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+__Category.h"; sourceTree = "<group>"; };
+		BEDF83331FECA6E50080B295 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		BEDF83341FECA6E50080B295 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		BEDF833F1FECA9350080B295 /* ShowBigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowBigViewController.m; sourceTree = "<group>"; };
+		BEDF83401FECA9360080B295 /* MessagePhotoMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagePhotoMenuItem.h; sourceTree = "<group>"; };
+		BEDF83411FECA9360080B295 /* MessagePhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagePhotoView.m; sourceTree = "<group>"; };
+		BEDF83421FECA9360080B295 /* MessagePhotoMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagePhotoMenuItem.m; sourceTree = "<group>"; };
+		BEDF83431FECA9360080B295 /* MessagePhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagePhotoView.h; sourceTree = "<group>"; };
+		BEDF83441FECA9360080B295 /* ShowBigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowBigViewController.h; sourceTree = "<group>"; };
+		BEDF83481FECA94D0080B295 /* ZBMessageShareMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBMessageShareMenuView.h; sourceTree = "<group>"; };
+		BEDF83491FECA94D0080B295 /* ZBMessageShareMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBMessageShareMenuItem.m; sourceTree = "<group>"; };
+		BEDF834A1FECA94D0080B295 /* ZBMessageShareMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBMessageShareMenuItem.h; sourceTree = "<group>"; };
+		BEDF834B1FECA94E0080B295 /* ZBMessageShareMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBMessageShareMenuView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -641,6 +670,7 @@
 				A92C88441F5AA9EB00CD02C4 /* AppDelegate.h */,
 				A92C88451F5AA9EB00CD02C4 /* AppDelegate.m */,
 				BE08DA0C1FEA671700B8F0DE /* NetworkRequest.swift */,
+				A92C885B1F5AABB900CD02C4 /* Main */,
 				A92C887E1F5AB47A00CD02C4 /* UILabel */,
 				A92C88771F5AB32200CD02C4 /* UITableView */,
 				A9A7F2131F61EDBE00D460AE /* AutoLayout */,
@@ -654,7 +684,7 @@
 				A921E60C1F9DCCAE00717164 /* PerformanceViewController */,
 				A94CE7421FC0793B0067B8BB /* SwiftViewController */,
 				A94D8FCE1FEAB7C600B25E4E /* PickerViewController */,
-				A92C885B1F5AABB900CD02C4 /* Main */,
+				BE053B3A1FECA2C800E38289 /* PhotoViewController */,
 				A92C88601F5AB0C100CD02C4 /* Category */,
 				A904FEFE1F931CF000AC2A53 /* Tools */,
 				A92C88411F5AA9EB00CD02C4 /* Supporting Files */,
@@ -826,6 +856,22 @@
 			name = AutoLayout;
 			sourceTree = "<group>";
 		};
+		BE053B3A1FECA2C800E38289 /* PhotoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BE053B3B1FECA2EB00E38289 /* PhotoViewController.h */,
+				BE053B3C1FECA2EB00E38289 /* PhotoViewController.m */,
+				BE053B3F1FECA4AC00E38289 /* ZYQAssetPickerController.h */,
+				BE053B3E1FECA4AC00E38289 /* ZYQAssetPickerController.m */,
+				BEDF83331FECA6E50080B295 /* UIView+Toast.h */,
+				BEDF83341FECA6E50080B295 /* UIView+Toast.m */,
+				BE656A031FED124B0017321B /* View */,
+				BEDF833D1FECA9150080B295 /* MessagePhotoView */,
+				BEDF833E1FECA91E0080B295 /* messageShareView */,
+			);
+			name = PhotoViewController;
+			sourceTree = "<group>";
+		};
 		BE08D9C21FEA54BE00B8F0DE /* __PickerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -833,6 +879,40 @@
 				BE08D9C41FEA54F300B8F0DE /* __PickerView.m */,
 			);
 			name = __PickerView;
+			sourceTree = "<group>";
+		};
+		BE656A031FED124B0017321B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BEDF833D1FECA9150080B295 /* MessagePhotoView */ = {
+			isa = PBXGroup;
+			children = (
+				BEDF83401FECA9360080B295 /* MessagePhotoMenuItem.h */,
+				BEDF83421FECA9360080B295 /* MessagePhotoMenuItem.m */,
+				BEDF83431FECA9360080B295 /* MessagePhotoView.h */,
+				BEDF83411FECA9360080B295 /* MessagePhotoView.m */,
+				BEDF83441FECA9360080B295 /* ShowBigViewController.h */,
+				BEDF833F1FECA9350080B295 /* ShowBigViewController.m */,
+				BE6569FF1FED0BF50017321B /* __PhotoItemCell.h */,
+				BE656A001FED0BF50017321B /* __PhotoItemCell.m */,
+				BE6569FE1FED0BF50017321B /* __PhotoItemCell.xib */,
+			);
+			name = MessagePhotoView;
+			sourceTree = "<group>";
+		};
+		BEDF833E1FECA91E0080B295 /* messageShareView */ = {
+			isa = PBXGroup;
+			children = (
+				BEDF834A1FECA94D0080B295 /* ZBMessageShareMenuItem.h */,
+				BEDF83491FECA94D0080B295 /* ZBMessageShareMenuItem.m */,
+				BEDF83481FECA94D0080B295 /* ZBMessageShareMenuView.h */,
+				BEDF834B1FECA94E0080B295 /* ZBMessageShareMenuView.m */,
+			);
+			name = messageShareView;
 			sourceTree = "<group>";
 		};
 		D531A055228450FD91131AFF /* Pods */ = {
@@ -913,6 +993,7 @@
 				A92C88511F5AA9EB00CD02C4 /* LaunchScreen.storyboard in Resources */,
 				A904FF211F99D81F00AC2A53 /* charles4.json in Resources */,
 				BE136DE61FEBDC6600BBB964 /* place.json in Resources */,
+				BE656A011FED0BF50017321B /* __PhotoItemCell.xib in Resources */,
 				A904FF1F1F99D81F00AC2A53 /* charles2.json in Resources */,
 				A904FF201F99D81F00AC2A53 /* charles3.json in Resources */,
 				A904FF1E1F99D81F00AC2A53 /* charles1.json in Resources */,
@@ -1031,6 +1112,7 @@
 				A92901561F8059E70002DBD3 /* __UITextField.m in Sources */,
 				A99733AD1F7B097400C18A45 /* NSObject+__Runtime.m in Sources */,
 				A92901661F805FA30002DBD3 /* NSDictionary+__Category.m in Sources */,
+				BEDF834D1FECA94E0080B295 /* ZBMessageShareMenuView.m in Sources */,
 				A904FF181F99D5E500AC2A53 /* NSObject+__Model.m in Sources */,
 				A903E1751F9AF6DF00950E6D /* UIView+__Gradient.m in Sources */,
 				A904FF091F93524C00AC2A53 /* GCDViewController.m in Sources */,
@@ -1050,6 +1132,7 @@
 				A92901851F8069190002DBD3 /* NSString+Regex.m in Sources */,
 				A90BFDCB1F7FFC3B008EFA09 /* __UIButton.m in Sources */,
 				A92901841F8069190002DBD3 /* NSData+AES.m in Sources */,
+				BEDF834C1FECA94E0080B295 /* ZBMessageShareMenuItem.m in Sources */,
 				A92952A31F77969100504B10 /* UITextFieldViewController.m in Sources */,
 				BE0BBE211FE2A66700C52EBA /* __Exchange.swift in Sources */,
 				A9A7F2161F61EDF700D460AE /* AutoLayoutViewController.m in Sources */,
@@ -1059,8 +1142,11 @@
 				A92C88731F5AB0E300CD02C4 /* UIButton+__Category.m in Sources */,
 				A903E1721F9AF1FA00950E6D /* GradientViewController.m in Sources */,
 				A9E1F1D01FA089A200D2C219 /* PerformanceViewCell.m in Sources */,
+				BEDF83351FECA6E50080B295 /* UIView+Toast.m in Sources */,
 				A9443E921FC7CF3D0012C3BF /* UITextView+__Category.m in Sources */,
+				BEDF83471FECA9360080B295 /* MessagePhotoMenuItem.m in Sources */,
 				A91F256B1FA1C50F0099728A /* UIView+__Performance.m in Sources */,
+				BEDF83461FECA9360080B295 /* MessagePhotoView.m in Sources */,
 				BE08D9C51FEA54F300B8F0DE /* __PickerView.m in Sources */,
 				A9775E791F6C9D8A00A1FEDE /* UITableViewCell+__Category.m in Sources */,
 				A92C88B31F5B8AD800CD02C4 /* TableViewCell2.m in Sources */,
@@ -1073,9 +1159,11 @@
 				A9775E681F6B03F900A1FEDE /* NSAttributedString+__Category.m in Sources */,
 				A903E1951F9BA05F00950E6D /* FMDBViewController.m in Sources */,
 				A92901901F806C7E0002DBD3 /* UIImage+__Category.m in Sources */,
+				BEDF83451FECA9360080B295 /* ShowBigViewController.m in Sources */,
 				A929529C1F77874300504B10 /* UIBezierPathViewController.m in Sources */,
 				A92C88761F5AB0E300CD02C4 /* UIViewController+__Category.m in Sources */,
 				A904FF0F1F99D02700AC2A53 /* NSString+__RegularExpression.m in Sources */,
+				BE053B3D1FECA2EB00E38289 /* PhotoViewController.m in Sources */,
 				BE136DEC1FEBE28E00BBB964 /* PlaceModel.m in Sources */,
 				A92C888A1F5AC70B00CD02C4 /* TableViewController.m in Sources */,
 				BE0BBE1F1FE2A06200C52EBA /* UIControl+__Click.m in Sources */,
@@ -1083,6 +1171,7 @@
 				A9E1F1CD1FA0892E00D2C219 /* PerformanceViewController.m in Sources */,
 				A9775E761F6C98CC00A1FEDE /* UITableView+__Category.m in Sources */,
 				BEBC0F1A1FE52A77004E6BED /* Ken_Common.swift in Sources */,
+				BE053B401FECA4AC00E38289 /* ZYQAssetPickerController.m in Sources */,
 				A92952971F777BFE00504B10 /* UIView+__Frame.m in Sources */,
 				A929529F1F778EA700504B10 /* BezierView.m in Sources */,
 				A903E1791F9B47F000950E6D /* __SQLiteManager.m in Sources */,
@@ -1092,6 +1181,7 @@
 				A903E18D1F9B53F200950E6D /* __CoreDataManager.m in Sources */,
 				A929018E1F806C7E0002DBD3 /* UIImage+__Color.m in Sources */,
 				A923E6081F719D9000567E96 /* tableViewInCell.m in Sources */,
+				BE656A021FED0BF50017321B /* __PhotoItemCell.m in Sources */,
 				A92C885F1F5AADDD00CD02C4 /* MainNavViewController.m in Sources */,
 				A985F3C21F8EDC01000F5325 /* UIColor+__Category.m in Sources */,
 				A92AAC3F1F92FDE00042AC1A /* NSNumber+__Category.m in Sources */,

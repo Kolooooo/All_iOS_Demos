@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="__PhotoItemCell" reuseIdentifier="__PhotoItemCell" id="gTV-IL-0wX" customClass="__PhotoItemCell">
+            <rect key="frame" x="0.0" y="0.0" width="110" height="92"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="110" height="92"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uTY-K4-nyq">
+                        <rect key="frame" x="0.0" y="0.0" width="110" height="92"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AId-8o-VcY">
+                        <rect key="frame" x="80" y="0.0" width="30" height="30"/>
+                        <color key="backgroundColor" red="1" green="0.83587925199790858" blue="0.87917895253386003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="LNq-h4-MNF"/>
+                            <constraint firstAttribute="width" constant="30" id="Zdc-W0-csz"/>
+                        </constraints>
+                        <connections>
+                            <action selector="touchDeleteButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="GN9-T0-5Ge"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="0.82849612035143116" blue="0.65366856049250599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="uTY-K4-nyq" secondAttribute="trailing" id="DsR-G4-tSo"/>
+                <constraint firstItem="uTY-K4-nyq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LBo-4B-rbQ"/>
+                <constraint firstItem="uTY-K4-nyq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="NBf-B7-Bh6"/>
+                <constraint firstItem="AId-8o-VcY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="RAY-NF-yf3"/>
+                <constraint firstAttribute="trailing" secondItem="AId-8o-VcY" secondAttribute="trailing" id="tr9-x8-1GY"/>
+                <constraint firstAttribute="bottom" secondItem="uTY-K4-nyq" secondAttribute="bottom" id="vh8-mS-niX"/>
+            </constraints>
+            <size key="customSize" width="110" height="92"/>
+            <connections>
+                <outlet property="deleteButton" destination="AId-8o-VcY" id="3Id-5I-Xb3"/>
+                <outlet property="imageView" destination="uTY-K4-nyq" id="Wha-ZR-9BJ"/>
+            </connections>
+            <point key="canvasLocation" x="55" y="73"/>
+        </collectionViewCell>
+    </objects>
+</document>
