@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 // MARK: - Enum
 
 class SwiftViewController: UIViewController {
@@ -22,46 +23,48 @@ class SwiftViewController: UIViewController {
         initUI()
         initData()
         initRequest()
-        
-        
-        let string = "1234"
-        
-        let intValue: Int = Int(string) ?? 0
-        print(intValue)
-        
-        let doubleValue: Double = Double(string) ?? 0.0
-        print(doubleValue)
     }
+    
+    // MARK: - Public method
+    
+    // MARK: - Private method
+    
+    // MARK: - Delegate method
+    
+    // MARK: - Data request & Data processing
+    private func initData(){
+        
+    }
+    
+    private func initRequest(){
+        
+    }
+    
+    // MARK: - View layout
+    private func initUI(){
+        // MARK: View style
+        
+        // MARK: 通过xib 加载view
+        let xibView = XibView.__viewFormXib()
+        xibView.frame = CGRect(x: 0.0, y: 0.0, width: 100.0, height: 100.0)
+        view.addSubview(xibView)
+        
+        __print("\(self)")
+        
+        let string = "Hello"
+        let name = type(of: string)
+        let nameString = name.init()
+        print(name)
+        
+        // MARK: View structure
+        // MARK: View layout
+        // MARK: View action
+    }
+    
+    // MARK: - Setter
+    
+    // MARK: - Lazy load
 }
 
 
-// MARK: - Public method
 
-// MARK: - Private method
-
-// MARK: - Delegate method
-
-// MARK: - Data request & Data processing
-private func initData(){
-    
-}
-
-private func initRequest(){
-    
-}
-
-// MARK: - View layout
-private func initUI(){
-    // MARK: View style
-    
-    
-    
-    
-    // MARK: View structure
-    // MARK: View layout
-    // MARK: View action
-}
-
-// MARK: - Setter
-
-// MARK: - Lazy load

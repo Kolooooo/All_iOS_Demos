@@ -14,6 +14,8 @@
 #import "tableViewInCell.h"
 #import "tableViewInCell2.h"
 #import "GCDViewController.h"
+#import "iOS_ALL_Demo-Swift.h"
+
 
 @interface MainViewController ()
 <UITableViewDelegate,
@@ -95,7 +97,8 @@ UITableViewDataSource>
             break;
         }
         case 11:{
-            [self.navigationController pushViewController:[[NSClassFromString(@"SwiftViewController") alloc] init] animated:YES];
+            SwiftViewController *vc = [[SwiftViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case 12:{

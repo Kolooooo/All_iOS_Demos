@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 func __print<T>(_ message : T, file : String = #file, lineNumber : Int = #line) {
     // 设置
@@ -14,9 +15,17 @@ func __print<T>(_ message : T, file : String = #file, lineNumber : Int = #line) 
     // 输入：-D DEBUGSWIFT
     #if DEBUGSWIFT
         let fileName = (file as NSString).lastPathComponent
-        print("===>>> Class: \(fileName) | Line: \(lineNumber) - \n \(message)")
+        print("===>>> Class: \(fileName) | Line: \(lineNumber) - \n \(message) \n")
     #endif
 }
 
 /// 空操作
 func __nullOperation(){}
+
+public let __ApplicationShared = UIApplication.shared
+
+
+
+
+
+
