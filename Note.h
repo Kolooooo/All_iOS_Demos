@@ -21,6 +21,25 @@
  */
 
 
+#pragma mark - 系统提示窗口
+#pragma mark 下方提示窗口
+/*
+myActionSheet = [[UIActionSheet alloc]
+                 initWithTitle:nil
+                 delegate:self
+                 cancelButtonTitle:@"取消"
+                 destructiveButtonTitle:nil
+                 otherButtonTitles:@"打开照相机",@"从手机相册获取", nil];
+
+[myActionSheet showInView:self.window];
+ 
+ #pragma mark UIActionSheetDelegate
+ - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{}
+*/
+
+#pragma mark 中间提示窗口
+
+
 /* 访问权限
 Privacy - Microphone Usage Description //麦克风权限
 Privacy - Contacts Usage Description   //通讯录权限

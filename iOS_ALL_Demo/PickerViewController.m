@@ -15,6 +15,7 @@ __PickerViewDataSource>
 
 @property (nonatomic, strong) __PickerView  *pickerView;
 @property (nonatomic, strong) NSMutableArray *places;
+@property (nonatomic, strong) SelectedPlace  *selectedPlace;
 
 @end
 
@@ -38,6 +39,8 @@ __PickerViewDataSource>
 - (void)initData{
     NSDictionary *jsonObject = [self loadJsonDocument:@"place" ofType:@"json"];
     self.places = [PlaceModel mj_objectArrayWithKeyValuesArray:jsonObject[@"datas"][@"list"]];
+    
+    self.selectedPlace = [[SelectedPlace alloc] init];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -49,16 +52,69 @@ __PickerViewDataSource>
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    return self.places.count;
+    if (component == 0) {
+        return self.places.count;
+    }
+    
+    if (component == 1) {
+        NSInteger placeComponent = [pickerView selectedRowInComponent:0];
+        PlaceModel *place = self.places[placeComponent];
+        return place.son.count;
+    }
+    
+    return 1;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    return @"ken";
+    if (component == 0) {
+        if (self.places.count > row) {
+            PlaceModel *place = self.places[row];
+            return place.name;
+        }
+    }
+    
+    if (component == 1) {
+        NSInteger placeComponent = [pickerView selectedRowInComponent:0];
+        if (self.places.count > placeComponent) {
+            PlaceModel *place = self.places[placeComponent];
+            if (place.son.count > row) {
+                CityModel *city = place.son[row];
+                return city.name;
+            }
+        }
+    }
+    
+    return @"";
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    if (component == 0) {
+        if (self.places.count > row) {
+            
+#pragma mark 滚动0列 刷新1列数据
+            [pickerView reloadComponent:1];
+            [pickerView selectRow:0 inComponent:1 animated:NO];
+            
+            PlaceModel *place = self.places[row];
+            self.selectedPlace.selectedProvince = place.name;
+        }
+    }
+    
+    if (component == 1) {
+        NSInteger placeComponent = [pickerView selectedRowInComponent:0];
+        if (self.places.count > placeComponent) {
+            PlaceModel *place = self.places[placeComponent];
+            if (place.son.count > row) {
+                CityModel *city = place.son[row];
+                self.selectedPlace.selectedCity = city.name;
+            }
+        }
+    }
 }
 
 //- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
 //
-//#pragma mark 隐藏/改变颜色 选中的两条线
+#pragma mark 隐藏/改变颜色 选中的两条线，但是这个会把原来的滚动cell 给遮住
 //    for(UIView *speartorView in pickerView.subviews){
 //        // 取出分割线view
 //        if (speartorView.frame.size.height < 1){
@@ -68,5 +124,10 @@ __PickerViewDataSource>
 //
 //    return nil;
 //}
+
+#pragma mark __PickerViewDelegate
+- (void)__touchDoneButton:(__PickerView *)pickerView{
+    DEBUGLOG(@"%@, %@", self.selectedPlace.selectedProvince, self.selectedPlace.selectedCity);
+}
 
 @end
