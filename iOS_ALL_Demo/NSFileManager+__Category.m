@@ -1,23 +1,15 @@
-//
-//  NSFileManager+__Category.m
-//  iOS_ALL_Demo
-//
-//  Created by Ken on 2017/12/23.
-//  Copyright © 2017年 Ken lu. All rights reserved.
-//
+
 
 #import "NSFileManager+__Category.h"
 
 @implementation NSFileManager (__Category)
 
-/// 获取应用沙盒根路径
 + (NSString *_Nonnull)__home{
     NSString *dirHome = NSHomeDirectory();
     DEBUGLOG(@"app_home: %@",dirHome);
     return dirHome;
 }
 
-/// 获取Documents目录路径
 + (NSString *_Nonnull)__documentPath{
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -25,7 +17,6 @@
     return documentsDirectory;
 }
 
-/// 获取Library目录路径
 + (NSString *_Nonnull)__libraryPath{
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
     NSString *libraryDirectory = [paths objectAtIndex:0];
@@ -33,7 +24,6 @@
     return libraryDirectory;
 }
 
-/// 获取Cache目录路径
 + (NSString *_Nonnull)__cachePath{
     NSArray *cacPath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     NSString *cachePath = [cacPath objectAtIndex:0];
@@ -41,14 +31,12 @@
     return cachePath;
 }
 
-/// 获取Tmp目录路径
 + (NSString *_Nonnull)__tmpPath{
     NSString *tmpDirectory = NSTemporaryDirectory();
     DEBUGLOG(@"app_home_tmp: %@",tmpDirectory);
     return tmpDirectory;
 }
 
-/// 创建文件夹
 - (BOOL)__createDocumentWithDocumentName:(NSString *_Nonnull)documentName{
     NSString *documentsPath = [NSFileManager __documentPath];
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -67,7 +55,6 @@
     }
 }
 
-/// 创建文件
 - (BOOL)__createFileWithDocumentPath:(NSString *_Nullable)documentPath fileName:(NSString *_Nullable)fileName fileType:(NSString *_Nullable)fileType{
     if (documentPath == nil || [documentPath isEqualToString:@""]){
         NSAssert(NO, @"documentPath is nil or emtity");
@@ -100,7 +87,6 @@
     }
 }
 
-/// 将数据写到文件
 - (BOOL)__writeFileWithFilePath:(NSString *_Nullable)filePath contant:(NSString *_Nullable)contant{
     if (filePath == nil || [filePath isEqualToString:@""]){
         NSAssert(NO, @"filePath is nil or emtity");
@@ -124,7 +110,6 @@
     }
 }
 
-/// 读文件数据
 - (NSString *_Nonnull)__loadFileWithFilePath:(NSString *_Nullable)filePath{
     if (filePath == nil || [filePath isEqualToString:@""]){
         NSAssert(NO, @"filePath is nil or emtity");
@@ -136,7 +121,6 @@
     return content;
 }
 
-/// 删除文件
 - (BOOL)__deleteFileWithFilePath:(NSString *_Nullable)filePath{
     if (filePath == nil || [filePath isEqualToString:@""]){
         NSAssert(NO, @"filePath is nil or emtity");
