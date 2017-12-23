@@ -36,5 +36,6 @@
 #pragma mark - Tools
 #import "SDVersion.h"
 #import "Masonry.h"
+#import "UIImageView+WebCache.h"
 
 #endif

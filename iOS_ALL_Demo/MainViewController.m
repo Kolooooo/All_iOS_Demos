@@ -119,6 +119,11 @@ UITableViewDataSource>
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
+        case 16:{
+            [self.navigationController pushViewController:[[NSClassFromString(@"BannerViewController") alloc] init] animated:YES];
+            
+            break;
+        }
             
         default:
             break;
@@ -139,10 +144,11 @@ UITableViewDataSource>
                     @"FMDBViewController",
                     @"PerformanceViewController 性能优化",
                     @"SwiftViewController",
-                    @"PickerViewController",
-                    @"PhotoViewController",
+                    @"PickerViewController 省份城市pickerView",
+                    @"PhotoViewController 相册",
                     @"TimerViewController",
-                    @"RecorderViewController 录音功能"
+                    @"RecorderViewController 录音功能",
+                    @"BannerViewController 轮播图"
                     ];
 }
 
