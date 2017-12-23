@@ -11,6 +11,7 @@
 #import "UILabelViewController.h"
 #import "TableViewController.h"
 #import "AutoLayoutViewController.h"
+#import "RecorderViewController.h"
 #import "tableViewInCell.h"
 #import "tableViewInCell2.h"
 #import "GCDViewController.h"
@@ -109,6 +110,15 @@ UITableViewDataSource>
             [self.navigationController pushViewController:[[NSClassFromString(@"PhotoViewController") alloc] init] animated:YES];
             break;
         }
+        case 14:{
+            [self.navigationController pushViewController:[[NSClassFromString(@"TimerViewController") alloc] init] animated:YES];
+            break;
+        }
+        case 15:{
+            RecorderViewController *vc = [RecorderViewController __viewControllerWithStoryboardName:@"RecorderViewController" identifier:@"RecorderViewController"];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
             
         default:
             break;
@@ -117,7 +127,7 @@ UITableViewDataSource>
 
 - (void)initData{
     self.titles = @[
-                    @"UILabel",
+                    @"UILabelViewController",
                     @"UITableViewController",
                     @"AutoLayoutViewController",
                     @"UITextFieldViewController",
@@ -130,7 +140,9 @@ UITableViewDataSource>
                     @"PerformanceViewController 性能优化",
                     @"SwiftViewController",
                     @"PickerViewController",
-                    @"PhotoViewController"
+                    @"PhotoViewController",
+                    @"TimerViewController",
+                    @"RecorderViewController 录音功能"
                     ];
 }
 

@@ -116,6 +116,12 @@
 		BE0BBE211FE2A66700C52EBA /* __Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BBE201FE2A66700C52EBA /* __Exchange.swift */; };
 		BE136DE61FEBDC6600BBB964 /* place.json in Resources */ = {isa = PBXBuildFile; fileRef = BE136DE51FEBDC6400BBB964 /* place.json */; };
 		BE136DEC1FEBE28E00BBB964 /* PlaceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE136DEB1FEBE28E00BBB964 /* PlaceModel.m */; };
+		BE3FA34A1FEE0E9000EDC9FA /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3FA3491FEE0E8F00EDC9FA /* TimerViewController.m */; };
+		BE3FA34C1FEE124500EDC9FA /* RecorderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3FA34B1FEE124500EDC9FA /* RecorderViewController.storyboard */; };
+		BE3FA3511FEE125700EDC9FA /* RecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3FA34E1FEE125700EDC9FA /* RecorderViewController.m */; };
+		BE3FA3521FEE125700EDC9FA /* __Recorder.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3FA34F1FEE125700EDC9FA /* __Recorder.m */; };
+		BE3FA3561FEE13D900EDC9FA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE3FA3551FEE13D800EDC9FA /* AVFoundation.framework */; };
+		BE3FA3591FEE2BAA00EDC9FA /* NSFileManager+__Category.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3FA3581FEE2BAA00EDC9FA /* NSFileManager+__Category.m */; };
 		BE656A011FED0BF50017321B /* __PhotoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE6569FE1FED0BF50017321B /* __PhotoItemCell.xib */; };
 		BE656A021FED0BF50017321B /* __PhotoItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE656A001FED0BF50017321B /* __PhotoItemCell.m */; };
 		BEBC0F1A1FE52A77004E6BED /* __Swift_Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBC0F191FE52A77004E6BED /* __Swift_Common.swift */; };
@@ -332,6 +338,16 @@
 		BE136DE51FEBDC6400BBB964 /* place.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = place.json; sourceTree = "<group>"; };
 		BE136DEA1FEBE28E00BBB964 /* PlaceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceModel.h; sourceTree = "<group>"; };
 		BE136DEB1FEBE28E00BBB964 /* PlaceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceModel.m; sourceTree = "<group>"; };
+		BE3FA3481FEE0E8F00EDC9FA /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		BE3FA3491FEE0E8F00EDC9FA /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
+		BE3FA34B1FEE124500EDC9FA /* RecorderViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RecorderViewController.storyboard; sourceTree = "<group>"; };
+		BE3FA34D1FEE125700EDC9FA /* RecorderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecorderViewController.h; sourceTree = "<group>"; };
+		BE3FA34E1FEE125700EDC9FA /* RecorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecorderViewController.m; sourceTree = "<group>"; };
+		BE3FA34F1FEE125700EDC9FA /* __Recorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __Recorder.m; sourceTree = "<group>"; };
+		BE3FA3501FEE125700EDC9FA /* __Recorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __Recorder.h; sourceTree = "<group>"; };
+		BE3FA3551FEE13D800EDC9FA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BE3FA3571FEE2BAA00EDC9FA /* NSFileManager+__Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+__Category.h"; sourceTree = "<group>"; };
+		BE3FA3581FEE2BAA00EDC9FA /* NSFileManager+__Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+__Category.m"; sourceTree = "<group>"; };
 		BE6569FE1FED0BF50017321B /* __PhotoItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = __PhotoItemCell.xib; sourceTree = "<group>"; };
 		BE6569FF1FED0BF50017321B /* __PhotoItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __PhotoItemCell.h; sourceTree = "<group>"; };
 		BE656A001FED0BF50017321B /* __PhotoItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __PhotoItemCell.m; sourceTree = "<group>"; };
@@ -357,6 +373,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE3FA3561FEE13D900EDC9FA /* AVFoundation.framework in Frameworks */,
 				A903E17C1F9B486200950E6D /* libsqlite3.0.tbd in Frameworks */,
 				9572D230B8823D46B44F57DA /* Pods_iOS_ALL_Demo.framework in Frameworks */,
 			);
@@ -386,6 +403,7 @@
 		A903E17A1F9B486200950E6D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE3FA3551FEE13D800EDC9FA /* AVFoundation.framework */,
 				A903E17B1F9B486200950E6D /* libsqlite3.0.tbd */,
 				2573F632D803DD291153C3AF /* Pods_iOS_ALL_Demo.framework */,
 			);
@@ -437,6 +455,7 @@
 		A904FEFE1F931CF000AC2A53 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				BE3FA3531FEE12C600EDC9FA /* __Recorder */,
 				BE08D9C21FEA54BE00B8F0DE /* __PickerView */,
 				A921E6081F9C2D1E00717164 /* __AFNManager */,
 				A903E1981F9BBDB100950E6D /* __FMDBManager */,
@@ -693,6 +712,8 @@
 				A94CE7421FC0793B0067B8BB /* SwiftViewController */,
 				A94D8FCE1FEAB7C600B25E4E /* PickerViewController */,
 				BE053B3A1FECA2C800E38289 /* PhotoViewController */,
+				BE3FA3471FEE0E5800EDC9FA /* TimerViewController */,
+				BE3FA3541FEE132800EDC9FA /* RecorderViewController */,
 				A92C88601F5AB0C100CD02C4 /* Category */,
 				A904FEFE1F931CF000AC2A53 /* Tools */,
 				A92C88411F5AA9EB00CD02C4 /* Supporting Files */,
@@ -765,6 +786,8 @@
 				A92AAC3E1F92FDE00042AC1A /* NSNumber+__Category.m */,
 				A92901641F805FA30002DBD3 /* NSDictionary+__Category.h */,
 				A92901651F805FA30002DBD3 /* NSDictionary+__Category.m */,
+				BE3FA3571FEE2BAA00EDC9FA /* NSFileManager+__Category.h */,
+				BE3FA3581FEE2BAA00EDC9FA /* NSFileManager+__Category.m */,
 				A92901681F8060940002DBD3 /* NSFileManager+Paths.h */,
 				A92901671F8060940002DBD3 /* NSFileManager+Paths.m */,
 				A92C886E1F5AB0E300CD02C4 /* UIViewController+__Category.h */,
@@ -893,6 +916,34 @@
 			name = __PickerView;
 			sourceTree = "<group>";
 		};
+		BE3FA3471FEE0E5800EDC9FA /* TimerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BE3FA3481FEE0E8F00EDC9FA /* TimerViewController.h */,
+				BE3FA3491FEE0E8F00EDC9FA /* TimerViewController.m */,
+			);
+			name = TimerViewController;
+			sourceTree = "<group>";
+		};
+		BE3FA3531FEE12C600EDC9FA /* __Recorder */ = {
+			isa = PBXGroup;
+			children = (
+				BE3FA3501FEE125700EDC9FA /* __Recorder.h */,
+				BE3FA34F1FEE125700EDC9FA /* __Recorder.m */,
+			);
+			name = __Recorder;
+			sourceTree = "<group>";
+		};
+		BE3FA3541FEE132800EDC9FA /* RecorderViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BE3FA34D1FEE125700EDC9FA /* RecorderViewController.h */,
+				BE3FA34E1FEE125700EDC9FA /* RecorderViewController.m */,
+				BE3FA34B1FEE124500EDC9FA /* RecorderViewController.storyboard */,
+			);
+			name = RecorderViewController;
+			sourceTree = "<group>";
+		};
 		BE656A031FED124B0017321B /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1007,6 +1058,7 @@
 				BE136DE61FEBDC6600BBB964 /* place.json in Resources */,
 				BE656A011FED0BF50017321B /* __PhotoItemCell.xib in Resources */,
 				A904FF1F1F99D81F00AC2A53 /* charles2.json in Resources */,
+				BE3FA34C1FEE124500EDC9FA /* RecorderViewController.storyboard in Resources */,
 				A904FF201F99D81F00AC2A53 /* charles3.json in Resources */,
 				A904FF1E1F99D81F00AC2A53 /* charles1.json in Resources */,
 				A97FBFA91FEDBC7E00F361E0 /* XibView.xib in Resources */,
@@ -1115,6 +1167,7 @@
 				A921E6071F9C2D1400717164 /* __AFNManager.m in Sources */,
 				A92901821F8069190002DBD3 /* NSString+QRCode.m in Sources */,
 				A903E1861F9B4BD100950E6D /* KKHistoriesModel.m in Sources */,
+				BE3FA3511FEE125700EDC9FA /* RecorderViewController.m in Sources */,
 				A929018F1F806C7E0002DBD3 /* UIImage+Compress.m in Sources */,
 				A903E19B1F9BBE0700950E6D /* __FMDBManager.m in Sources */,
 				A904FF121F99D0C600AC2A53 /* NSObject+__Log.m in Sources */,
@@ -1137,6 +1190,7 @@
 				A92952941F776EF100504B10 /* UIImageView+__Category.m in Sources */,
 				A929019E1F80DFF50002DBD3 /* RuntimeViewController.m in Sources */,
 				A92C88721F5AB0E300CD02C4 /* NSObject+__Common.m in Sources */,
+				BE3FA3521FEE125700EDC9FA /* __Recorder.m in Sources */,
 				A929528D1F76C9E000504B10 /* UIView+__Transform.m in Sources */,
 				A9775E701F6B0F9A00A1FEDE /* __UILabel.m in Sources */,
 				A904FF041F931D3900AC2A53 /* __StarButton.m in Sources */,
@@ -1173,6 +1227,7 @@
 				A9775E681F6B03F900A1FEDE /* NSAttributedString+__Category.m in Sources */,
 				A903E1951F9BA05F00950E6D /* FMDBViewController.m in Sources */,
 				A92901901F806C7E0002DBD3 /* UIImage+__Category.m in Sources */,
+				BE3FA34A1FEE0E9000EDC9FA /* TimerViewController.m in Sources */,
 				BEDF83451FECA9360080B295 /* ShowBigViewController.m in Sources */,
 				A929529C1F77874300504B10 /* UIBezierPathViewController.m in Sources */,
 				A92C88761F5AB0E300CD02C4 /* UIViewController+__Category.m in Sources */,
@@ -1181,6 +1236,7 @@
 				BE136DEC1FEBE28E00BBB964 /* PlaceModel.m in Sources */,
 				A92C888A1F5AC70B00CD02C4 /* TableViewController.m in Sources */,
 				BE0BBE1F1FE2A06200C52EBA /* UIControl+__Click.m in Sources */,
+				BE3FA3591FEE2BAA00EDC9FA /* NSFileManager+__Category.m in Sources */,
 				A9282A141F75AE35009C2659 /* UITextField+__Category.m in Sources */,
 				A9E1F1CD1FA0892E00D2C219 /* PerformanceViewController.m in Sources */,
 				A9775E761F6C98CC00A1FEDE /* UITableView+__Category.m in Sources */,
