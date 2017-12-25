@@ -4,6 +4,16 @@
 
 @implementation UIViewController (__Category)
 
+/// 打印显示控制器
+- (void)viewWillAppear:(BOOL)animated{
+    
+#ifdef DEBUG
+    NSLog(@"===>> Current ViewController: %@", self.class);
+#else
+#endif
+    
+}
+
 - (PushType)__pushTypeOfCurrentViewController{
     NSArray *viewcontrollers = self.navigationController.viewControllers;
     if (viewcontrollers.count > 1){

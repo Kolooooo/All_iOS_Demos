@@ -6,7 +6,6 @@
 
 @implementation UIView (__Category)
 
-
 - (UIViewController *_Nonnull)__viewController{
     UIViewController *viewController = nil;
     UIResponder *next = self.nextResponder;

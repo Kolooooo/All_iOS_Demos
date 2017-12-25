@@ -51,3 +51,8 @@ Privacy - Motion Usage Description     //运动与健康
 Privacy - Media Libaray Usage Description //媒体资源库
 Privacy - Calendars Usage Description  //日历
 */
+
+#pragma mark - 指定初始化函数
+// NS_DESIGNATED_INITIALIZER //指定初始化函数
+// - (void)initWithName:(NSString *)name NS_DESIGNATED_INITIALIZER;
+

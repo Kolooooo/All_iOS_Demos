@@ -12,6 +12,7 @@
 #import "TableViewController.h"
 #import "AutoLayoutViewController.h"
 #import "RecorderViewController.h"
+#import "PhotoViewController.h"
 #import "tableViewInCell.h"
 #import "tableViewInCell2.h"
 #import "GCDViewController.h"
@@ -107,7 +108,8 @@ UITableViewDataSource>
             break;
         }
         case 13:{
-            [self.navigationController pushViewController:[[NSClassFromString(@"PhotoViewController") alloc] init] animated:YES];
+            PhotoViewController *vc = [PhotoViewController __viewControllerWithStoryboardName:@"PhotoViewController" identifier:@"PhotoViewController"];
+            [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case 14:{
