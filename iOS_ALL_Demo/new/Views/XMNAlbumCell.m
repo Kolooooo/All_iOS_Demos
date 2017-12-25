@@ -7,9 +7,9 @@
 //
 
 #import "XMNAlbumCell.h"
-
 #import "XMNAlbumModel.h"
 #import "XMNPhotoManager.h"
+
 
 @interface XMNAlbumCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *albumCoverImageView;
@@ -19,9 +19,11 @@
 
 @implementation XMNAlbumCell
 
++ (NSString *_Nonnull)cellID{
+    return NSStringFromClass(self);
+}
 
 - (void)configCellWithItem:(XMNAlbumModel * _Nonnull)item {
-    
     NSMutableAttributedString *nameString = [[NSMutableAttributedString alloc] initWithString:item.name attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16],NSForegroundColorAttributeName:[UIColor blackColor]}];
     NSAttributedString *countString = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"  (%zd)",item.count] attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16],NSForegroundColorAttributeName:[UIColor lightGrayColor]}];
     [nameString appendAttributedString:countString];
@@ -32,7 +34,6 @@
         __weak typeof(*&self) self = wSelf;
         self.albumCoverImageView.image = image;
     }];
-    
 }
 
 @end

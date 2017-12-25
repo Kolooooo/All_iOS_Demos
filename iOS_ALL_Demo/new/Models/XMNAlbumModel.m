@@ -7,20 +7,17 @@
 //
 
 #import "XMNAlbumModel.h"
-
 #import "XMNPhotoPickerDefines.h"
-
 #import <Photos/PHFetchResult.h>
 #import <AssetsLibrary/ALAssetsGroup.h>
+
 
 @interface XMNAlbumModel ()
 
 /** 相册的名称 */
 @property (nonatomic, copy)   NSString *name;
-
 /** 照片的数量 */
 @property (nonatomic, assign) NSUInteger count;
-
 /** PHFetchResult<PHAsset> or ALAssetsGroup<ALAsset> */
 @property (nonatomic, strong) id fetchResult;
 
@@ -29,7 +26,6 @@
 @implementation XMNAlbumModel
 
 #pragma mark - Methods
-
 + (XMNAlbumModel *)albumWithResult:(id)result name:(NSString *)name {
     XMNAlbumModel *model = [[XMNAlbumModel alloc] init];
     model.fetchResult = result;
@@ -63,12 +59,9 @@
     }
 }
 
-
 #pragma mark - Getters
-
 - (NSString *)description {
     return [NSString stringWithFormat:@"\n-----album desc start--\nalbum :%@ have %ld photos \nresult :%@\n-----album desc end----",self.name,(unsigned long)self.count,self.fetchResult];
 }
-
 
 @end

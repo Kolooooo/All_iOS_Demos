@@ -7,18 +7,18 @@
 //
 
 
-
 #import "XMNPhotoManager.h"
+
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored"-Wdeprecated-declarations"
+
 
 @implementation XMNPhotoManager
 @synthesize assetLibrary = _assetLibrary;
 
 
 #pragma mark - Life Cycle
-
 + (instancetype)sharedManager {
     static dispatch_once_t onceToken;
     static id manager;
@@ -29,8 +29,6 @@
 }
 
 #pragma mark - Methods
-
-
 - (BOOL)hasAuthorized {
     if (iOS8Later) {
         return [PHPhotoLibrary authorizationStatus] == PHAuthorizationStatusAuthorized;
@@ -48,10 +46,7 @@
 }
 
 
-/// ========================================
-/// @name   获取Album相册相关方法
-/// ========================================
-
+#pragma mark -  获取Album相册相关方法
 /**
  *  获取所有的相册
  *
@@ -125,7 +120,6 @@
     }
 }
 
-
 /**
  *  获取相册中的所有图片,视频
  *
@@ -197,11 +191,7 @@
     return newTime;
 }
 
-/// ========================================
-/// @name   获取Asset对应信息相关方法
-/// ========================================
-
-
+#pragma mark - 获取Asset对应信息相关方法
 /**
  *  根据提供的asset 获取原图图片
  *  使用异步获取asset的原图图片

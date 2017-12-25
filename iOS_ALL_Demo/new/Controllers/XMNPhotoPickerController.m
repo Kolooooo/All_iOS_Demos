@@ -23,7 +23,7 @@
 #pragma mark - Life Cycle
 - (instancetype)initWithMaxCount:(NSUInteger)maxCount
                         delegate:(id<XMNPhotoPickerControllerDelegate>)delegate {
-    
+    // !!!: init XMNAlbumListController
     XMNAlbumListController *albumListC = [[XMNAlbumListController alloc] init];
     if (self = [super initWithRootViewController:albumListC]) {
         _photoPickerDelegate = delegate;
@@ -35,8 +35,8 @@
 }
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
+    
     [self setupNavigationBarAppearance];
 }
 
@@ -55,10 +55,8 @@
     NSLog(@"photo picker dealloc");
 }
 
-#pragma mark - XMNPhotoPickerController Methods
-
+#pragma mark - XMNPhotoPickerController
 - (void)handleAuthorized {
-    
     if ([XMNPhotoManager sharedManager].authorizationStatus == PHAuthorizationStatusNotDetermined) {
         //未决定是否授权 -> 启动定时器
         [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
@@ -78,13 +76,13 @@
     
 }
 
-/**
- *  自动前往照片列表页面
- */
+#pragma mark - 自动前往照片列表页面
+/// 自动前往照片列表页面
 - (void)autoPushPhotoCollectionViewController {
     if (self.autoPushToPhotoCollection) {
         XMNPhotoCollectionController *photoCollectionC = [[XMNPhotoCollectionController alloc] initWithCollectionViewLayout:[XMNPhotoCollectionController photoCollectionViewLayoutWithWidth:self.view.frame.size.width]];
         __weak typeof(*&self) wSelf = self;
+        // !!!: 获取所有的相册
         [[XMNPhotoManager sharedManager] getAlbumsPickingVideoEnable:self.pickingVideoEnable completionBlock:^(NSArray<XMNAlbumModel *> *albums) {
             __weak typeof(*&self) self = wSelf;
             photoCollectionC.album = [albums firstObject];
@@ -192,70 +190,4 @@
 
 
 @end
-
-@implementation XMNAlbumListController
-
-#pragma mark - XMNAlbumListController Life Cycle 
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.navigationItem.title = @"照片";
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(_handleCancelAction)];
-    
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-    self.tableView.tableFooterView = [[UIView alloc] init];
-    self.tableView.rowHeight = 70.0f;
-    [self.tableView registerNib:[UINib nibWithNibName:@"XMNAlbumCell" bundle:nil ] forCellReuseIdentifier:@"XMNAlbumCell"];
-    
-    XMNPhotoPickerController *imagePickerVC = (XMNPhotoPickerController *)self.navigationController;
-
-    __weak typeof(*&self) wSelf = self;
-    [[XMNPhotoManager sharedManager] getAlbumsPickingVideoEnable:imagePickerVC.pickingVideoEnable completionBlock:^(NSArray<XMNAlbumModel *> *albums) {
-        __strong typeof(*&wSelf) self = wSelf;
-        self.albums = [NSArray arrayWithArray:albums];
-        [self.tableView reloadData];
-    }];
-    
-}
-
-
-#pragma mark - XMNAlbumListController Methods
-
-- (void)_handleCancelAction {
-    
-    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
-    XMNPhotoPickerController *photoPickerVC = (XMNPhotoPickerController *)self.navigationController;
-    [photoPickerVC didCancelPickingPhoto];
-    
-}
-
-
-#pragma mark - XMNAlbumListController UITableViewDataSource && UITableViewDelegate
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    return self.albums.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    XMNAlbumCell *albumCell = [tableView dequeueReusableCellWithIdentifier:@"XMNAlbumCell"];
-    [albumCell configCellWithItem:self.albums[indexPath.row]];
-    return albumCell;
-    
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    XMNPhotoCollectionController *photoCollectionC = [[XMNPhotoCollectionController alloc] initWithCollectionViewLayout:[XMNPhotoCollectionController photoCollectionViewLayoutWithWidth:self.view.frame.size.width]];
-    photoCollectionC.album = self.albums[indexPath.row];
-    [self.navigationController pushViewController:photoCollectionC animated:YES];
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
-@end
-
-
-#pragma clang diagnostic pop
 

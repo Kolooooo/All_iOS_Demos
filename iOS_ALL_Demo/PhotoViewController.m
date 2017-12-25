@@ -16,6 +16,7 @@
 UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) NSMutableArray<XMNAssetModel*>* models;
+
 @end
 
 @implementation PhotoViewController
@@ -26,7 +27,6 @@ UICollectionViewDelegateFlowLayout>
 }
 
 - (IBAction)clear:(UIBarButtonItem *)sender {
-    
     NSMutableArray* indexPathes = [NSMutableArray array];
     for (int i = 0; i < self.models.count; i++) {
         NSIndexPath* indexPath = [NSIndexPath indexPathForItem:i inSection:0];
@@ -39,43 +39,31 @@ UICollectionViewDelegateFlowLayout>
 }
 
 - (IBAction)getPictuer:(UIBarButtonItem *)sender {
+    // !!!: init XMNPhotoPickerController
     XMNPhotoPickerController* picker = [[XMNPhotoPickerController alloc] initWithMaxCount:9 delegate:nil];
     
-    
+    // !!!: init 选择照片后回调
     __weak typeof(self) weakSelf = self;
-    
-    // 选择照片后回调
     [picker setDidFinishPickingPhotosBlock:^(NSArray<UIImage *> * _Nullable images, NSArray<XMNAssetModel *> * _Nullable assets) {
-        NSLog(@"picker images :%@ \n\n assets:%@",images,assets);
+        NSLog(@"picker images :%@ \n\n assets:%@", images, assets);
         [weakSelf.models addObjectsFromArray:assets];
         [weakSelf.collectionView reloadData];
         
-        [self dismissViewControllerAnimated:YES completion:^{
-        }];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }];
     
-    // 选择视频后回调
+    // !!!: init 选择视频后回调
     [picker setDidFinishPickingVideoBlock:^(UIImage * _Nullable image, XMNAssetModel * _Nullable asset) {
-        
         [weakSelf compressVideo:asset.asset];
-        
-        
-        [self dismissViewControllerAnimated:YES completion:^{
-            
-        }];
-        
+        [self dismissViewControllerAnimated:YES completion:nil];
     }];
     
-//    点击取消
+    //    点击取消
     [picker setDidCancelPickingBlock:^{
-        [self dismissViewControllerAnimated:YES completion:^{
-            
-        }];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }];
     
-    [self presentViewController:picker animated:YES completion:^{
-        
-    }];
+    [self presentViewController:picker animated:YES completion:nil];
 }
 
 -(void)compressVideo:(PHAsset*)asset{
@@ -91,17 +79,14 @@ UICollectionViewDelegateFlowLayout>
                 [PromptManager dismissJPGHUD];
                 if (exportSession.status == AVAssetExportSessionStatusCompleted) {
                     NSLog(@"压缩成功");
-    
+                    
                     [PromptManager showSuccessJPGHUDWithMessage:@"压缩成功" intView:self.view time:1];
                     [MediaUtils deleteFileByPath:url.path];
                     
                     if ([MediaUtils getFileSize:compressedOutputURL.path] > 1024 * 1024 * 5) {
                         NSLog(@"压缩后还是大于5M");
                     }
-                    
-                    
                 }else{ NSLog(@"压缩失败"); }
-                
             }];
         }
     }];
@@ -123,7 +108,7 @@ UICollectionViewDelegateFlowLayout>
 #pragma mark - UICollectionViewDelegateFlowLayout
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     CGFloat width = (collectionView.frame.size.width - 40) / 4.0;
-
+    
     return CGSizeMake(width, width);
 }
 

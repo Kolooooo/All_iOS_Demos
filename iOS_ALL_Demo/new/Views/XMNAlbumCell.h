@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @class XMNAlbumModel;
+
+
 @interface XMNAlbumCell : UITableViewCell
 
++ (NSString *_Nonnull)cellID;
 
 - (void)configCellWithItem:(XMNAlbumModel * _Nonnull)item;
 

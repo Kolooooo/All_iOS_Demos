@@ -39,4 +39,6 @@
  */
 - (void)configCellWithItem:(XMNAssetModel * _Nonnull )item;
 
++ (NSString *)cellID;
+
 @end

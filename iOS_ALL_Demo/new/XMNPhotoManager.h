@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <Photos/Photos.h>
 #import <AssetsLibrary/AssetsLibrary.h>
-
 #import "XMNPhotoPickerDefines.h"
 #import "XMNAlbumModel.h"
 #import "XMNAssetModel.h"
+
 
 @interface XMNPhotoManager : NSObject
 
@@ -42,7 +42,7 @@
 /// ========================================
 
 /**
- *  获取所有的相册
+ // !!!: 获取所有的相册
  *
  *  @param pickingVideoEnable 是否允许选择视频
  *  @param completionBlock    回调block
@@ -52,7 +52,7 @@
 
 
 /**
- *  获取相册中的所有图片,视频
+ // !!!: 获取相册中的所有图片, 视频
  *
  *  @param result             对应相册  PHFetchResult or ALAssetsGroup<ALAsset>
  *  @param pickingVideoEnable 是否允许选择视频
@@ -62,12 +62,12 @@
          pickingVideoEnable:(BOOL)pickingVideoEnable
             completionBlock:(void(^_Nonnull)(NSArray<XMNAssetModel *> * _Nullable assets))completionBlock;
 
-/// ========================================
-/// @name   获取Asset对应信息相关方法
-/// ========================================
 
+
+
+#pragma mark - 获取Asset对应信息相关方法
 /**
- *  根据提供的asset 获取原图图片
+ // !!!: 根据提供的asset 获取原图图片
  *  使用异步获取asset的原图图片
  *  @param asset           具体资源 <PHAsset or ALAsset>
  *  @param completionBlock 回到block
@@ -76,7 +76,7 @@
                 completionBlock:(void(^_Nonnull)(UIImage * _Nullable image))completionBlock;
 
 /**
- *  根据提供的asset获取缩略图
+ // !!!: 根据提供的asset获取缩略图
  *  使用同步方法获取
  *  @param asset           具体的asset资源 PHAsset or ALAsset
  *  @param size            缩略图大小
@@ -87,7 +87,7 @@
               completionBlock:(void(^_Nonnull)(UIImage *_Nullable image))completionBlock;
 
 /**
- *  根据asset 获取屏幕预览图
+ // !!!: 根据asset 获取屏幕预览图
  *
  *  @param asset           提供的asset资源 PHAsset or ALAsset
  *  @param completionBlock 回调block

@@ -90,6 +90,7 @@
 		A93217AB1FE68798005BF77A /* __AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93217AA1FE68798005BF77A /* __AlamofireManager.swift */; };
 		A9443E921FC7CF3D0012C3BF /* UITextView+__Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A9443E911FC7CF3C0012C3BF /* UITextView+__Category.m */; };
 		A94D8FD11FEAB7DA00B25E4E /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A94D8FD01FEAB7DA00B25E4E /* PickerViewController.m */; };
+		A969E1751FF1BD19008D60F2 /* XMNAlbumListController.m in Sources */ = {isa = PBXBuildFile; fileRef = A969E1741FF1BD19008D60F2 /* XMNAlbumListController.m */; };
 		A9775E681F6B03F900A1FEDE /* NSAttributedString+__Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A9775E671F6B03F900A1FEDE /* NSAttributedString+__Category.m */; };
 		A9775E701F6B0F9A00A1FEDE /* __UILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9775E6F1F6B0F9A00A1FEDE /* __UILabel.m */; };
 		A9775E761F6C98CC00A1FEDE /* UITableView+__Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A9775E751F6C98CC00A1FEDE /* UITableView+__Category.m */; };
@@ -328,6 +329,8 @@
 		A94CE7431FC079DF0067B8BB /* iOS_ALL_Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS_ALL_Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		A94D8FCF1FEAB7DA00B25E4E /* PickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickerViewController.h; sourceTree = "<group>"; };
 		A94D8FD01FEAB7DA00B25E4E /* PickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickerViewController.m; sourceTree = "<group>"; };
+		A969E1731FF1BD19008D60F2 /* XMNAlbumListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMNAlbumListController.h; sourceTree = "<group>"; };
+		A969E1741FF1BD19008D60F2 /* XMNAlbumListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMNAlbumListController.m; sourceTree = "<group>"; };
 		A9775E661F6B03F900A1FEDE /* NSAttributedString+__Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+__Category.h"; path = "Masonry/NSAttributedString+__Category.h"; sourceTree = "<group>"; };
 		A9775E671F6B03F900A1FEDE /* NSAttributedString+__Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+__Category.m"; path = "Masonry/NSAttributedString+__Category.m"; sourceTree = "<group>"; };
 		A9775E6E1F6B0F9A00A1FEDE /* __UILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __UILabel.h; sourceTree = "<group>"; };
@@ -1008,21 +1011,21 @@
 			isa = PBXGroup;
 			children = (
 				A9D2B1501FEFD6170053FF92 /* XMNPhotoPreviewCell.h */,
+				A9D2B15A1FEFD6170053FF92 /* XMNPhotoPreviewCell.m */,
+				A9D2B1571FEFD6170053FF92 /* XMNAssetCell.h */,
+				A9D2B15F1FEFD6170053FF92 /* XMNAssetCell.m */,
+				A9D2B1531FEFD6170053FF92 /* XMNAssetCell.xib */,
+				A9D2B15E1FEFD6170053FF92 /* XMNAlbumCell.h */,
+				A9D2B1581FEFD6170053FF92 /* XMNAlbumCell.m */,
 				A9D2B1511FEFD6170053FF92 /* XMNAlbumCell.xib */,
 				A9D2B1521FEFD6170053FF92 /* XMNPhotoPicker.h */,
-				A9D2B1531FEFD6170053FF92 /* XMNAssetCell.xib */,
-				A9D2B1541FEFD6170053FF92 /* XMNPhotoPicker.xib */,
-				A9D2B1551FEFD6170053FF92 /* XMNBottomBar.m */,
-				A9D2B1561FEFD6170053FF92 /* XMNPhotoStickLayout.m */,
-				A9D2B1571FEFD6170053FF92 /* XMNAssetCell.h */,
-				A9D2B1581FEFD6170053FF92 /* XMNAlbumCell.m */,
 				A9D2B1591FEFD6170053FF92 /* XMNPhotoPicker.m */,
-				A9D2B15A1FEFD6170053FF92 /* XMNPhotoPreviewCell.m */,
-				A9D2B15B1FEFD6170053FF92 /* XMNBottomBar.xib */,
+				A9D2B1541FEFD6170053FF92 /* XMNPhotoPicker.xib */,
 				A9D2B15C1FEFD6170053FF92 /* XMNBottomBar.h */,
+				A9D2B1551FEFD6170053FF92 /* XMNBottomBar.m */,
+				A9D2B15B1FEFD6170053FF92 /* XMNBottomBar.xib */,
 				A9D2B15D1FEFD6170053FF92 /* XMNPhotoStickLayout.h */,
-				A9D2B15E1FEFD6170053FF92 /* XMNAlbumCell.h */,
-				A9D2B15F1FEFD6170053FF92 /* XMNAssetCell.m */,
+				A9D2B1561FEFD6170053FF92 /* XMNPhotoStickLayout.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1053,13 +1056,15 @@
 			isa = PBXGroup;
 			children = (
 				A9D2B17B1FEFD6320053FF92 /* XMNPhotoCollectionController.h */,
-				A9D2B17C1FEFD6320053FF92 /* XMNPhotoPickerController.h */,
-				A9D2B17D1FEFD6320053FF92 /* XMNVideoPreviewController.m */,
-				A9D2B17E1FEFD6320053FF92 /* XMNPhotoPreviewController.h */,
 				A9D2B17F1FEFD6320053FF92 /* XMNPhotoCollectionController.m */,
+				A9D2B17C1FEFD6320053FF92 /* XMNPhotoPickerController.h */,
 				A9D2B1801FEFD6320053FF92 /* XMNPhotoPickerController.m */,
-				A9D2B1811FEFD6320053FF92 /* XMNVideoPreviewController.h */,
+				A969E1731FF1BD19008D60F2 /* XMNAlbumListController.h */,
+				A969E1741FF1BD19008D60F2 /* XMNAlbumListController.m */,
+				A9D2B17E1FEFD6320053FF92 /* XMNPhotoPreviewController.h */,
 				A9D2B1821FEFD6320053FF92 /* XMNPhotoPreviewController.m */,
+				A9D2B1811FEFD6320053FF92 /* XMNVideoPreviewController.h */,
+				A9D2B17D1FEFD6320053FF92 /* XMNVideoPreviewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1470,6 +1475,7 @@
 				A9D2B16A1FEFD6170053FF92 /* XMNPhotoPicker.m in Sources */,
 				A9775E681F6B03F900A1FEDE /* NSAttributedString+__Category.m in Sources */,
 				A903E1951F9BA05F00950E6D /* FMDBViewController.m in Sources */,
+				A969E1751FF1BD19008D60F2 /* XMNAlbumListController.m in Sources */,
 				A92901901F806C7E0002DBD3 /* UIImage+__Category.m in Sources */,
 				BE3FA34A1FEE0E9000EDC9FA /* TimerViewController.m in Sources */,
 				A929529C1F77874300504B10 /* UIBezierPathViewController.m in Sources */,

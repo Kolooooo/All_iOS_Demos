@@ -43,8 +43,7 @@ static NSString * const kXMNAssetCellIdentifier = @"XMNAssetCell";
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations
-    
-    
+
     self.navigationItem.title = self.album.name;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(_handleCancelAction)];
     
@@ -57,6 +56,7 @@ static NSString * const kXMNAssetCellIdentifier = @"XMNAssetCell";
     
     //从相册中获取所有的资源model
     __weak typeof(*&self) wSelf = self;
+    // !!!: 获取相册中的所有图片,视频
     [[XMNPhotoManager sharedManager] getAssetsFromResult:self.album.fetchResult pickingVideoEnable:[(XMNPhotoPickerController *)self.navigationController pickingVideoEnable] completionBlock:^(NSArray<XMNAssetModel *> *assets) {
         __weak typeof(*&self) self = wSelf;
         self.assets = [NSArray arrayWithArray:assets];
@@ -68,7 +68,6 @@ static NSString * const kXMNAssetCellIdentifier = @"XMNAssetCell";
         });
         [self.collectionView reloadData];
     }];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -94,9 +93,9 @@ static NSString * const kXMNAssetCellIdentifier = @"XMNAssetCell";
 #pragma mark - Methods
 
 - (void)_setupCollectionView {
-    self.collectionView.backgroundColor = [UIColor whiteColor];
+    self.collectionView.backgroundColor = [UIColor orangeColor];
     self.collectionView.alwaysBounceHorizontal = NO;
-    self.collectionView.contentInset = UIEdgeInsetsMake(4, 4, 54, 4);
+    self.collectionView.contentInset = UIEdgeInsetsMake(0.0, 0.0, 54, 0.0);
     self.collectionView.scrollIndicatorInsets = self.collectionView.contentInset;
     self.collectionView.contentSize = CGSizeMake(self.view.frame.size.width, ((self.assets.count + 3) / 4) * self.view.frame.size.width);
     [self.collectionView registerNib:[UINib nibWithNibName:kXMNAssetCellIdentifier bundle:nil] forCellWithReuseIdentifier:kXMNAssetCellIdentifier];
@@ -112,10 +111,8 @@ static NSString * const kXMNAssetCellIdentifier = @"XMNAssetCell";
     
     [bottomBar setPreviewBlock:^{
         XMNPhotoPreviewController *previewC = [[XMNPhotoPreviewController alloc] initWithCollectionViewLayout:[XMNPhotoPreviewController photoPreviewViewLayoutWithSize:[UIScreen mainScreen].bounds.size]];
-//        previewC.assets = self.assets;
         previewC.assets = self.selectedAssets;
         previewC.selectedAssets = self.selectedAssets;
-//        previewC.currentIndex = indexPath.row;
         previewC.maxCount = [(XMNPhotoPickerController *)self.navigationController maxCount];
         __weak typeof(*&self) wSelf = self;
         [previewC setDidFinishPreviewBlock:^(NSArray<XMNAssetModel *> *selectedAssets) {
@@ -133,11 +130,6 @@ static NSString * const kXMNAssetCellIdentifier = @"XMNAssetCell";
     }];
     
     [self.view addSubview:self.bottomBar = bottomBar];
-}
-
-#pragma mark LSYAssetPreviewDelegate
-- (void)AssetPreviewDidFinishPick:(NSArray *)assets{
-    
 }
 
 - (void)_setupConstraints {
@@ -161,12 +153,12 @@ static NSString * const kXMNAssetCellIdentifier = @"XMNAssetCell";
     return 1;
 }
 
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.assets.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    // !!!: XMNAssetCell
     XMNAssetCell *assetCell = [collectionView dequeueReusableCellWithReuseIdentifier:kXMNAssetCellIdentifier forIndexPath:indexPath];
     [assetCell configCellWithItem:self.assets[indexPath.row]];
     __weak typeof(*&self) wSelf = self;
@@ -219,6 +211,7 @@ static NSString * const kXMNAssetCellIdentifier = @"XMNAssetCell";
             __weak typeof(*&self) self = wSelf;
             [(XMNPhotoPickerController *)self.navigationController didFinishPickingVideo:asset];
         }];
+        // !!!: push to XMNVideoPreviewController
         [self.navigationController pushViewController:videoPreviewC animated:YES];
     }else {
         XMNPhotoPreviewController *previewC = [[XMNPhotoPreviewController alloc] initWithCollectionViewLayout:[XMNPhotoPreviewController photoPreviewViewLayoutWithSize:[UIScreen mainScreen].bounds.size]];
@@ -237,7 +230,7 @@ static NSString * const kXMNAssetCellIdentifier = @"XMNAssetCell";
            __weak typeof(*&self) self = wSelf;
             [(XMNPhotoPickerController *)self.navigationController didFinishPickingPhoto:selectedAssets];
         }];
-        
+        // !!!: push to XMNPhotoPreviewController
         [self.navigationController pushViewController:previewC animated:YES];
     }
     
@@ -245,8 +238,8 @@ static NSString * const kXMNAssetCellIdentifier = @"XMNAssetCell";
 }
 
 #pragma mark - Getters
-
 + (UICollectionViewLayout *)photoCollectionViewLayoutWithWidth:(CGFloat)width {
+    // !!!: setter UICollectionViewLayout
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     CGFloat margin = kXMNMargin;
     layout.itemSize = kXMNThumbnailSize;

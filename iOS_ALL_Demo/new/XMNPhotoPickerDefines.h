@@ -18,8 +18,8 @@
 #define iOS8Later ([UIDevice currentDevice].systemVersion.floatValue >= 8.0f)
 #define iOS9Later ([UIDevice currentDevice].systemVersion.floatValue >= 9.0f)
 
-#define kXMNMargin 4
-#define kXMNThumbnailWidth ([UIScreen mainScreen].bounds.size.width - 2 * kXMNMargin - 4) / 4 - kXMNMargin
+#define kXMNMargin 0.0
+#define kXMNThumbnailWidth ([UIScreen mainScreen].bounds.size.width - 2.2) / 3.0
 #define kXMNThumbnailSize CGSizeMake(kXMNThumbnailWidth, kXMNThumbnailWidth)
 
 #define kXMNCamera 1
