@@ -1,4 +1,10 @@
-
+//
+//  UINavigationController+__Category.m
+//  QunhuanTribe
+//
+//  Created by Ken on 2017/12/16.
+//  Copyright © 2017年 GarveyCalvin. All rights reserved.
+//
 
 #import "UINavigationController+__Category.h"
 
@@ -23,7 +29,7 @@
                                                  }];
 }
 
-- (void)__addRightBarButtonItem:(UIImage *_Nullable)iconImage target:(id _Nullable)target selector:(SEL _Nullable)selector{
+- (void)__addRightBarButtonItem:(UIImage *_Nonnull)iconImage target:(id _Nullable)target selector:(SEL _Nullable)selector{
     UIBarButtonItem *rightButtonItem = [[UIBarButtonItem alloc] initWithImage:iconImage style:UIBarButtonItemStylePlain target:target action:selector];
     
     if (![target isKindOfClass:NSClassFromString(@"UIViewController")]) {
@@ -35,7 +41,19 @@
     viewController.navigationItem.rightBarButtonItem = rightButtonItem;
 }
 
-- (void)__addLeftBarButtonItem:(UIImage *_Nullable)iconImage target:(id _Nullable)target selector:(SEL _Nullable)selector{
+- (void)__addRightBarButtonItemWithTitle:(NSString *_Nonnull)title target:(id _Nullable)target selector:(SEL _Nullable)selector{
+    UIBarButtonItem *rightButtonItem = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:target action:selector];
+    
+    if (![target isKindOfClass:NSClassFromString(@"UIViewController")]) {
+        NSAssert(NO, @"target is not UIViewController class");
+        return;
+    }
+    
+    UIViewController *viewController =  (UIViewController *)target;
+    viewController.navigationItem.rightBarButtonItem = rightButtonItem;
+}
+
+- (void)__addLeftBarButtonItem:(UIImage *_Nonnull)iconImage target:(id _Nullable)target selector:(SEL _Nullable)selector{
     UIBarButtonItem *leftButtonItem = [[UIBarButtonItem alloc] initWithImage:iconImage style:UIBarButtonItemStylePlain target:target action:selector];
     
     if (![target isKindOfClass:NSClassFromString(@"UIViewController")]) {
@@ -47,4 +65,17 @@
     viewController.navigationItem.leftBarButtonItem = leftButtonItem;
 }
 
+- (void)__addLeftBarButtonItemWithTitle:(NSString *_Nonnull)title target:(id _Nullable)target selector:(SEL _Nullable)selector{
+    UIBarButtonItem *leftButtonItem = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:target action:selector];
+    
+    if (![target isKindOfClass:NSClassFromString(@"UIViewController")]) {
+        NSAssert(NO, @"target is not UIViewController class");
+        return;
+    }
+    
+    UIViewController *viewController =  (UIViewController *)target;
+    viewController.navigationItem.leftBarButtonItem = leftButtonItem;
+}
+
 @end
+

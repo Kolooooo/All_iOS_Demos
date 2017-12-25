@@ -1,4 +1,10 @@
-
+//
+//  UINavigationController+__Category.h
+//  QunhuanTribe
+//
+//  Created by Ken on 2017/12/16.
+//  Copyright © 2017年 GarveyCalvin. All rights reserved.
+//
 
 #import <UIKit/UIKit.h>
 
@@ -9,33 +15,44 @@
 
 /**
  设置导航栏背景颜色
-
+ 
  @param color 背景颜色
  */
 - (void)__setBackgroundColor:(UIColor *_Nonnull)color;
 
 /**
  设置元素色彩
-
+ 
  @param color 颜色
  */
 - (void)__setTintColor:(UIColor *_Nonnull)color;
 
 /**
  设置导航栏标题颜色
-
+ 
  @param color 颜色
  */
 - (void)__setNavTitleColor:(UIColor *_Nonnull)color;
 
 /**
- 添加一个导航栏右按钮
+ 添加一个导航栏右按钮, 图片
  */
-- (void)__addRightBarButtonItem:(UIImage *_Nullable)iconImage target:(id _Nullable)target selector:(SEL _Nullable)selector;
+- (void)__addRightBarButtonItem:(UIImage *_Nonnull)iconImage target:(id _Nullable)target selector:(SEL _Nullable)selector;
 
 /**
- 添加一个导航栏左按钮
+ 添加一个导航栏右按钮, 文字标题
  */
-- (void)__addLeftBarButtonItem:(UIImage *_Nullable)iconImage target:(id _Nullable)target selector:(SEL _Nullable)selector;
+- (void)__addRightBarButtonItemWithTitle:(NSString *_Nonnull)title target:(id _Nullable)target selector:(SEL _Nullable)selector;
+
+/**
+ 添加一个导航栏左按钮, 图片
+ */
+- (void)__addLeftBarButtonItem:(UIImage *_Nonnull)iconImage target:(id _Nullable)target selector:(SEL _Nullable)selector;
+
+/**
+ 添加一个导航栏左按钮, 文字标题
+ */
+- (void)__addLeftBarButtonItemWithTitle:(NSString *_Nonnull)title target:(id _Nullable)target selector:(SEL _Nullable)selector;
 
 @end
+
