@@ -5,6 +5,14 @@
 @interface UIImage (__Category)
 
 /**
+ 图片拉伸
+
+ @param insets 拉伸的正方形区域
+ @return 图片
+ */
+- (instancetype _Nonnull)__resizableImage:(UIEdgeInsets)insets;
+
+/**
  设置圆角
 
  @param cornerRadius 圆角大小

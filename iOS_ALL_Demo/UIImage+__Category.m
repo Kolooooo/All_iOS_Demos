@@ -9,6 +9,12 @@ typedef NS_ENUM(NSUInteger, ScaleDownImageType) {
 
 @implementation UIImage (__Category)
 
+- (instancetype _Nonnull)__resizableImage:(UIEdgeInsets)insets{
+    // 指定为拉伸模式，伸缩后重新赋值
+    UIImage *image = [self resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
+    return image;
+}
+
 - (UIImage *_Nonnull)__setCornerRadius:(CGFloat)cornerRadius setImageSize:(CGSize)size{
     CGRect rect = CGRectMake(0, 0, size.width, size.height);
     

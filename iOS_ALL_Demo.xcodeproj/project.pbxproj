@@ -147,6 +147,8 @@
 		A9E1F1D01FA089A200D2C219 /* PerformanceViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E1F1CF1FA089A200D2C219 /* PerformanceViewCell.m */; };
 		BE08D9C51FEA54F300B8F0DE /* __PickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE08D9C41FEA54F300B8F0DE /* __PickerView.m */; };
 		BE08DA0D1FEA671700B8F0DE /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08DA0C1FEA671700B8F0DE /* NetworkRequest.swift */; };
+		BE090AA51FF1D9CE007168F9 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE090AA41FF1D9CE007168F9 /* TabViewController.m */; };
+		BE090AA81FF1DA0F007168F9 /* __TabView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE090AA71FF1DA0F007168F9 /* __TabView.m */; };
 		BE0BBE1C1FE29C2B00C52EBA /* NSString+__Language.m in Sources */ = {isa = PBXBuildFile; fileRef = BE0BBE1B1FE29C2B00C52EBA /* NSString+__Language.m */; };
 		BE0BBE1F1FE2A06200C52EBA /* UIControl+__Click.m in Sources */ = {isa = PBXBuildFile; fileRef = BE0BBE1E1FE2A06200C52EBA /* UIControl+__Click.m */; };
 		BE0BBE211FE2A66700C52EBA /* __Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BBE201FE2A66700C52EBA /* __Exchange.swift */; };
@@ -433,6 +435,10 @@
 		BE08D9C31FEA54F300B8F0DE /* __PickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = __PickerView.h; sourceTree = "<group>"; };
 		BE08D9C41FEA54F300B8F0DE /* __PickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __PickerView.m; sourceTree = "<group>"; };
 		BE08DA0C1FEA671700B8F0DE /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		BE090AA31FF1D9CE007168F9 /* TabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabViewController.h; sourceTree = "<group>"; };
+		BE090AA41FF1D9CE007168F9 /* TabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabViewController.m; sourceTree = "<group>"; };
+		BE090AA61FF1DA0F007168F9 /* __TabView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = __TabView.h; sourceTree = "<group>"; };
+		BE090AA71FF1DA0F007168F9 /* __TabView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __TabView.m; sourceTree = "<group>"; };
 		BE0BBE1A1FE29C2B00C52EBA /* NSString+__Language.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+__Language.h"; sourceTree = "<group>"; };
 		BE0BBE1B1FE29C2B00C52EBA /* NSString+__Language.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+__Language.m"; sourceTree = "<group>"; };
 		BE0BBE1D1FE2A06100C52EBA /* UIControl+__Click.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+__Click.h"; sourceTree = "<group>"; };
@@ -809,6 +815,7 @@
 				BE3FA3471FEE0E5800EDC9FA /* TimerViewController */,
 				BE3FA3541FEE132800EDC9FA /* RecorderViewController */,
 				BE3FA35A1FEE408700EDC9FA /* BannerViewController */,
+				BE090AA21FF1D989007168F9 /* TabViewController */,
 				A92C88601F5AB0C100CD02C4 /* Category */,
 				A904FEFE1F931CF000AC2A53 /* Tools */,
 				A92C88411F5AA9EB00CD02C4 /* Supporting Files */,
@@ -1149,6 +1156,17 @@
 			name = __PickerView;
 			sourceTree = "<group>";
 		};
+		BE090AA21FF1D989007168F9 /* TabViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BE090AA31FF1D9CE007168F9 /* TabViewController.h */,
+				BE090AA41FF1D9CE007168F9 /* TabViewController.m */,
+				BE090AA61FF1DA0F007168F9 /* __TabView.h */,
+				BE090AA71FF1DA0F007168F9 /* __TabView.m */,
+			);
+			name = TabViewController;
+			sourceTree = "<group>";
+		};
 		BE3FA3471FEE0E5800EDC9FA /* TimerViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1402,6 +1420,7 @@
 				A921E6071F9C2D1400717164 /* __AFNManager.m in Sources */,
 				A92901821F8069190002DBD3 /* NSString+QRCode.m in Sources */,
 				A9D2B1841FEFD6320053FF92 /* XMNAssetModel.m in Sources */,
+				BE090AA81FF1DA0F007168F9 /* __TabView.m in Sources */,
 				A9D2B1671FEFD6170053FF92 /* XMNBottomBar.m in Sources */,
 				A903E1861F9B4BD100950E6D /* KKHistoriesModel.m in Sources */,
 				BE3FA3511FEE125700EDC9FA /* RecorderViewController.m in Sources */,
@@ -1466,6 +1485,7 @@
 				A92901691F8060940002DBD3 /* NSFileManager+Paths.m in Sources */,
 				A903E1831F9B4B9F00950E6D /* SQLiteManagerViewController.m in Sources */,
 				A9D2B16D1FEFD6170053FF92 /* XMNAssetCell.m in Sources */,
+				BE090AA51FF1D9CE007168F9 /* TabViewController.m in Sources */,
 				A904FF011F931CFD00AC2A53 /* __StarsControl.m in Sources */,
 				A929015D1F805D250002DBD3 /* __UIView.m in Sources */,
 				A92901601F805F150002DBD3 /* NSDate+Utilities.m in Sources */,
