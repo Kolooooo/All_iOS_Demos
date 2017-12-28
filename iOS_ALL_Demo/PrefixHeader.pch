@@ -26,6 +26,7 @@
 #import "UIControl+__Click.h"
 #import "__StarsControl.h"
 #import "__PickerView.h"
+#import "NSFileManager+__Category.h"
 
 #import <MJExtension/MJExtension.h>
 

@@ -13,6 +13,7 @@
 @interface RecorderViewController ()
 
 @property (nonatomic, strong) __Recorder  *recorder;
+@property (nonatomic, strong) NSURL *recordFileUrl;
 
 @end
 
@@ -26,8 +27,17 @@
     NSString *filePath = [path stringByAppendingString:@"/RRecord.arm"];
     
     //2.获取文件路径
-    NSURL *recordFileUrl = [NSURL fileURLWithPath:filePath];
-    self.recorder = [[__Recorder alloc] initWith:recordFileUrl];
+    self.recordFileUrl = [NSURL fileURLWithPath:filePath];
+    self.recorder = [[__Recorder alloc] initWith:self.recordFileUrl];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    NSString *voicePath = @"http:\/\/p06blazdg.bkt.clouddn.com\/20171228174407_4f5b294002d63d498e932aed7eacc88b.amr";
+    
+    NSString *documentPath = [NSFileManager __documentPath];
+    NSString *saveFilePath = [NSString stringWithFormat:@"%@/%@", documentPath, @"20171228174407_4f5b294002d63d498e932aed7eacc88b.amr"];
+    [self.recorder __loadVoiceWithPath:voicePath saveFilePath:saveFilePath];
+    DEBUGLOG(@"%@", saveFilePath);
 }
 
 - (IBAction)startRecord:(id)sender {
@@ -39,7 +49,7 @@
 }
 
 - (IBAction)playRecord:(id)sender {
-    [self.recorder __playRecord];
+    [self.recorder __playRecordWithURL:self.recordFileUrl];
 }
 
 @end

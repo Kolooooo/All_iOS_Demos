@@ -1,10 +1,4 @@
-//
-//  __RecorderTool.m
-//  RLAudioRecord
-//
-//  Created by Ken on 2017/12/23.
-//  Copyright © 2017年 Enorth.com. All rights reserved.
-//
+
 
 #import "__Recorder.h"
 #import <AVFoundation/AVFoundation.h>
@@ -24,15 +18,13 @@
 @implementation __Recorder
 
 
-- (instancetype)initWith:(NSURL *)recordFileUrl{
+- (instancetype _Nonnull)initWith:(NSURL *)recordFileUrl{
     self = [super init];
     if (self) {
         _recordFileUrl = recordFileUrl;
         
-        
         NSDictionary *recordSetting = [self recordSetting];//设置参数
         self.recorder = [[AVAudioRecorder alloc] initWithURL:recordFileUrl settings:recordSetting error:nil];
-        
         
         self.session = [self session];
     }
@@ -57,17 +49,15 @@
     }
 }
 
-- (void)__playRecord{
+- (void)__playRecordWithURL:(NSURL *_Nonnull)recordURL{
     NSLog(@"播放录音");
     
     [self.recorder stop];
+    if ([self.player isPlaying]){
+        return;
+    }
     
-    if ([self.player isPlaying])return;
-    
-    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:self.recordFileUrl error:nil];
-    
-    NSLog(@"%li",self.player.data.length/1024);
-    
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:recordURL error:nil];
     [self.session setCategory:AVAudioSessionCategoryPlayback error:nil];
     [self.player play];
 }
@@ -103,4 +93,24 @@
     return _session;
 }
 
+#pragma mark - 录音下载 并本地保存
+- (BOOL)__loadVoiceWithPath:(NSString *_Nonnull)voicePath saveFilePath:(NSString *_Nonnull)saveFilePath{
+    //设置下载链接
+    NSURL *soundURL = [NSURL URLWithString:voicePath];
+    //根据链接获取数据
+    NSData *audioData = [NSData dataWithContentsOfURL: soundURL];
+    
+    //保存
+    if ([audioData writeToFile:saveFilePath atomically:YES]) {
+        DEBUGLOG(@"语音下载成功并保存");
+        DEBUGLOG(@"%@", saveFilePath);
+        return YES;
+    }else{
+        DEBUGLOG(@"保存错误 -> %@", saveFilePath);
+        return NO;
+    }
+}
+
 @end
+
+
