@@ -54,5 +54,19 @@
  */
 - (void)__addLeftBarButtonItemWithTitle:(NSString *_Nonnull)title target:(id _Nullable)target selector:(SEL _Nullable)selector;
 
+/**
+ 添加一个自定义导航栏右按钮
+ 
+ @param customView 自定义视图
+ */
+- (void)__addCustomRightBarButtonItemWithCustomView:(UIView *_Nonnull)customView;
+
+/**
+ 添加一个自定义导航栏左按钮
+ 
+ @param customView 自定义视图
+ */
+- (void)__addCustomLeftBarButtonItemWithCustomView:(UIView *_Nonnull)customView;
+
 @end
 
