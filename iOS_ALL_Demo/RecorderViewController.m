@@ -24,7 +24,7 @@
     
     //1.获取沙盒地址
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    NSString *filePath = [path stringByAppendingString:@"/RRecord.arm"];
+    NSString *filePath = [path stringByAppendingString:@"/RRecord.wav"];
     
     //2.获取文件路径
     self.recordFileUrl = [NSURL fileURLWithPath:filePath];
@@ -37,6 +37,13 @@
     NSString *documentPath = [NSFileManager __documentPath];
     NSString *saveFilePath = [NSString stringWithFormat:@"%@/%@", documentPath, @"20171228174407_4f5b294002d63d498e932aed7eacc88b.amr"];
     [self.recorder __loadVoiceWithPath:voicePath saveFilePath:saveFilePath];
+    
+
+    NSString *wavPath = [NSString stringWithFormat:@"%@/%@", NSFileManager.__documentPath, @"test.wav"];
+    [VoiceConverter ConvertAmrToWav:saveFilePath wavSavePath:wavPath];
+    
+    NSURL *fileURL = [NSURL URLWithString:wavPath];
+    [self.recorder __playRecordWithURL: fileURL];
     DEBUGLOG(@"%@", saveFilePath);
 }
 
