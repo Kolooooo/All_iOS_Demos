@@ -10,6 +10,7 @@ static const CGFloat doneButtonWidth = 50.0f;
 static const CGFloat cancelButtonWidth = 50.0f;
 static const CGFloat lineHeight = 0.5f;
 
+
 @interface __PickerView()
 
 @property (nonatomic, strong) UIView  *bigView;
@@ -90,6 +91,10 @@ static const CGFloat lineHeight = 0.5f;
         self.isShow = YES;
         self.alpha = 1.0;
         self.bigView.y = self.height-bigViewHeight;
+    } completion:^(BOOL finished) {
+        if ([self.delegale respondsToSelector:@selector(__didShow:)]) {
+            [self.delegale __didShow:self];
+        }
     }];
 }
 
@@ -106,6 +111,10 @@ static const CGFloat lineHeight = 0.5f;
         self.isShow = NO;
         self.alpha = 0.0;
         self.bigView.y = self.height;
+    } completion:^(BOOL finished) {
+        if ([self.delegale respondsToSelector:@selector(__didHidden:)]) {
+            [self.delegale __didHidden:self];
+        }
     }];
 }
 
@@ -226,4 +235,5 @@ static const CGFloat lineHeight = 0.5f;
 }
 
 @end
+
 

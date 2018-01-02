@@ -10,6 +10,8 @@
 - (void)__touchDoneButton:(__PickerView *)pickerView;
 - (void)__willShow:(__PickerView *)pickerView;
 - (void)__willHidden:(__PickerView *)pickerView;
+- (void)__didShow:(__PickerView *)pickerView;
+- (void)__didHidden:(__PickerView *)pickerView;
 @end
 
 @protocol __PickerViewDataSource <UIPickerViewDataSource>
@@ -38,4 +40,5 @@
 - (void)setSelectedLineColor:(UIColor *)color;
 
 @end
+
 
