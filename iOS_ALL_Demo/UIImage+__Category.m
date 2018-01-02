@@ -11,8 +11,14 @@ typedef NS_ENUM(NSUInteger, ScaleDownImageType) {
 
 - (instancetype _Nonnull)__resizableImage:(UIEdgeInsets)insets{
     // 指定为拉伸模式，伸缩后重新赋值
-    UIImage *image = [self resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
-    return image;
+    return [self resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
+}
+
+- (instancetype _Nonnull)__resizableImageWithPoint:(CGPoint)point{
+    CGFloat imageWidth = self.size.width;
+    CGFloat imageHeight = self.size.height;
+    UIEdgeInsets insets = UIEdgeInsetsMake(point.y, point.x, imageHeight - point.y - 1, imageWidth - point.y - 1);
+    return [self resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
 }
 
 - (UIImage *_Nonnull)__setCornerRadius:(CGFloat)cornerRadius setImageSize:(CGSize)size{

@@ -174,6 +174,7 @@
 		BE79D1641FEE43F60081A4EA /* Home_Scroll_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE79D15F1FEE43F60081A4EA /* Home_Scroll_01.jpg */; };
 		BEBC0F1A1FE52A77004E6BED /* __Swift_Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBC0F191FE52A77004E6BED /* __Swift_Common.swift */; };
 		BEBC0F1D1FE52A99004E6BED /* UINavigationController+__Category.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBC0F1B1FE52A99004E6BED /* UINavigationController+__Category.m */; };
+		BEC688681FF797880072435A /* ImgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC688671FF797880072435A /* ImgeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -486,6 +487,8 @@
 		BEBC0F191FE52A77004E6BED /* __Swift_Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = __Swift_Common.swift; sourceTree = "<group>"; };
 		BEBC0F1B1FE52A99004E6BED /* UINavigationController+__Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+__Category.m"; sourceTree = "<group>"; };
 		BEBC0F1C1FE52A99004E6BED /* UINavigationController+__Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+__Category.h"; sourceTree = "<group>"; };
+		BEC688661FF797880072435A /* ImgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImgeViewController.h; sourceTree = "<group>"; };
+		BEC688671FF797880072435A /* ImgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImgeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -836,6 +839,7 @@
 				BE3FA3541FEE132800EDC9FA /* RecorderViewController */,
 				BE3FA35A1FEE408700EDC9FA /* BannerViewController */,
 				BE090AA21FF1D989007168F9 /* TabViewController */,
+				BE3E5CD41FF787FD004D2010 /* ImageViewController */,
 				A92C88601F5AB0C100CD02C4 /* Category */,
 				A904FEFE1F931CF000AC2A53 /* Tools */,
 				A92C88411F5AA9EB00CD02C4 /* Supporting Files */,
@@ -1238,6 +1242,15 @@
 			name = TabViewController;
 			sourceTree = "<group>";
 		};
+		BE3E5CD41FF787FD004D2010 /* ImageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BEC688661FF797880072435A /* ImgeViewController.h */,
+				BEC688671FF797880072435A /* ImgeViewController.m */,
+			);
+			name = ImageViewController;
+			sourceTree = "<group>";
+		};
 		BE3FA3471FEE0E5800EDC9FA /* TimerViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1550,6 +1563,7 @@
 				A9443E921FC7CF3D0012C3BF /* UITextView+__Category.m in Sources */,
 				A9D2B1BC1FEFD6400053FF92 /* PromptController.m in Sources */,
 				A91F256B1FA1C50F0099728A /* UIView+__Performance.m in Sources */,
+				BEC688681FF797880072435A /* ImgeViewController.m in Sources */,
 				BE08D9C51FEA54F300B8F0DE /* __PickerView.m in Sources */,
 				A97FBFAB1FEDC0E800F361E0 /* __Extension+NSObject.swift in Sources */,
 				A9775E791F6C9D8A00A1FEDE /* UITableViewCell+__Category.m in Sources */,

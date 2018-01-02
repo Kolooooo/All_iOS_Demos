@@ -131,6 +131,11 @@ UITableViewDataSource>
             
             break;
         }
+        case 18:{
+            [self.navigationController pushViewController:[[NSClassFromString(@"ImgeViewController") alloc] init] animated:YES];
+            
+            break;
+        }
             
         default:
             break;
@@ -156,7 +161,8 @@ UITableViewDataSource>
                     @"TimerViewController",
                     @"RecorderViewController 录音功能",
                     @"BannerViewController 轮播图",
-                    @"TabViewController"
+                    @"TabViewController",
+                    @"ImgeViewController"
                     ];
 }
 

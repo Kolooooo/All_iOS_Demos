@@ -61,7 +61,7 @@
         return;
     }
     
-    UIViewController *viewController =  (UIViewController *)target;
+    UIViewController *viewController = (UIViewController *)target;
     viewController.navigationItem.leftBarButtonItem = leftButtonItem;
 }
 
@@ -77,5 +77,12 @@
     viewController.navigationItem.leftBarButtonItem = leftButtonItem;
 }
 
-@end
+- (void)__addCustomRightBarButtonItemWithCustomView:(UIView *_Nonnull)customView{
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:customView];
+}
 
+- (void)__addCustomLeftBarButtonItemWithCustomView:(UIView *_Nonnull)customView{
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:customView];
+}
+
+@end
