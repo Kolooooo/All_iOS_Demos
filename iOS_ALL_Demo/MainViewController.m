@@ -136,6 +136,11 @@ UITableViewDataSource>
             
             break;
         }
+        case 19:{
+            [self.navigationController pushViewController:[[NSClassFromString(@"Button2ViewController") alloc] init] animated:YES];
+            
+            break;
+        }
             
         default:
             break;
@@ -162,7 +167,8 @@ UITableViewDataSource>
                     @"RecorderViewController 录音功能",
                     @"BannerViewController 轮播图",
                     @"TabViewController",
-                    @"ImgeViewController"
+                    @"ImgeViewController",
+                    @"Button2ViewController 长按录音"
                     ];
 }
 

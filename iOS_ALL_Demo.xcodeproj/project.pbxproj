@@ -109,6 +109,7 @@
 		A9A7F2161F61EDF700D460AE /* AutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A7F2151F61EDF700D460AE /* AutoLayoutViewController.m */; };
 		A9A7F2181F61EE0100D460AE /* AutoLayoutViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9A7F2171F61EE0100D460AE /* AutoLayoutViewController.storyboard */; };
 		A9A7F21E1F61F50800D460AE /* NSString+__Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A7F21D1F61F50800D460AE /* NSString+__Category.m */; };
+		A9ADBDDE1FFDA4690000618C /* Button2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9ADBDDD1FFDA4690000618C /* Button2ViewController.m */; };
 		A9C2CE501F7095B60029DBDE /* iOS.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = A9C2CE4F1F7095B60029DBDE /* iOS.rtfd */; };
 		A9D2B1641FEFD6170053FF92 /* XMNAlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9D2B1511FEFD6170053FF92 /* XMNAlbumCell.xib */; };
 		A9D2B1651FEFD6170053FF92 /* XMNAssetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9D2B1531FEFD6170053FF92 /* XMNAssetCell.xib */; };
@@ -373,6 +374,8 @@
 		A9A7F2171F61EE0100D460AE /* AutoLayoutViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AutoLayoutViewController.storyboard; sourceTree = "<group>"; };
 		A9A7F21C1F61F50800D460AE /* NSString+__Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+__Category.h"; sourceTree = "<group>"; };
 		A9A7F21D1F61F50800D460AE /* NSString+__Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+__Category.m"; sourceTree = "<group>"; };
+		A9ADBDDC1FFDA4690000618C /* Button2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Button2ViewController.h; sourceTree = "<group>"; };
+		A9ADBDDD1FFDA4690000618C /* Button2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Button2ViewController.m; sourceTree = "<group>"; };
 		A9C2CE4F1F7095B60029DBDE /* iOS.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = iOS.rtfd; sourceTree = "<group>"; };
 		A9D2B1501FEFD6170053FF92 /* XMNPhotoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNPhotoPreviewCell.h; sourceTree = "<group>"; };
 		A9D2B1511FEFD6170053FF92 /* XMNAlbumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMNAlbumCell.xib; sourceTree = "<group>"; };
@@ -840,6 +843,7 @@
 				BE3FA35A1FEE408700EDC9FA /* BannerViewController */,
 				BE090AA21FF1D989007168F9 /* TabViewController */,
 				BE3E5CD41FF787FD004D2010 /* ImageViewController */,
+				A9ADBDDB1FFDA3FD0000618C /* ButtonViewController */,
 				A92C88601F5AB0C100CD02C4 /* Category */,
 				A904FEFE1F931CF000AC2A53 /* Tools */,
 				A92C88411F5AA9EB00CD02C4 /* Supporting Files */,
@@ -1069,6 +1073,15 @@
 				A9A7F2171F61EE0100D460AE /* AutoLayoutViewController.storyboard */,
 			);
 			name = AutoLayout;
+			sourceTree = "<group>";
+		};
+		A9ADBDDB1FFDA3FD0000618C /* ButtonViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A9ADBDDC1FFDA4690000618C /* Button2ViewController.h */,
+				A9ADBDDD1FFDA4690000618C /* Button2ViewController.m */,
+			);
+			name = ButtonViewController;
 			sourceTree = "<group>";
 		};
 		A9D2B14E1FEFD6020053FF92 /* new */ = {
@@ -1618,6 +1631,7 @@
 				A903E18D1F9B53F200950E6D /* __CoreDataManager.m in Sources */,
 				A9D2B1871FEFD6320053FF92 /* UIViewController+XMNPhotoHUD.m in Sources */,
 				A929018E1F806C7E0002DBD3 /* UIImage+__Color.m in Sources */,
+				A9ADBDDE1FFDA4690000618C /* Button2ViewController.m in Sources */,
 				A923E6081F719D9000567E96 /* tableViewInCell.m in Sources */,
 				A9D2B1B11FEFD6400053FF92 /* JGProgressHUDFadeZoomAnimation.m in Sources */,
 				A92C885F1F5AADDD00CD02C4 /* MainNavViewController.m in Sources */,
