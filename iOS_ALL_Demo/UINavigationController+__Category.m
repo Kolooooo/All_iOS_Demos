@@ -78,11 +78,12 @@
 }
 
 - (void)__addCustomRightBarButtonItemWithCustomView:(UIView *_Nonnull)customView{
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:customView];
+    self.visibleViewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:customView];
 }
 
 - (void)__addCustomLeftBarButtonItemWithCustomView:(UIView *_Nonnull)customView{
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:customView];
+    self.visibleViewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:customView];
 }
 
 @end
+
