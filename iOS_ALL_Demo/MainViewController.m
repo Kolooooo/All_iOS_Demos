@@ -146,6 +146,11 @@ UITableViewDataSource>
             
             break;
         }
+        case 21:{
+            [self.navigationController pushViewController:[[NSClassFromString(@"NavigationController") alloc] init] animated:YES];
+            
+            break;
+        }
             
             
         default:
@@ -175,7 +180,8 @@ UITableViewDataSource>
                     @"TabViewController",
                     @"ImgeViewController",
                     @"Button2ViewController 长按录音",
-                    @"NSTimerViewController 倒计时"
+                    @"NSTimerViewController 倒计时",
+                    @"NavigationController - 完美隐藏"
                     ];
 }
 

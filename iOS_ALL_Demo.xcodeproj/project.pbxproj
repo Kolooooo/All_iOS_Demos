@@ -180,6 +180,8 @@
 		BEF748CC200855D200E00977 /* UIViewContentModeScaleAspectFill.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEF748C9200855D200E00977 /* UIViewContentModeScaleAspectFill.jpg */; };
 		BEF748CD200855D200E00977 /* UIViewContentModeScaleAspectFit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEF748CA200855D200E00977 /* UIViewContentModeScaleAspectFit.jpg */; };
 		BEF748CE200855D200E00977 /* UIViewContentModeScaleToFill.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEF748CB200855D200E00977 /* UIViewContentModeScaleToFill.jpg */; };
+		BEF748D320085B6700E00977 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF748D220085B6700E00977 /* NavigationController.m */; };
+		BEF748D620085D0F00E00977 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF748D520085D0F00E00977 /* PushViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -501,6 +503,10 @@
 		BEF748C9200855D200E00977 /* UIViewContentModeScaleAspectFill.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = UIViewContentModeScaleAspectFill.jpg; sourceTree = "<group>"; };
 		BEF748CA200855D200E00977 /* UIViewContentModeScaleAspectFit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = UIViewContentModeScaleAspectFit.jpg; sourceTree = "<group>"; };
 		BEF748CB200855D200E00977 /* UIViewContentModeScaleToFill.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = UIViewContentModeScaleToFill.jpg; sourceTree = "<group>"; };
+		BEF748D120085B6700E00977 /* NavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		BEF748D220085B6700E00977 /* NavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		BEF748D420085D0F00E00977 /* PushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
+		BEF748D520085D0F00E00977 /* PushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -854,7 +860,8 @@
 				BE090AA21FF1D989007168F9 /* TabViewController */,
 				BE3E5CD41FF787FD004D2010 /* ImageViewController */,
 				A9ADBDDB1FFDA3FD0000618C /* ButtonViewController */,
-				BECB720F1FFF439000E1B6B7 /* NSTimer */,
+				BECB720F1FFF439000E1B6B7 /* NSTimerViewController */,
+				BEF748CF20085B0E00E00977 /* NavigationController */,
 				A92C88601F5AB0C100CD02C4 /* Category */,
 				A904FEFE1F931CF000AC2A53 /* Tools */,
 				A92C88411F5AA9EB00CD02C4 /* Supporting Files */,
@@ -1327,13 +1334,13 @@
 			name = bannerImages;
 			sourceTree = "<group>";
 		};
-		BECB720F1FFF439000E1B6B7 /* NSTimer */ = {
+		BECB720F1FFF439000E1B6B7 /* NSTimerViewController */ = {
 			isa = PBXGroup;
 			children = (
 				BECB72121FFF43C700E1B6B7 /* NSTimerViewController.h */,
 				BECB72131FFF43C700E1B6B7 /* NSTimerViewController.m */,
 			);
-			name = NSTimer;
+			name = NSTimerViewController;
 			sourceTree = "<group>";
 		};
 		BEF748C7200855A100E00977 /* Method Desc */ = {
@@ -1352,6 +1359,25 @@
 				BEF748C9200855D200E00977 /* UIViewContentModeScaleAspectFill.jpg */,
 			);
 			name = UIViewContentMode;
+			sourceTree = "<group>";
+		};
+		BEF748CF20085B0E00E00977 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				BEF748D120085B6700E00977 /* NavigationController.h */,
+				BEF748D220085B6700E00977 /* NavigationController.m */,
+				BEF748D720085D8500E00977 /* 完美隐藏导航栏 */,
+			);
+			name = NavigationController;
+			sourceTree = "<group>";
+		};
+		BEF748D720085D8500E00977 /* 完美隐藏导航栏 */ = {
+			isa = PBXGroup;
+			children = (
+				BEF748D420085D0F00E00977 /* PushViewController.h */,
+				BEF748D520085D0F00E00977 /* PushViewController.m */,
+			);
+			name = "完美隐藏导航栏";
 			sourceTree = "<group>";
 		};
 		D531A055228450FD91131AFF /* Pods */ = {
@@ -1397,7 +1423,7 @@
 				TargetAttributes = {
 					A92C883D1F5AA9EB00CD02C4 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 9RU56WTF53;
+						DevelopmentTeam = V2BB3W5277;
 						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
@@ -1570,6 +1596,7 @@
 				A92C885A1F5AAAB100CD02C4 /* MainViewController.m in Sources */,
 				A92901981F80A3C40002DBD3 /* SDiOSVersion.m in Sources */,
 				A92901941F806D630002DBD3 /* UIScrollView+__Category.m in Sources */,
+				BEF748D320085B6700E00977 /* NavigationController.m in Sources */,
 				A92901561F8059E70002DBD3 /* __UITextField.m in Sources */,
 				A99733AD1F7B097400C18A45 /* NSObject+__Runtime.m in Sources */,
 				A92901661F805FA30002DBD3 /* NSDictionary+__Category.m in Sources */,
@@ -1581,6 +1608,7 @@
 				A9A7F21E1F61F50800D460AE /* NSString+__Category.m in Sources */,
 				A92901911F806C7E0002DBD3 /* UIImage+QRCode.m in Sources */,
 				BE08DA0D1FEA671700B8F0DE /* NetworkRequest.swift in Sources */,
+				BEF748D620085D0F00E00977 /* PushViewController.m in Sources */,
 				A921E60B1F9C529C00717164 /* FmdbTestModel.m in Sources */,
 				A9D2B1B91FEFD6400053FF92 /* JGProgressHUDPieIndicatorView.m in Sources */,
 				A92C88751F5AB0E300CD02C4 /* UIView+__Category.m in Sources */,
@@ -1806,8 +1834,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 9RU56WTF53;
+				DEVELOPMENT_TEAM = V2BB3W5277;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS_ALL_Demo/PrefixHeader.pch";
@@ -1821,6 +1851,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUGSWIFT";
 				PRODUCT_BUNDLE_IDENTIFIER = "Ken.iOS-ALL-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS_ALL_Demo/iOS_ALL_Demo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -1833,8 +1864,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 9RU56WTF53;
+				DEVELOPMENT_TEAM = V2BB3W5277;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS_ALL_Demo/PrefixHeader.pch";
@@ -1848,6 +1881,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "Ken.iOS-ALL-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS_ALL_Demo/iOS_ALL_Demo-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};

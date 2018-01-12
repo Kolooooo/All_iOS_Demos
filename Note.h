@@ -56,3 +56,14 @@ Privacy - Calendars Usage Description  //日历
 // NS_DESIGNATED_INITIALIZER //指定初始化函数
 // - (void)initWithName:(NSString *)name NS_DESIGNATED_INITIALIZER;
 
+#pragma mark - 震动一下
+// #import <AudioToolbox/AudioToolbox.h>
+// AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+
+
+
+
+
+
+
+
