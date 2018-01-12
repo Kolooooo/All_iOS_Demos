@@ -9,6 +9,10 @@ typedef NS_ENUM(NSUInteger, ScaleDownImageType) {
 
 @implementation UIImage (__Category)
 
+- (instancetype)__stretchableImageWithPoint:(CGPoint)point{
+    return [self stretchableImageWithLeftCapWidth:point.x topCapHeight:point.y];
+}
+
 - (instancetype _Nonnull)__resizableImage:(UIEdgeInsets)insets{
     // 指定为拉伸模式，伸缩后重新赋值
     return [self resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];

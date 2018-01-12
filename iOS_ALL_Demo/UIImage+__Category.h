@@ -5,7 +5,16 @@
 @interface UIImage (__Category)
 
 /**
- 点九图片拉伸
+ 图片拉伸，边缘固定，point 双向下一个像素就是拉伸的对象
+ 参数的意义是，如果参数指定10，5。那么，图片左边10个像素，上边5个像素。不会被拉伸，x坐标为11和一个像素会被横向复制，y坐标为6的一个像素会被纵向复制
+
+ @param point 拉伸的参考坐标
+ @return 返回图片
+ */
+- (instancetype _Nonnull)__stretchableImageWithPoint:(CGPoint)point;
+
+/**
+ 点九图片拉伸, 边缘会出现拉伸
 
  @param insets 拉伸的区域
  @return 返回图片
@@ -13,7 +22,7 @@
 - (instancetype _Nonnull)__resizableImage:(UIEdgeInsets)insets;
 
 /**
- 点九图片拉伸
+ 点九图片拉伸 边缘会出现拉伸
 
  @param point 拉伸的点坐标，坐标+1 正方形就是拉伸区域
  @return 返回图片

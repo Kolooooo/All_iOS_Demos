@@ -29,6 +29,16 @@
 }
 
 - (void)_insetsMethod{
+//    self.insetsMethod_ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 200, self.view.bounds.size.width, 100)];
+    self.insetsMethod_ImageView.backgroundColor = [UIColor lightGrayColor];
+    UIImage *imgLogin = [UIImage imageNamed:@"Personal_auto_voice"];
+    
+    /// 方法第一个参数是指图片的左边界到拉伸点的距离, 带二个参数是图片顶部到拉伸点的距离
+    imgLogin = [imgLogin stretchableImageWithLeftCapWidth:floorf(70.0) topCapHeight:floorf(30.0)];
+    self.insetsMethod_ImageView.image = imgLogin;
+    
+    return;
+    
     CGFloat imageWidth = self.pointImage.size.width;
     CGFloat imageHeight = self.pointImage.size.height;
     UIEdgeInsets insets = UIEdgeInsetsMake(imageHeight*0.5, imageWidth*0.5, imageHeight*0.5-1, imageWidth*0.5-1);
@@ -41,7 +51,7 @@
     CGFloat imageWidth = self.pointImage.size.width;
     CGFloat imageHeight = self.pointImage.size.height;
     CGPoint centerPoint = CGPointMake(imageWidth*0.5, imageHeight*0.5);
-    /// !!!: insets method
+    /// !!!: point method
     self.pointImage = [self.pointImage __resizableImageWithPoint:centerPoint];
     self.pointMethod_ImageView.image = self.pointImage;
 }
@@ -64,7 +74,7 @@
 #pragma mark - lazy load
 - (UIImage *)pointImage{
     if (_pointImage == nil) {
-        _pointImage = [UIImage imageNamed:@"nine_point"];
+        _pointImage = [UIImage imageNamed:@"Personal_auto_voice"];
     }
     return _pointImage;
 }

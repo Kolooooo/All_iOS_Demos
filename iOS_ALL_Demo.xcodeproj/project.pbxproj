@@ -176,6 +176,10 @@
 		BEBC0F1A1FE52A77004E6BED /* __Swift_Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBC0F191FE52A77004E6BED /* __Swift_Common.swift */; };
 		BEBC0F1D1FE52A99004E6BED /* UINavigationController+__Category.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBC0F1B1FE52A99004E6BED /* UINavigationController+__Category.m */; };
 		BEC688681FF797880072435A /* ImgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC688671FF797880072435A /* ImgeViewController.m */; };
+		BECB72141FFF43C700E1B6B7 /* NSTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BECB72131FFF43C700E1B6B7 /* NSTimerViewController.m */; };
+		BEF748CC200855D200E00977 /* UIViewContentModeScaleAspectFill.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEF748C9200855D200E00977 /* UIViewContentModeScaleAspectFill.jpg */; };
+		BEF748CD200855D200E00977 /* UIViewContentModeScaleAspectFit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEF748CA200855D200E00977 /* UIViewContentModeScaleAspectFit.jpg */; };
+		BEF748CE200855D200E00977 /* UIViewContentModeScaleToFill.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEF748CB200855D200E00977 /* UIViewContentModeScaleToFill.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -492,6 +496,11 @@
 		BEBC0F1C1FE52A99004E6BED /* UINavigationController+__Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+__Category.h"; sourceTree = "<group>"; };
 		BEC688661FF797880072435A /* ImgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImgeViewController.h; sourceTree = "<group>"; };
 		BEC688671FF797880072435A /* ImgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImgeViewController.m; sourceTree = "<group>"; };
+		BECB72121FFF43C700E1B6B7 /* NSTimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTimerViewController.h; sourceTree = "<group>"; };
+		BECB72131FFF43C700E1B6B7 /* NSTimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSTimerViewController.m; sourceTree = "<group>"; };
+		BEF748C9200855D200E00977 /* UIViewContentModeScaleAspectFill.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = UIViewContentModeScaleAspectFill.jpg; sourceTree = "<group>"; };
+		BEF748CA200855D200E00977 /* UIViewContentModeScaleAspectFit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = UIViewContentModeScaleAspectFit.jpg; sourceTree = "<group>"; };
+		BEF748CB200855D200E00977 /* UIViewContentModeScaleToFill.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = UIViewContentModeScaleToFill.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -748,6 +757,7 @@
 		A929528E1F76C9E600504B10 /* UIView+Category */ = {
 			isa = PBXGroup;
 			children = (
+				BEF748C7200855A100E00977 /* Method Desc */,
 				A92952951F777BFE00504B10 /* UIView+__Frame.h */,
 				A92952961F777BFE00504B10 /* UIView+__Frame.m */,
 				A92C886C1F5AB0E300CD02C4 /* UIView+__Category.h */,
@@ -844,6 +854,7 @@
 				BE090AA21FF1D989007168F9 /* TabViewController */,
 				BE3E5CD41FF787FD004D2010 /* ImageViewController */,
 				A9ADBDDB1FFDA3FD0000618C /* ButtonViewController */,
+				BECB720F1FFF439000E1B6B7 /* NSTimer */,
 				A92C88601F5AB0C100CD02C4 /* Category */,
 				A904FEFE1F931CF000AC2A53 /* Tools */,
 				A92C88411F5AA9EB00CD02C4 /* Supporting Files */,
@@ -1316,6 +1327,33 @@
 			name = bannerImages;
 			sourceTree = "<group>";
 		};
+		BECB720F1FFF439000E1B6B7 /* NSTimer */ = {
+			isa = PBXGroup;
+			children = (
+				BECB72121FFF43C700E1B6B7 /* NSTimerViewController.h */,
+				BECB72131FFF43C700E1B6B7 /* NSTimerViewController.m */,
+			);
+			name = NSTimer;
+			sourceTree = "<group>";
+		};
+		BEF748C7200855A100E00977 /* Method Desc */ = {
+			isa = PBXGroup;
+			children = (
+				BEF748C8200855C000E00977 /* UIViewContentMode */,
+			);
+			name = "Method Desc";
+			sourceTree = "<group>";
+		};
+		BEF748C8200855C000E00977 /* UIViewContentMode */ = {
+			isa = PBXGroup;
+			children = (
+				BEF748CB200855D200E00977 /* UIViewContentModeScaleToFill.jpg */,
+				BEF748CA200855D200E00977 /* UIViewContentModeScaleAspectFit.jpg */,
+				BEF748C9200855D200E00977 /* UIViewContentModeScaleAspectFill.jpg */,
+			);
+			name = UIViewContentMode;
+			sourceTree = "<group>";
+		};
 		D531A055228450FD91131AFF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1359,7 +1397,7 @@
 				TargetAttributes = {
 					A92C883D1F5AA9EB00CD02C4 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 4W4G4T2XR6;
+						DevelopmentTeam = 9RU56WTF53;
 						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
@@ -1391,6 +1429,7 @@
 				A92901A01F83D0BB0002DBD3 /* Class_Tree.png in Resources */,
 				A9D2B16C1FEFD6170053FF92 /* XMNBottomBar.xib in Resources */,
 				BE79D1601FEE43F60081A4EA /* Home_Scroll_02.jpg in Resources */,
+				BEF748CC200855D200E00977 /* UIViewContentModeScaleAspectFill.jpg in Resources */,
 				BE79D1621FEE43F60081A4EA /* Home_Scroll_03.jpg in Resources */,
 				A9C2CE501F7095B60029DBDE /* iOS.rtfd in Resources */,
 				A92C88B51F5B8AE700CD02C4 /* TableViewCell2.xib in Resources */,
@@ -1407,10 +1446,12 @@
 				A904FF201F99D81F00AC2A53 /* charles3.json in Resources */,
 				A904FF1E1F99D81F00AC2A53 /* charles1.json in Resources */,
 				BE79D1641FEE43F60081A4EA /* Home_Scroll_01.jpg in Resources */,
+				BEF748CE200855D200E00977 /* UIViewContentModeScaleToFill.jpg in Resources */,
 				A97FBFA91FEDBC7E00F361E0 /* XibView.xib in Resources */,
 				A9D2B1831FEFD6320053FF92 /* PhotoPickerKit.xcassets in Resources */,
 				A92C887D1F5AB34F00CD02C4 /* TableViewCell.xib in Resources */,
 				BE79D1631FEE43F60081A4EA /* Home_Scroll_05.jpg in Resources */,
+				BEF748CD200855D200E00977 /* UIViewContentModeScaleAspectFit.jpg in Resources */,
 				A9A7F2181F61EE0100D460AE /* AutoLayoutViewController.storyboard in Resources */,
 				A9D2B1B21FEFD6400053FF92 /* JGProgressHUD Resources.bundle in Resources */,
 				A923E6091F719D9000567E96 /* tableViewInCell.xib in Resources */,
@@ -1554,6 +1595,7 @@
 				A904FF041F931D3900AC2A53 /* __StarButton.m in Sources */,
 				A92C88431F5AA9EB00CD02C4 /* main.m in Sources */,
 				A92901851F8069190002DBD3 /* NSString+Regex.m in Sources */,
+				BECB72141FFF43C700E1B6B7 /* NSTimerViewController.m in Sources */,
 				A90BFDCB1F7FFC3B008EFA09 /* __UIButton.m in Sources */,
 				A9D2B1881FEFD6320053FF92 /* XMNVideoPreviewController.m in Sources */,
 				A9D2B16B1FEFD6170053FF92 /* XMNPhotoPreviewCell.m in Sources */,
@@ -1765,7 +1807,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 4W4G4T2XR6;
+				DEVELOPMENT_TEAM = 9RU56WTF53;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS_ALL_Demo/PrefixHeader.pch";
@@ -1792,7 +1834,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 4W4G4T2XR6;
+				DEVELOPMENT_TEAM = 9RU56WTF53;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS_ALL_Demo/PrefixHeader.pch";

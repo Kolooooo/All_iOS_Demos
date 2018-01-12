@@ -141,6 +141,12 @@ UITableViewDataSource>
             
             break;
         }
+        case 20:{
+            [self.navigationController pushViewController:[[NSClassFromString(@"NSTimerViewController") alloc] init] animated:YES];
+            
+            break;
+        }
+            
             
         default:
             break;
@@ -168,7 +174,8 @@ UITableViewDataSource>
                     @"BannerViewController 轮播图",
                     @"TabViewController",
                     @"ImgeViewController",
-                    @"Button2ViewController 长按录音"
+                    @"Button2ViewController 长按录音",
+                    @"NSTimerViewController 倒计时"
                     ];
 }
 
