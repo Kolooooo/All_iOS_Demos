@@ -488,6 +488,7 @@
 		BE3FA35C1FEE40AE00EDC9FA /* HMCycleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMCycleView.m; sourceTree = "<group>"; };
 		BE3FA35E1FEE40C000EDC9FA /* BannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
 		BE3FA35F1FEE40C000EDC9FA /* BannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
+		BE567FD3200ACE1F00E96286 /* Cocoapods_Note.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cocoapods_Note.h; sourceTree = "<group>"; };
 		BE79D15B1FEE43F60081A4EA /* Home_Scroll_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Home_Scroll_02.jpg; sourceTree = "<group>"; };
 		BE79D15C1FEE43F60081A4EA /* Home_Scroll_04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Home_Scroll_04.jpg; sourceTree = "<group>"; };
 		BE79D15D1FEE43F60081A4EA /* Home_Scroll_03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Home_Scroll_03.jpg; sourceTree = "<group>"; };
@@ -815,6 +816,7 @@
 				A929019F1F83D0BA0002DBD3 /* Class_Tree.png */,
 				A9C2CE4F1F7095B60029DBDE /* iOS.rtfd */,
 				A985F3BF1F8EDAC8000F5325 /* Note.h */,
+				BE567FD3200ACE1F00E96286 /* Cocoapods_Note.h */,
 				A904FF191F99D81F00AC2A53 /* Charles */,
 				A92C88401F5AA9EB00CD02C4 /* iOS_ALL_Demo */,
 				A92C883F1F5AA9EB00CD02C4 /* Products */,

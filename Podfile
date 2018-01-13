@@ -19,6 +19,9 @@ target 'iOS_ALL_Demo' do
   #Swift frameworks
   #pod 'SnapKit'
   pod 'Alamofire', '~> 4.5'
+  
+  # photo frameword
+  pod 'ZLPhotoBrowser'
 
   
 end
