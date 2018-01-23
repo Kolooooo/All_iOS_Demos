@@ -31,6 +31,9 @@
 
 #import <MJExtension/MJExtension.h>
 
+//
+#import "ZLPhotoActionSheet.h"
+
 
 #import "__Config.h"
 

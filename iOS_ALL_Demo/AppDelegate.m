@@ -20,7 +20,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    
     MainViewController *main = [[MainViewController alloc] init];
     MainNavViewController *nav = [[MainNavViewController alloc] initWithRootViewController:main];
     
@@ -31,9 +30,11 @@
     [self.window makeKeyAndVisible];
     
     
+    DEBUGLOG(@"%@", @([[[UIDevice currentDevice] systemVersion] floatValue]));
 #if defined(DEBUG)||defined(_DEBUG)
     [[JPFPSStatus sharedInstance] open];
 #endif
+    
     
     
     return YES;

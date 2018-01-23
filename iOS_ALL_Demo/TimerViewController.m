@@ -24,48 +24,45 @@
     self.second = 60;
     
     [self initUI];
-    self.secondLabel.text = [NSString stringWithFormat:@"%ld 秒", (long)self.second];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self startTheTimer];
     
-    /// 延时停止timer
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.second * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self stopOrRemoveTimer];
-    });
+#pragma mark - 开始定时器
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(refreshLabelText) userInfo:nil repeats:YES];
 }
 
 - (void)dealloc{
     [self stopOrRemoveTimer];
 }
 
-/// 添加定时器
-- (void)startTheTimer{
-    /// 1 秒调用一次refreshLabelText 方法
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(refreshLabelText) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
-}
-
-/// 移除定时器
+#pragma mark - 结束移除定时器
 - (void)stopOrRemoveTimer{
     [self.timer invalidate];
     self.timer = nil;
 }
 
 -(void)refreshLabelText{
+    if (self.second <= 0) {
+        [self stopOrRemoveTimer];
+        self.second = 0;
+        return;
+    }
+    
     self.second--;
     self.secondLabel.text = [NSString stringWithFormat:@"%ld 秒", (long)self.second];
 }
 
 - (void)initUI{
     self.secondLabel = [[UILabel alloc] init];
+    self.secondLabel.text = [NSString stringWithFormat:@"%ld 秒", (long)self.second];
+    self.secondLabel.textAlignment = NSTextAlignmentCenter;
+    self.secondLabel.textColor = [UIColor redColor];
     self.secondLabel.height = 20.0;
     self.secondLabel.width = __ScreenWidth;
     self.secondLabel.centerX = self.view.centerX;
     self.secondLabel.centerY = self.view.centerY;
     [self.view addSubview:self.secondLabel];
 }
-
 
 @end

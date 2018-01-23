@@ -61,7 +61,9 @@ Privacy - Calendars Usage Description  //日历
 // AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 
 
-
+#pragma mark - 路径
+// xcode 证书路径
+// cd ~/Library/MobileDevice/Provisioning\ Profiles/
 
 
 

@@ -17,4 +17,9 @@
         *** CURRENT SOURCES ***
             http://ruby.taobao.org/
     $ sudo gem install cocoapods    //安装
+ 
+ 创建Podfile
+    $ vim Podfile   // 创建Podfile 文件并且编辑
+        Podfile 标准格式
+ 
  */
