@@ -22,6 +22,9 @@ target 'iOS_ALL_Demo' do
   
   # photo frameword
   pod 'ZLPhotoBrowser'
+  # Bug 跟踪
+  pod 'Bugly'
+  # 导航栏平滑切换
+  pod 'KMNavigationBarTransition'
 
-  
 end
