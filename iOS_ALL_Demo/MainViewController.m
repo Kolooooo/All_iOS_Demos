@@ -151,7 +151,11 @@ UITableViewDataSource>
             
             break;
         }
+        case 22:{
+            [self.navigationController pushViewController:[[NSClassFromString(@"FactoryPatternController") alloc] init] animated:YES];
             
+            break;
+        }
             
         default:
             break;
@@ -181,7 +185,8 @@ UITableViewDataSource>
                     @"ImgeViewController",
                     @"Button2ViewController 长按录音",
                     @"NSTimerViewController 倒计时",
-                    @"NavigationController - 完美隐藏"
+                    @"NavigationController - 完美隐藏",
+                    @"工厂模式"
                     ];
 }
 

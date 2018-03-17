@@ -25,6 +25,22 @@
  */
 - (void)__setLeftContentPadding:(CGFloat)leftPadding;
 
+/**
+ 键盘弹出
+ 在 textFieldDidBeginEditing 这个代理方法内使用
+ 
+ @param showView 需要上弹的view
+ */
+- (void)__keyboardShowToUp:(UIView *_Nonnull)showView;
+
+/**
+ 键盘收起
+ 在 textFieldShouldReturn 这个代理方法内使用
+ 
+ @param hiddenView 需要收起的view
+ */
+- (void)__keyboardHiddenToDown:(UIView *_Nonnull)hiddenView;
+
 @end
 
 
@@ -179,3 +195,6 @@
  NSLog(@"%@",[_field text]);
  }
  */
+
+
+

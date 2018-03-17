@@ -10,6 +10,7 @@
 #import "MainViewController.h"
 #import "MainNavViewController.h"
 #import <JPFPSStatus/JPFPSStatus.h>
+#import "kenModel.h"
 
 @interface AppDelegate ()
 
@@ -34,8 +35,6 @@
 #if defined(DEBUG)||defined(_DEBUG)
     [[JPFPSStatus sharedInstance] open];
 #endif
-    
-    
     
     return YES;
 }
