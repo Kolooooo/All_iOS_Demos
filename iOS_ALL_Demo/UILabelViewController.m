@@ -110,6 +110,9 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self checkVersion];
+    
+    return;
     NSLog(@"%@ - %@", touches, event);
     
     [self.textTF1 resignFirstResponder];
@@ -121,12 +124,12 @@
     }];
 }
 
-- (void)__re:(NSInteger)count obj:(id)obj sel:(SEL)sel {
-    for (int i = 0 ; i < count; i++) {
-        if ([obj respondsToSelector:sel]) {
-//            [obj d:sel withObject:nil];
-        }
-    }
+-(void)checkVersion {
+    [__Tool __repeatPerformed:self sel:@selector(checkVersion) repeatCount:5];
+}
+
+- (void)dealloc {
+    DEBUGLOG(@"释放了");
 }
 
 @end

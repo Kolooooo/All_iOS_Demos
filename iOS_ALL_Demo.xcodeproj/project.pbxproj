@@ -198,6 +198,7 @@
 		BE568019200AD40200E96286 /* ZLPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE568001200AD40200E96286 /* ZLPhotoModel.m */; };
 		BE56801A200AD40200E96286 /* ZLEditVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE568002200AD40200E96286 /* ZLEditVideoController.m */; };
 		BE56801B200AD40200E96286 /* ZLPhotoConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BE568003200AD40200E96286 /* ZLPhotoConfiguration.m */; };
+		BE587170206A27FA00FEE6B1 /* __Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = BE58716F206A27F900FEE6B1 /* __Tool.m */; };
 		BE6082662068D68E001FC929 /* UIAlertView+__Category.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6082652068D68E001FC929 /* UIAlertView+__Category.m */; };
 		BE79D1601FEE43F60081A4EA /* Home_Scroll_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE79D15B1FEE43F60081A4EA /* Home_Scroll_02.jpg */; };
 		BE79D1611FEE43F60081A4EA /* Home_Scroll_04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE79D15C1FEE43F60081A4EA /* Home_Scroll_04.jpg */; };
@@ -582,6 +583,8 @@
 		BE568001200AD40200E96286 /* ZLPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLPhotoModel.m; sourceTree = "<group>"; };
 		BE568002200AD40200E96286 /* ZLEditVideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLEditVideoController.m; sourceTree = "<group>"; };
 		BE568003200AD40200E96286 /* ZLPhotoConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLPhotoConfiguration.m; sourceTree = "<group>"; };
+		BE58716E206A27F900FEE6B1 /* __Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = __Tool.h; sourceTree = "<group>"; };
+		BE58716F206A27F900FEE6B1 /* __Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __Tool.m; sourceTree = "<group>"; };
 		BE6082642068D68E001FC929 /* UIAlertView+__Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+__Category.h"; sourceTree = "<group>"; };
 		BE6082652068D68E001FC929 /* UIAlertView+__Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+__Category.m"; sourceTree = "<group>"; };
 		BE79D15B1FEE43F60081A4EA /* Home_Scroll_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Home_Scroll_02.jpg; sourceTree = "<group>"; };
@@ -1022,6 +1025,8 @@
 				BE0BBE1E1FE2A06200C52EBA /* UIControl+__Click.m */,
 				A92901581F805ACF0002DBD3 /* __UITextView.h */,
 				A92901591F805ACF0002DBD3 /* __UITextView.m */,
+				BE58716E206A27F900FEE6B1 /* __Tool.h */,
+				BE58716F206A27F900FEE6B1 /* __Tool.m */,
 				A9443E901FC7CF3C0012C3BF /* UITextView+__Category.h */,
 				A9443E911FC7CF3C0012C3BF /* UITextView+__Category.m */,
 				A985F3C01F8EDC01000F5325 /* UIColor+__Category.h */,
@@ -1974,6 +1979,7 @@
 				A923E6081F719D9000567E96 /* tableViewInCell.m in Sources */,
 				BE2AC69020479928009A614E /* Cat.m in Sources */,
 				A9D2B1B11FEFD6400053FF92 /* JGProgressHUDFadeZoomAnimation.m in Sources */,
+				BE587170206A27FA00FEE6B1 /* __Tool.m in Sources */,
 				A92C885F1F5AADDD00CD02C4 /* MainNavViewController.m in Sources */,
 				A985F3C21F8EDC01000F5325 /* UIColor+__Category.m in Sources */,
 				A92AAC3F1F92FDE00042AC1A /* NSNumber+__Category.m in Sources */,
