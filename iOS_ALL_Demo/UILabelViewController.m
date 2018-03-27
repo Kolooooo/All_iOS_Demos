@@ -121,4 +121,12 @@
     }];
 }
 
+- (void)__re:(NSInteger)count obj:(id)obj sel:(SEL)sel {
+    for (int i = 0 ; i < count; i++) {
+        if ([obj respondsToSelector:sel]) {
+//            [obj d:sel withObject:nil];
+        }
+    }
+}
+
 @end

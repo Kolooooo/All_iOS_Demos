@@ -162,13 +162,19 @@
     return isSuccess;
 }
 
-- (void)set__ObjectID:(NSString *)__ObjectID{
+- (void)set__objectID:(NSString *)__objectID{
     /// @selector(objectID): 属性关联的key，也可以定义一个char * ;
-    objc_setAssociatedObject(self, @selector(__objectID), __ObjectID, OBJC_ASSOCIATION_COPY);
+    
+    // OBJC_ASSOCIATION_ASSIGN 等价于 @property(assign)。
+    // OBJC_ASSOCIATION_RETAIN_NONATOMIC等价于 @property(strong, nonatomic)。
+    // OBJC_ASSOCIATION_COPY_NONATOMIC等价于@property(copy, nonatomic)。
+    // OBJC_ASSOCIATION_RETAIN等价于@property(strong,atomic)。
+    // OBJC_ASSOCIATION_COPY等价于@property(copy, atomic)。
+    objc_setAssociatedObject(self, @selector(__objectID), __objectID, OBJC_ASSOCIATION_COPY_NONATOMIC);
     
     /* 或：
      * static const char *OBJECT_ID = "objectID";
-     * objc_setAssociatedObject(self, OBJECT_ID, objectID, OBJC_ASSOCIATION_COPY);
+     * objc_setAssociatedObject(self, OBJECT_ID, objectID, OBJC_ASSOCIATION_COPY_NONATOMIC);
      */
 }
 

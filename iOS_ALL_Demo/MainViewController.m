@@ -38,6 +38,11 @@ UITableViewDataSource>
     [self initRequest];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.titles.count;
 }
