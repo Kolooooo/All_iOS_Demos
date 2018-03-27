@@ -4,7 +4,7 @@
 
 @implementation __Tool
 
-+ (void)__repeatPerformed:(id)target sel:(SEL)sel repeatCount:(NSInteger)repeatCount repeatFinish:(void(^)())repeatFinish {
++ (void)__repeatPerformed:(id)target sel:(SEL)sel repeatCount:(NSInteger)repeatCount repeatFinish:(void(^)(void))repeatFinish {
     __weak id weakTarget = target;
     static NSInteger count = 0;
     

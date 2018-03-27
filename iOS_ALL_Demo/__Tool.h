@@ -12,6 +12,6 @@
  @param repeatCount 重复次数
  @param repeatFinish 次数重复执行完毕
  */
-+ (void)__repeatPerformed:(id)target sel:(SEL)sel repeatCount:(NSInteger)repeatCount repeatFinish:(void(^)())repeatFinish;
++ (void)__repeatPerformed:(id)target sel:(SEL)sel repeatCount:(NSInteger)repeatCount repeatFinish:(void(^)(void))repeatFinish;
 
 @end
