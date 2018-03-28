@@ -4,6 +4,12 @@
 #import <sys/utsname.h>
 #import <AdSupport/AdSupport.h>
 
+@interface UIView ()
+
+@property (nonatomic, strong) NSNumber *__isShowNumber;
+
+@end
+
 @implementation UIView (__Category)
 
 - (UIViewController *_Nonnull)__viewController{
@@ -239,6 +245,23 @@
     
     NSAssert(NO, @"view of viewIndex is null!!!");
     return nil;
+}
+
+#pragma mark - private method
+- (void)set__isShowNumber:(NSNumber *)__isShowNumber {
+    objc_setAssociatedObject(self, @selector(__isShowNumber), __isShowNumber, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSNumber *)__isShowNumber {
+    return objc_getAssociatedObject(self, @selector(__isShowNumber));
+}
+
+- (BOOL)__isShow {
+    return [[self __isShowNumber] boolValue];
+}
+
+- (void)set__isShow:(BOOL)__isShow {
+    [self set__isShowNumber:@(__isShow)];
 }
 
 @end

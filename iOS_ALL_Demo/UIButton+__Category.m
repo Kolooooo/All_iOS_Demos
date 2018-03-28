@@ -3,6 +3,11 @@
 #import "UIButton+__Category.h"
 #import <objc/runtime.h>
 
+@interface UIButton ()
+
+@property (nonatomic, strong) NSNumber *__isShowing;
+
+@end
 
 @implementation UIButton (__Category)
 
@@ -49,6 +54,23 @@
     
     // 重新调用原来按钮事件的实现逻辑，现在调用的替换方法就是原方法
     [self __sendAction:action to:target forEvent:event];
+}
+
+#pragma mark - private method
+- (void)set__string:(NSString *)__string {
+    objc_setAssociatedObject(self, @selector(__string), __string, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (NSString *)__string {
+    return objc_getAssociatedObject(self, @selector(__string));
+}
+
+- (void)set__object:(id)__object {
+    objc_setAssociatedObject(self, @selector(__object), __object, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (id)__object {
+    return objc_getAssociatedObject(self, @selector(__object));
 }
 
 @end

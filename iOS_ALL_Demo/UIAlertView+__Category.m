@@ -12,11 +12,11 @@
     return objc_getAssociatedObject(self, @selector(__string));
 }
 
-- (void)set__object:(NSString *)__object {
+- (void)set__object:(id)__object {
     objc_setAssociatedObject(self, @selector(__object), __object, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (NSString *)__object {
+- (id)__object {
     return objc_getAssociatedObject(self, @selector(__object));
 }
 

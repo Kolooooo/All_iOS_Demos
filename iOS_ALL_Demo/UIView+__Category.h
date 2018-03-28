@@ -4,6 +4,8 @@
 
 @interface UIView (__Category)
 
+@property (nonatomic, assign) BOOL __isShow;
+
 /**
  根据子视图 获取 子视图所在的控制器
 

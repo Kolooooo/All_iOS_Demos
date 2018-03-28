@@ -2,7 +2,15 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, __IsShowing) {
+    __YES,
+    __NO
+};
+
 @interface UIButton (__Category)
+
+@property (nonatomic, copy) NSString *__string;
+@property (nonatomic, strong) id __object;
 
 /**
  按钮文字在左边，iocn 在右边的布局

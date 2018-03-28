@@ -23,12 +23,22 @@
     UIButton * roundBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [roundBtn setFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width-60)/2, 200, 60, 60)];
     [roundBtn setBackgroundColor:[UIColor blueColor]];
+    
+    roundBtn.__string = @"__string";
+    roundBtn.__object = @"__object";
+    roundBtn.__isShow = NO;
+    [roundBtn addTarget:self action:@selector(touchButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:roundBtn];
     _roundBtn = roundBtn;
     
-    UILongPressGestureRecognizer * longGesture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longGesture:)];
+    UILongPressGestureRecognizer * longGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longGesture:)];
     [roundBtn addGestureRecognizer:longGesture];
-    
+}
+
+- (void)touchButton:(UIButton *)button {
+    DEBUGLOG(@"button.__string == %@", button.__string);
+    DEBUGLOG(@"button.__object == %@", button.__object);
+    DEBUGLOG(@"button.__isShow == %d", button.__isShow);
 }
 
 -(void)longGesture:(UILongPressGestureRecognizer *)gesture{
