@@ -110,8 +110,6 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     NSLog(@"%@ - %@", touches, event);
-    [__Reflex __reflexPerformSelectorWithClassString:@"" selString:@"__yinshe"];
-    return;
     
     [self.textTF1 resignFirstResponder];
     [self.textTF2 resignFirstResponder];

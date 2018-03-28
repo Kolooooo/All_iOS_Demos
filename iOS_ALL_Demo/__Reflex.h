@@ -6,6 +6,7 @@
 
 /**
  映射执行方法(分离解耦合)
+ eg: [__Reflex __reflexPerformSelectorWithClassString:@"ClassString" selString:@"Func"];
 
  @param classString 映射的调用方法的对象
  @param selString 映射的调用的方法sel
