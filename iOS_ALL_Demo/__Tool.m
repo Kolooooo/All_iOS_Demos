@@ -5,7 +5,6 @@
 @implementation __Tool
 
 + (void)__repeatPerformed:(id)target sel:(SEL)sel repeatCount:(NSInteger)repeatCount repeatFinish:(void(^)(void))repeatFinish {
-    __weak id weakTarget = target;
     static NSInteger count = 0;
     
     if (count < repeatCount) {
@@ -13,13 +12,18 @@
         DEBUGLOG(@"count = %@", @(count));
         
         count++;
-        if (!weakTarget) { return; }
+        __weak id weakTarget = target;
+        if (!weakTarget) {
+            NSAssert(NO, @"target is nil");
+            return;
+        }
+        
         if ([weakTarget respondsToSelector:sel]) {
             IMP imp = [target methodForSelector:sel];
             void (*func)(id, SEL) = (void *)imp;
             func (target, sel);
-            
-            // [target performSelector:sel withObject:withObject];
+        } else {
+            NSAssert(NO, @"[target respondsToSelector:sel] is NO");
         }
     } else {
         count = 0;

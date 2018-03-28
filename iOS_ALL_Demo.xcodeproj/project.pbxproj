@@ -211,6 +211,8 @@
 		BEC688681FF797880072435A /* ImgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC688671FF797880072435A /* ImgeViewController.m */; };
 		BECB72141FFF43C700E1B6B7 /* NSTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BECB72131FFF43C700E1B6B7 /* NSTimerViewController.m */; };
 		BED4FB132013AE4F0006E675 /* NSString+__Time.m in Sources */ = {isa = PBXBuildFile; fileRef = BED4FB122013AE4F0006E675 /* NSString+__Time.m */; };
+		BEDF3414206B375700C36054 /* __YinShe.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDF3413206B375700C36054 /* __YinShe.m */; };
+		BEDF3417206B3E1900C36054 /* __Reflex.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDF3416206B3E1900C36054 /* __Reflex.m */; };
 		BEF343E1205A6EA80025A939 /* kenModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF343E0205A6EA80025A939 /* kenModel.m */; };
 		BEF748CC200855D200E00977 /* UIViewContentModeScaleAspectFill.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEF748C9200855D200E00977 /* UIViewContentModeScaleAspectFill.jpg */; };
 		BEF748CD200855D200E00977 /* UIViewContentModeScaleAspectFit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEF748CA200855D200E00977 /* UIViewContentModeScaleAspectFit.jpg */; };
@@ -603,6 +605,10 @@
 		BECB72131FFF43C700E1B6B7 /* NSTimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSTimerViewController.m; sourceTree = "<group>"; };
 		BED4FB112013AE4F0006E675 /* NSString+__Time.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+__Time.h"; sourceTree = "<group>"; };
 		BED4FB122013AE4F0006E675 /* NSString+__Time.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+__Time.m"; sourceTree = "<group>"; };
+		BEDF3412206B375700C36054 /* __YinShe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = __YinShe.h; sourceTree = "<group>"; };
+		BEDF3413206B375700C36054 /* __YinShe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __YinShe.m; sourceTree = "<group>"; };
+		BEDF3415206B3E1900C36054 /* __Reflex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = __Reflex.h; sourceTree = "<group>"; };
+		BEDF3416206B3E1900C36054 /* __Reflex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __Reflex.m; sourceTree = "<group>"; };
 		BEF343DF205A6EA80025A939 /* kenModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kenModel.h; sourceTree = "<group>"; };
 		BEF343E0205A6EA80025A939 /* kenModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kenModel.m; sourceTree = "<group>"; };
 		BEF748C9200855D200E00977 /* UIViewContentModeScaleAspectFill.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = UIViewContentModeScaleAspectFill.jpg; sourceTree = "<group>"; };
@@ -1093,6 +1099,10 @@
 			children = (
 				A92C887F1F5AB49400CD02C4 /* UILabelViewController.h */,
 				A92C88801F5AB49400CD02C4 /* UILabelViewController.m */,
+				BEDF3412206B375700C36054 /* __YinShe.h */,
+				BEDF3413206B375700C36054 /* __YinShe.m */,
+				BEDF3415206B3E1900C36054 /* __Reflex.h */,
+				BEDF3416206B3E1900C36054 /* __Reflex.m */,
 			);
 			name = UILabelViewController;
 			sourceTree = "<group>";
@@ -1858,6 +1868,7 @@
 				A903E1751F9AF6DF00950E6D /* UIView+__Gradient.m in Sources */,
 				A904FF091F93524C00AC2A53 /* GCDViewController.m in Sources */,
 				A9A7F21E1F61F50800D460AE /* NSString+__Category.m in Sources */,
+				BEDF3414206B375700C36054 /* __YinShe.m in Sources */,
 				BE56800C200AD40200E96286 /* ZLPlayer.m in Sources */,
 				A92901911F806C7E0002DBD3 /* UIImage+QRCode.m in Sources */,
 				BE08DA0D1FEA671700B8F0DE /* NetworkRequest.swift in Sources */,
@@ -1982,6 +1993,7 @@
 				BE587170206A27FA00FEE6B1 /* __Tool.m in Sources */,
 				A92C885F1F5AADDD00CD02C4 /* MainNavViewController.m in Sources */,
 				A985F3C21F8EDC01000F5325 /* UIColor+__Category.m in Sources */,
+				BEDF3417206B3E1900C36054 /* __Reflex.m in Sources */,
 				A92AAC3F1F92FDE00042AC1A /* NSNumber+__Category.m in Sources */,
 				A903E1891F9B535400950E6D /* NSManagedObject+KEN.m in Sources */,
 			);

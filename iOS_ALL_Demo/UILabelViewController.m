@@ -92,7 +92,6 @@
     [button __setCornerRadius:CGSizeMake(20, 30) type:UIRectCornerTopLeft|UIRectCornerTopRight|UIRectCornerBottomLeft];
     
     
-    
     UITextField *textTF1 = [[UITextField alloc] initWithFrame:CGRectMake(100, 300, 50, 50)];
     self.textTF1 = textTF1;
     textTF1.backgroundColor = [UIColor purpleColor];
@@ -105,15 +104,14 @@
     [self.view addSubview:textTF2];
 }
 
-- (void)touchButton{
-    
+- (void)touchButton {
+ 
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self checkVersion];
-    
-    return;
     NSLog(@"%@ - %@", touches, event);
+    [__Reflex __reflexPerformSelectorWithClassString:@"" selString:@"__yinshe"];
+    return;
     
     [self.textTF1 resignFirstResponder];
     [self.textTF2 resignFirstResponder];
@@ -122,10 +120,6 @@
     [UIView animateWithDuration:0.0 animations:^{
         self.textTF1.transform = CGAffineTransformRotate(self.textTF1.transform, M_PI_4);//在当前的head.transform的基础上再旋转
     }];
-}
-
--(void)checkVersion {
-    [__Tool __repeatPerformed:self sel:@selector(checkVersion) repeatCount:5];
 }
 
 - (void)dealloc {

@@ -23,3 +23,25 @@
         Podfile 标准格式
  
  */
+
+
+/**
+ NS_ASSUME_NONNULL_BEGIN
+ 
+ @interfacemyClass()
+ @property (nonatomic,copy) NSString *aString;
+ - (id)methodWithString:(NSString *_Nonnull)str;
+ @end
+ 
+ NS_ASSUME_NONNULL_END
+ 
+ == 等于下方
+ 
+ @interfacemyClass()
+ @property (nonatomic,copy) NSString *_Nonnull aString;
+ - (id)methodWithString:(NSString *_Nonnull)str;
+ @end
+ 
+ 
+ 在这两个宏之间的代码，所有简单指针对象都被假定为 nonnull ，因此我们只需要去指定那些 nullable 指针对象即可。
+ */
