@@ -20,6 +20,9 @@
     [super viewDidLoad];
     
     self.navigationController.delegate = self;
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    view.backgroundColor = [UIColor redColor];
+    [self.view addSubview:view];
 }
 
 #pragma mark - UINavigationControllerDelegate
@@ -30,6 +33,5 @@
     /// 隐藏
     [self.navigationController setNavigationBarHidden:isShow animated:YES];
 }
-
 
 @end

@@ -168,6 +168,8 @@
 		BE2AC69220479928009A614E /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2AC68C20479928009A614E /* Dog.m */; };
 		BE2AC69320479928009A614E /* FactoryPatternController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2AC68D20479928009A614E /* FactoryPatternController.m */; };
 		BE2AC69D2047B8CC009A614E /* BuilderPatternViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2AC69C2047B8CC009A614E /* BuilderPatternViewController.m */; };
+		BE371AD0207F0BE90025CFB0 /* PresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE371ACF207F0BE90025CFB0 /* PresentViewController.m */; };
+		BE371AD320844D1A0025CFB0 /* UINavigationController+__Show.m in Sources */ = {isa = PBXBuildFile; fileRef = BE371AD220844D1A0025CFB0 /* UINavigationController+__Show.m */; };
 		BE3FA34A1FEE0E9000EDC9FA /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3FA3491FEE0E8F00EDC9FA /* TimerViewController.m */; };
 		BE3FA34C1FEE124500EDC9FA /* RecorderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3FA34B1FEE124500EDC9FA /* RecorderViewController.storyboard */; };
 		BE3FA3511FEE125700EDC9FA /* RecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3FA34E1FEE125700EDC9FA /* RecorderViewController.m */; };
@@ -530,6 +532,10 @@
 		BE2AC68E20479928009A614E /* DesignPattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignPattern.h; sourceTree = "<group>"; };
 		BE2AC69B2047B8CC009A614E /* BuilderPatternViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuilderPatternViewController.h; sourceTree = "<group>"; };
 		BE2AC69C2047B8CC009A614E /* BuilderPatternViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuilderPatternViewController.m; sourceTree = "<group>"; };
+		BE371ACE207F0BE90025CFB0 /* PresentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentViewController.h; sourceTree = "<group>"; };
+		BE371ACF207F0BE90025CFB0 /* PresentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentViewController.m; sourceTree = "<group>"; };
+		BE371AD120844D1A0025CFB0 /* UINavigationController+__Show.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+__Show.h"; sourceTree = "<group>"; };
+		BE371AD220844D1A0025CFB0 /* UINavigationController+__Show.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+__Show.m"; sourceTree = "<group>"; };
 		BE3FA3481FEE0E8F00EDC9FA /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		BE3FA3491FEE0E8F00EDC9FA /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		BE3FA34B1FEE124500EDC9FA /* RecorderViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RecorderViewController.storyboard; sourceTree = "<group>"; };
@@ -1071,6 +1077,8 @@
 				A923E6101F71E6C600567E96 /* UISearchController+__Category.m */,
 				BEBC0F1C1FE52A99004E6BED /* UINavigationController+__Category.h */,
 				BEBC0F1B1FE52A99004E6BED /* UINavigationController+__Category.m */,
+				BE371AD120844D1A0025CFB0 /* UINavigationController+__Show.h */,
+				BE371AD220844D1A0025CFB0 /* UINavigationController+__Show.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -1649,6 +1657,8 @@
 			children = (
 				BEF748D120085B6700E00977 /* NavigationController.h */,
 				BEF748D220085B6700E00977 /* NavigationController.m */,
+				BE371ACE207F0BE90025CFB0 /* PresentViewController.h */,
+				BE371ACF207F0BE90025CFB0 /* PresentViewController.m */,
 				BEF748D720085D8500E00977 /* 完美隐藏导航栏 */,
 			);
 			name = NavigationController;
@@ -1988,9 +1998,11 @@
 				A92C888A1F5AC70B00CD02C4 /* TableViewController.m in Sources */,
 				BE0BBE1F1FE2A06200C52EBA /* UIControl+__Click.m in Sources */,
 				A9D2B1B51FEFD6400053FF92 /* JGProgressHUDIndicatorView.m in Sources */,
+				BE371AD0207F0BE90025CFB0 /* PresentViewController.m in Sources */,
 				BE3FA3591FEE2BAA00EDC9FA /* NSFileManager+__Category.m in Sources */,
 				A9D2B1B01FEFD6400053FF92 /* JGProgressHUDAnimation.m in Sources */,
 				BE56800B200AD40200E96286 /* ZLCustomCamera.m in Sources */,
+				BE371AD320844D1A0025CFB0 /* UINavigationController+__Show.m in Sources */,
 				A9D2B1B71FEFD6400053FF92 /* JGProgressHUDFadeAnimation.m in Sources */,
 				BE568016200AD40200E96286 /* ZLShowBigImgViewController.m in Sources */,
 				BE568018200AD40200E96286 /* ZLPhotoActionSheet.m in Sources */,

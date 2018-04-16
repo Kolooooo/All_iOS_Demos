@@ -65,7 +65,7 @@
 }
 
 - (void)__logViewHierarchy{
-    NSString *description = [self __showViewHierarchyWithlevel:0];
+    NSString *description = [self _showViewHierarchyWithlevel:0];
     
     NSLog(@"%@", description);
 }
@@ -78,7 +78,7 @@
     self.layer.mask = maskLayer;
 }
 
-- (NSString *)__showViewHierarchyWithlevel:(NSInteger)level{
+- (NSString *)_showViewHierarchyWithlevel:(NSInteger)level{
     NSMutableString * description = [NSMutableString string];
     NSMutableString * indent = [NSMutableString string];
     
@@ -88,7 +88,7 @@
     
     [description appendFormat:@"\n%@%@", indent, [self description]];
     for (UIView * item in self.subviews){
-        [description appendFormat:@"%@", [item __showViewHierarchyWithlevel:level + 1]];
+        [description appendFormat:@"%@", [item _showViewHierarchyWithlevel:level + 1]];
     }
     
     return description.copy;

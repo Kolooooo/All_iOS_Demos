@@ -9,6 +9,7 @@
 #import "NavigationController.h"
 #import "PushViewController.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import "PresentViewController.h"
 
 @interface NavigationController ()
 
@@ -39,7 +40,10 @@
             break;
         }
         case UISwipeGestureRecognizerDirectionRight:{
-            
+#pragma mark 先present 控制器然后push 控制器
+            PresentViewController *vc = [[PresentViewController alloc] init];
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+            [self.navigationController presentViewController:nav animated:YES completion:nil];
             break;
         }
             

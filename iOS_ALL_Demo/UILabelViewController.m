@@ -7,6 +7,8 @@
 //
 
 #import "UILabelViewController.h"
+#import "PushViewController.h"
+#import "UINavigationController+__Show.h"
 
 @interface UILabelViewController ()
 
@@ -109,7 +111,12 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    NSLog(@"%@ - %@", touches, event);
+    PushViewController *vc = [[PushViewController alloc] init];
+    [self.navigationController __showViewController:vc completion:nil];
+    
+    return;
+    
+    DEBUGLOG(@"%@ - %@", touches, event);
     
     [self.textTF1 resignFirstResponder];
     [self.textTF2 resignFirstResponder];
