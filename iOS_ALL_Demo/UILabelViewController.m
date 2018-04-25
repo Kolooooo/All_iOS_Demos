@@ -121,7 +121,6 @@
     [self.textTF1 resignFirstResponder];
     [self.textTF2 resignFirstResponder];
     
-    
     [UIView animateWithDuration:0.0 animations:^{
         self.textTF1.transform = CGAffineTransformRotate(self.textTF1.transform, M_PI_4);//在当前的head.transform的基础上再旋转
     }];

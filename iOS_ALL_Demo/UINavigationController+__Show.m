@@ -12,6 +12,7 @@
 
 - (void)__showViewController:(UIViewController *_Nonnull)showViewController completion:(void (^ __nullable)(void))completion {
     if (showViewController == nil) return;
+    
     __weak UIViewController *weakShowViewController = showViewController;
     weakShowViewController.definesPresentationContext = YES;
     
